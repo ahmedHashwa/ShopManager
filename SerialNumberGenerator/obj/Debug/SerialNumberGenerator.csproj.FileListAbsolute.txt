@@ -1,0 +1,33 @@
+E:\My Projects\Shop Management Solution\SerialNumberGenerator\SerialNumberGenerator\bin\Debug\SerialNumberGenerator.exe
+E:\My Projects\Shop Management Solution\SerialNumberGenerator\SerialNumberGenerator\bin\Debug\SerialNumberGenerator.pdb
+E:\My Projects\Shop Management Solution\SerialNumberGenerator\SerialNumberGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\My Projects\Shop Management Solution\SerialNumberGenerator\SerialNumberGenerator\obj\Debug\WindowsFormsApplication1.SerialNumberGenerator.resources
+E:\My Projects\Shop Management Solution\SerialNumberGenerator\SerialNumberGenerator\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\My Projects\Shop Management Solution\SerialNumberGenerator\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.csproj.GenerateResource.Cache
+E:\My Projects\Shop Management Solution\SerialNumberGenerator\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.exe
+E:\My Projects\Shop Management Solution\SerialNumberGenerator\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\bin\Debug\SerialNumberGenerator.exe
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\bin\Debug\SerialNumberGenerator.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\ResolveAssemblyReference.cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\WindowsFormsApplication1.SerialNumberGenerator.resources
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.csproj.GenerateResource.Cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.exe
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.pdb
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\bin\Debug\SerialNumberGenerator.exe
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\bin\Debug\SerialNumberGenerator.pdb
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\WindowsFormsApplication1.SerialNumberGenerator.resources
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.csproj.GenerateResource.Cache
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.exe
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.pdb
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\bin\Debug\SerialNumberGenerator.exe
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\bin\Debug\SerialNumberGenerator.pdb
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\obj\Debug\ResolveAssemblyReference.cache
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\obj\Debug\WindowsFormsApplication1.SerialNumberGenerator.resources
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\obj\Debug\ResGen.read.1.tlog
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\obj\Debug\ResGen.write.1.tlog
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.exe
+D:\My Projects\ShMaX\Shop Management\SerialNumberGenerator\obj\Debug\SerialNumberGenerator.pdb

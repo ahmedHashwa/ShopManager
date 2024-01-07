@@ -1,0 +1,248 @@
+﻿#region using directives
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using ShopManager.Controls.Basic;
+using ShopManager.Controls.Data;
+using ShopManager.Controls.Data.ShopDataSetTableAdapters;
+using ShopManager.ProjectResources.Data.commonDataSetTableAdapters;
+using ShopManager.ProjectResources.Properties;
+
+#endregion
+
+namespace ShopManager.Controls.Regular
+{
+    // ReSharper disable UnusedMember.Global
+    /// <summary>
+    /// </summary>
+    public partial class FridgeStoragesControl : ParentControl
+    // ReSharper restore UnusedMember.Global
+    {
+        /// <summary>
+        /// </summary>
+        public FridgeStoragesControl()
+            : this(null)
+        {
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name = "ds"></param>
+        public FridgeStoragesControl(ShopDataSet ds)
+            : base(ds)
+        {
+            InitializeComponent();
+            RowEnter += FridgeStoragesControl_RowEnter;
+            التاريخDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewDateCellStyle;
+            اسمالثلاجةDataGridViewTextBoxColumn.Frozen = رقمالايصالDataGridViewTextBoxColumn.Frozen = true;
+            FilterCollapsed = true;
+            ParentBindingSourceSortString = "[مسلسل] desc";
+            AllowToggleInsertEdit = true;
+            supplierComboBox.Validated += ValidatedOk;
+            rawKindComboBox.Validated += ValidatedOk;
+            billNONumericUpDown.Validated += ValidatedOk;
+            DeleteDataAll += new EventHandler(FridgeStoragesControl_DeleteDataAll);
+        }
+
+        void FridgeStoragesControl_DeleteDataAll(object sender, EventArgs e)
+        {
+            تخزين_الثلاجةTableAdapter.DeleteAll();
+        }
+
+        #region Properties
+
+        private ShopDataSet.الأنواع_الخامRow RawKindRow
+        {
+            get
+            {
+                return (ShopDataSet.الأنواع_الخامRow)GetRow(الأنواعالخامBindingSource,
+                                                             string.Format("[{0}] = '{1}'", "الاسم",
+                                                                           rawKindComboBox.Text.Trim()),
+                                                             () =>
+                                                             {
+                                                                 ShopDataSet.الأنواع_الخامRow row =
+                                                                     MainDataSet.الأنواع_الخام.Addالأنواع_الخامRow(
+                                                                         rawKindComboBox.Text.Trim());
+                                                                 الأنواع_الخامTableAdapter.Update(row);
+                                                                 return row;
+                                                             }
+                                                          );
+            }
+        }
+
+        private ShopDataSet.الثلاجاتRow FridgeRow
+        {
+            get
+            {
+                return (ShopDataSet.الثلاجاتRow)GetRow(الثلاجاتBindingSource,
+                                                        string.Format("[{0}] = '{1}'", "الاسم",
+                                                                      fridgesComboBox.Text.Trim()),
+                                                        () =>
+                                                        {
+                                                            ShopDataSet.الثلاجاتRow row =
+                                                                MainDataSet.الثلاجات.AddالثلاجاتRow(
+                                                                    fridgesComboBox.Text.Trim());
+                                                            الثلاجاتTableAdapter.Update(row);
+                                                            return row;
+                                                        }
+                                                     );
+            }
+        }
+
+        private ShopDataSet.الموردينRow SupplierRow
+        {
+            get
+            {
+                return (ShopDataSet.الموردينRow)GetRow(الموردينBindingSource,
+                                                        string.Format("[{0}] = '{1}'", "الاسم",
+                                                                      supplierComboBox.Text.Trim()),
+                                                        () =>
+                                                        {
+
+                                                            var row =
+                                                                MainDataSet.الموردين.AddالموردينRow(
+                                                                    supplierComboBox.Text.Trim(), beginningBalanceNumericUpDown.Enabled ?
+                                                                    beginningBalanceNumericUpDown.Value : 0);
+                                                            الموردينTableAdapter.Update(row);
+                                                            return row;
+                                                        }
+                                                     );
+            }
+        }
+
+        #endregion
+
+        #region Control Handlers
+
+        private void FridgeStoragesControl_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            label8.Text = Resources.CurrentBalance;
+            beginningBalanceNumericUpDown.Value = (Decimal)
+                                                 new CommonQueriesTableAdapter().sp_GetSupplierCredit(
+                                                      ((ShopDataSet.تخزين_الثلاجةRow)CurrentDataRow).اسم_المورد);
+        }
+
+        private void FridgeStoragesUserControl_AddNewItem(object sender, EventArgs e)
+        {
+            var raw = RawKindRow;
+            var fri = FridgeRow;
+            var sup = SupplierRow;
+            تخزين_الثلاجةTableAdapter.Insert1(fri.معرف, raw.معرف,
+                                              sup.معرف,
+                                              (int)N_CagesNumericUpDown.Value,
+                                              (int)N_KilosNumericUpDown.Value,
+                                              depositeDateDateTimePicker.Value.Date,
+                                              (long)billNONumericUpDown.Value);
+            var datarow =
+                MainDataSet.تخزين_الثلاجة.Addتخزين_الثلاجةRow(fri.الاسم, raw.الاسم,
+                                                              sup.الاسم, (int)N_CagesNumericUpDown.Value,
+                                                              (int)N_KilosNumericUpDown.Value,
+                                                              depositeDateDateTimePicker.Value.Date,
+                                                              (long)billNONumericUpDown.Value);
+            // ReSharper disable PossibleInvalidOperationException
+            datarow.مسلسل = (long)تخزين_الثلاجةTableAdapter.GetLastID().Value;
+            // ReSharper restore PossibleInvalidOperationException
+            MainDataSet.تخزين_الثلاجة.AcceptChanges();
+        }
+
+        /// <exception cref = "Exception">يجب إدخال اسم المورد</exception>
+        protected override void CheckInputs()
+        {
+            if (string.IsNullOrEmpty(supplierComboBox.Text.Trim()))
+                throw new Exception("يجب إدخال اسم المورد") { Source = supplierComboBox.Name };
+            if (string.IsNullOrEmpty(fridgesComboBox.Text.Trim()))
+                throw new Exception("يجب إدخال اسم الثلاجة") { Source = fridgesComboBox.Name };
+            if (string.IsNullOrEmpty(rawKindComboBox.Text.Trim()))
+                throw new Exception("يجب إدخال اسم الخام") { Source = rawKindComboBox.Name };
+            long? value = تخزين_الثلاجةTableAdapter.CheckIfRecieptNoExists((long)billNONumericUpDown.Value);
+            if (value.HasValue && billNONumericUpDown.Value != 0
+                &&
+                (CurrentMode == SubmitMode.Update
+                     ? ((ShopDataSet.تخزين_الثلاجةRow)CurrentDataRow).رقم_الايصال != billNONumericUpDown.Value
+                     : true))
+                throw new Exception("تم إدخال هذا الرقم من قبل") { Source = billNONumericUpDown.Name };
+        }
+
+        private void FridgeStoragesUserControl_UpdateItem(object sender, EventArgs e)
+        {
+            var datarow = (ShopDataSet.تخزين_الثلاجةRow)CurrentDataRow;
+            ShopDataSet.الأنواع_الخامRow raw = RawKindRow;
+            ShopDataSet.الموردينRow sup = SupplierRow;
+            ShopDataSet.الثلاجاتRow fri = FridgeRow;
+
+            تخزين_الثلاجةTableAdapter.Update1(fri.معرف, raw.معرف, sup.معرف,
+                                              (int)N_CagesNumericUpDown.Value,
+                                              (int)N_KilosNumericUpDown.Value,
+                                              depositeDateDateTimePicker.Value,
+                                              (long)billNONumericUpDown.Value, datarow.مسلسل);
+            MainDataSet.تخزين_الثلاجة.AcceptChanges();
+        }
+
+        private void FridgeStoragesUserControl_LoadAll(object sender, EventArgs e)
+        {
+            تخزين_الثلاجةTableAdapter.Fill(MainDataSet.تخزين_الثلاجة, DateTime.MinValue, DateTime.MaxValue);
+        }
+
+        private void FridgeStoragesUserControl_LoadByPeriod(object sender, EventArgs e)
+        {
+            تخزين_الثلاجةTableAdapter.Fill(MainDataSet.تخزين_الثلاجة, FilterPeriodStartDate, DateTime.Now);
+        }
+
+        private void FridgeStoragesUserControl_LoadByTimeRange(object sender, EventArgs e)
+        {
+            تخزين_الثلاجةTableAdapter.Fill(MainDataSet.تخزين_الثلاجة, FilterStartDate, FilterEndDate);
+        }
+
+        private void FridgeStoragesUserControl_DeleteRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            MainDataSet.تخزين_الثلاجة.AcceptChanges();
+            تخزين_الثلاجةTableAdapter.sp_FridgeStorage_Delete(((ShopDataSet.تخزين_الثلاجةRow)CurrentDataRow).مسلسل);
+        }
+
+        private void SupplierComboBoxValidated(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(supplierComboBox.Text))
+            {
+                supplierComboBox.BackColor = new Color();
+                object debt = new CommonQueriesTableAdapter().sp_GetSupplierCredit(supplierComboBox.Text);
+                if (debt != null)
+                {
+                    MakeNumericUpDownReadOnly(beginningBalanceNumericUpDown);
+                    beginningBalanceNumericUpDown.Value = (decimal)debt;
+                    label8.Text = Resources.CurrentBalance;
+                }
+                else
+                {
+                    MakeNumericUpDownWritable(beginningBalanceNumericUpDown);
+                    beginningBalanceNumericUpDown.Select();
+                    label8.Text = Resources.FridgeStoragesControl_SupplierComboBoxValidated_BeginningBalance;
+                    beginningBalanceNumericUpDown.Value = 0;
+                }
+            }
+        }
+
+        private void FridgeStoragesUserControl_ClearData(object sender, EventArgs e)
+        {
+            MakeNumericUpDownReadOnly(beginningBalanceNumericUpDown);
+        }
+
+        private void FridgeStoragesUserControl_RefreshingData(object sender, EventArgs e)
+        {
+            الموردينTableAdapter.ClearBeforeFill =
+                الأنواع_الخامTableAdapter.ClearBeforeFill = الثلاجاتTableAdapter.ClearBeforeFill = (bool) sender;
+            الموردينTableAdapter.Fill(MainDataSet.الموردين);
+            الأنواع_الخامTableAdapter.Fill(MainDataSet.الأنواع_الخام);
+            الثلاجاتTableAdapter.Fill(MainDataSet.الثلاجات);
+        }
+
+        /// <summary>
+        /// </summary>
+        public override void SelectFirstBoxInPanel()
+        {
+            fridgesComboBox.Select();
+        }
+
+        #endregion
+    }
+}

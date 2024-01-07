@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShopManager</RootNamespace>
+    <AssemblyName>ShopManager</AssemblyName>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <StartupObject>ShopManager.Program</StartupObject>
+    <ApplicationIcon>..\ShopManager.ProjectResources\Resources\building.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <ManifestCertificateThumbprint>1C6C69C9E4618250C0BB910240D192EEB08CDE4D</ManifestCertificateThumbprint>
+    <ManifestKeyFile>ShopManager_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>C:\Documents and Settings\sOlOnXPL\Desktop\WebSite\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>ar</TargetCulture>
+    <ProductName>g</ProductName>
+    <PublisherName>g</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>false</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Logger, Version=1.0.1199.25392, Culture=neutral" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Forms\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Forms\MainInstaller.cs" />
+    <Compile Include="Main Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Forms\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Forms\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Forms\SaveRestoreProcess.cs" />
+    <Compile Include="Main Forms\ShopManagerInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main Forms\ShopManagerInstaller.Designer.cs">
+      <DependentUpon>ShopManagerInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Forms\StartUpWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Forms\StartUpWizard.Designer.cs">
+      <DependentUpon>StartUpWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Forms\OptionsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\StartUpWizard_Loading_Shown.sequencediagram.layout">
+      <DependentUpon>StartUpWizard_Loading_Shown.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\StartUpWizard_StartUpWizard.sequencediagram.layout">
+      <DependentUpon>StartUpWizard_StartUpWizard.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Design\StartUpWizard_Loading_Shown.sequencediagram" />
+    <None Include="Design\StartUpWizard_StartUpWizard.sequencediagram" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Design\AllClassDiagram.cd" />
+    <EmbeddedResource Include="Data\dbscript.sql" />
+    <EmbeddedResource Include="Data\masterscript.sql" />
+    <None Include="Design\ClassDependencies.dgml" />
+    <None Include="Design\ShMaXAssemblyDependencies.dgml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Design\_تعديلات.docx" />
+    <None Include="Main Forms\LoggingStatus.Config" />
+    <None Include="Design\Main_Main.sequencediagram" />
+    <None Include="Properties\app.manifest" />
+    <EmbeddedResource Include="Main Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Forms\StartUpWizard.resx">
+      <DependentUpon>StartUpWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Main_Main.sequencediagram.layout">
+      <DependentUpon>Main_Main.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentControl.bmp" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Notes\Design Notes.txt" />
+    <None Include="Notes\SQLCODE.txt" />
+    <None Include="Notes\UpgradeInstruction.txt" />
+    <None Include="Design\ShMaXNamespaceDependencies.dgml" />
+    <None Include="ShopManager_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.8.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2008 Report Viewer</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.9.2">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition SP2 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Main Forms\Logger.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopManager.Controls\ShopManager.Controls.csproj">
+      <Project>{0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E}</Project>
+      <Name>ShopManager.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopManager.Reports\ShopManager.Reports.csproj">
+      <Project>{967279F6-8127-4916-A6B8-E9B18762760F}</Project>
+      <Name>ShopManager.Reports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopManager.ProjectResources\ShopManager.ProjectResources.csproj">
+      <Project>{EA63C7AF-F6CE-421A-AB40-46F402AA55A6}</Project>
+      <Name>ShopManager.ProjectResources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_145.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_261.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Design\TextFile1.txt" />
+    <None Include="Resources\44%282%29.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- Import of the MSBuildCommunityTask targets -->
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <!-- to manage version number -->
+  <Target Name="Version">
+    <Version VersionFile="version.txt" RevisionType="Increment">
+      <Output TaskParameter="Major" PropertyName="Major" />
+      <Output TaskParameter="Minor" PropertyName="Minor" />
+      <Output TaskParameter="Build" PropertyName="Build" />
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </Version>
+  </Target>
+  <!-- to generate our personnal version info -->
+  <Target Name="AssemblyInfo">
+    <SvnVersion LocalPath="$(MSBuildProjectDirectory) " ToolPath="C:\Program Files (x86)\CollabNet\Subversion Server\">
+      <Output TaskParameter="Revision" PropertyName="Build" />
+    </SvnVersion>
+    <AssemblyInfo CodeLanguage="CS" OutputFile="Properties\AssemblyInfo.cs" AssemblyTitle="برنامج إدارة المحل" AssemblyDescription="برنامج لإدارة محل" AssemblyCompany="sOlOnXPL Software" AssemblyProduct="ShopManager" AssemblyCopyright="Copyright © sOlOnXPL Software 2010" AssemblyTrademark="sOlOnXPL Software" ComVisible="false" Guid="88812638-9547-4480-9bf4-4fe25103b35c" AssemblyVersion="$(Major).$(Minor).$(Revision).$(Build)" AssemblyFileVersion="$(Major).$(Minor).$(Revision).$(Build)" Condition="$(Revision) != '0' " />
+  </Target>
+  <!-- We launch these two targets -->
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="Version" />
+    <CallTarget Targets="AssemblyInfo" />
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

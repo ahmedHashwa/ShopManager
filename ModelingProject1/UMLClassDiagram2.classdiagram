@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0f15a861-c5ff-433d-b372-85414694a2dd" name="UMLClassDiagram2" linkedPackageId="361b9759-0685-4157-a7c9-6211a0b9745a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4f11ca39-3f84-4b28-a85f-67be98ea3b37" name="التلاجة" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="13eb6038-e4cd-4cda-9fec-6fc9befc2551" />
+        <ownedAttributesInternal>
+          <property Id="1fa50712-e37f-4271-8122-78ec637f4c60" name="اسم التلاجة" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="439d5f13-0750-4b0f-8eaa-a66234b419d9" />
+          </property>
+          <property Id="7fccbae1-58e5-4285-a2fd-676035f9a4d6" name="معرف التلاجة" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a3cfd6b8-d772-4364-b3eb-6ff442b21c9c" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ee2de13e-3d5b-4205-b2c8-ce3fbe53ac01" name="جدول التخزين بالتلاجة" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="045ef3c4-c391-444b-b778-e8d10180ac27" />
+        <ownedAttributesInternal>
+          <property Id="3519c1be-bd13-42ea-9d45-6a08da37e3fb" name="معرف التلاجة" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6f2b6501-f59b-4208-9c3b-dd376ea0be75" />
+          </property>
+          <property Id="94ecb611-0b8d-4eda-87a8-fc00f7d58b85" name="معرف الخام" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c34d8731-2045-4195-ba34-62a30be36577" />
+          </property>
+          <property Id="1bd64747-0252-4728-903c-397f67cbfd49" name="الكمية بالكيلو" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="30607418-9a51-4662-b811-2c58a690e838" />
+          </property>
+          <property Id="99756c79-d70b-426f-ac12-0f19e683d2d5" name="العدد بالاقفاص" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ed82e5b0-f83e-46c5-9df5-904c40207df9" />
+          </property>
+          <property Id="c3c78985-45a1-49c0-af28-7bee85250606" name="معرف المورد" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4c400b9a-f843-4e29-8b05-e22651d90002" />
+          </property>
+          <property Id="54d01eb3-0c13-4668-8364-013a82c04af6" name="تاريخ الادخال" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ebba2c24-f142-4b95-b213-1b6592bbbdbc" />
+          </property>
+          <property Id="f1504f50-90bd-4d18-9512-7e0cf23941e2" name="رقم الايصال" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3a8d002c-47cb-4e5b-ae2a-c8a5e2d2c7cd" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="842b0361-9fff-438f-b9bb-c3ddc8fa47a4" name="جدول صرف للمصنع" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a984711-5f55-4053-bf3e-40d6b384c67f" />
+        <ownedAttributesInternal>
+          <property Id="96af6b15-72c2-457e-8f17-6f4bdf75e330" name="معرف الخام" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0173d53d-32de-45e7-8b24-5f26a2a47278" />
+          </property>
+          <property Id="8d42292e-851b-44c8-ac64-165b2d23bce7" name="العدد المنصرف" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8b6ba00e-b959-4468-bd16-0b81430a442d" />
+          </property>
+          <property Id="82c08e88-6559-43a4-aefc-1d9ce2f7d8ab" name="معرف التلاجة" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="655f3f7a-cdd6-42ab-bca5-f1cdcb68860a" />
+          </property>
+          <property Id="1a340c1b-6ffe-4058-bb75-a17ee5bc7faa" name="وزن الخارج" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f950a7d0-99aa-491e-9600-7841bd1a52d6" />
+          </property>
+          <property Id="5d9d3eba-0a7e-4210-9d28-bd6da1de21db" name="تاريخ الصرف" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1c179dd7-9a4c-4e26-817a-5c1e9655d5de" />
+          </property>
+          <property Id="6a1c84dc-351b-4168-919b-b2fa620baac7" name="رقم الايصال" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="89feb757-f923-4714-949e-ce64319279aa" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="83afc239-a6e0-4c79-8a03-32498ec7f9b6" name="جدول التصنيع" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7c9e93fc-0d8f-4fc0-8039-5fdfa9facfcf" />
+        <ownedAttributesInternal>
+          <property Id="718ad30b-770a-4fac-9d1e-e7fdca7d4151" name="تاريخ التصنيع" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9b0b1e50-375b-453a-afaf-cf09fdf8a85d" />
+          </property>
+          <property Id="1b37bb11-ee36-459b-9d44-5d8e073824da" name="عدد الاقفاص" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="699c58ca-f048-443f-9dd4-dcc21f3bf90a" />
+          </property>
+          <property Id="8c6e440a-6339-4b5f-a8ca-ab14198a7de0" name="الكمية بالكيلو" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8a80f720-7ef4-433d-99c4-5a5e8f0ad677" />
+          </property>
+          <property Id="4a8d54e4-8bd0-467e-8f49-2df8e6879395" name="معرف الخرج" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="32f57bc0-ef63-4828-8272-8dcb23b3f905" />
+          </property>
+          <property Id="0aefdb0c-1a2c-4197-8996-594b743cbd0c" name="معرف التصنيع" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e5e905f5-d10f-4654-ac73-4780ae01db9e" />
+          </property>
+          <property Id="db3104fd-028d-40b3-a5ae-68ca1b0ea4ee" name="كمية السكر" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d3e44780-1df2-4864-977f-9504a9e5a9c3" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="900454b2-de28-4283-a3c3-c08b50cdf810" name="جدول الخرج" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="569bbd2b-74d6-4599-98ed-fba10f0b79e9" />
+        <ownedAttributesInternal>
+          <property Id="c5652150-2ef4-4bc6-bf27-1f98c746aece" name="معرف الخرج" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e6803957-f17a-404b-8ec6-901f4bb7fbba" />
+          </property>
+          <property Id="add79dc4-88ab-4906-8526-33df367227ed" name="نوع الخرج" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="04539aa1-c943-49db-b00d-3287712186b6" />
+          </property>
+          <property Id="05ff80db-635c-4d66-a8be-f61a33e1ec2a" name="اسم الخرج" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0120bcc4-40ed-4453-b61b-61762bfb4583" />
+          </property>
+          <property Id="08566175-25e1-4ea1-907c-b0b592b53568" name="الكمية" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d9afea97-ff59-48d8-a1c3-a69a9ac839a4" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="361b9759-0685-4157-a7c9-6211a0b9745a" name="ModelingProject1">
+    <elementDefinition Id="d823b4df-5ed0-4dd6-823c-fd958408217b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="cbf50fa5-72e4-47c9-af3d-40d9343dcad9">
+        <profileInstance Id="9c819cc0-aa67-444b-b690-96a50c19a104" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1e2be969-4b4f-4e94-9355-91da8860b724">
+        <profileInstance Id="9cd8a80d-ef76-4cc4-b4f4-086fef0e2737" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

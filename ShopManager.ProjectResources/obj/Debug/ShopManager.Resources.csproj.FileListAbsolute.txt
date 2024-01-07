@@ -1,0 +1,14 @@
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\Resources\obj\Debug\ResolveAssemblyReference.cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\Resources\obj\Debug\ShopManager.Resources.Properties.Resources.resources
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\Resources\obj\Debug\ShopManager.Resources.csproj.GenerateResource.Cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\Resources\bin\Debug\ShopManager.Resources.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\Resources\bin\Debug\ShopManager.Resources.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\Resources\obj\Debug\ShopManager.Resources.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\Resources\obj\Debug\ShopManager.Resources.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Resources\bin\Debug\ShopManager.Resources.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Resources\bin\Debug\ShopManager.Resources.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Resources\obj\Debug\ResolveAssemblyReference.cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Resources\obj\Debug\ShopManager.Resources.Properties.Resources.resources
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Resources\obj\Debug\ShopManager.Resources.csproj.GenerateResource.Cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Resources\obj\Debug\ShopManager.Resources.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Resources\obj\Debug\ShopManager.Resources.pdb

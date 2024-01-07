@@ -1,0 +1,1561 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="967279F6-8127-4916-A6B8-E9B18762760F/d:Reports/f:حركة الثلاجة.rdlc" caret="733" fromTop="12" />
+      <File id="967279F6-8127-4916-A6B8-E9B18762760F/d:Reports/f:المشتريات.rdlc" caret="544" fromTop="6" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Data/f:ShopDataSet.xsd" caret="0" fromTop="0" />
+      <File id="EA63C7AF-F6CE-421A-AB40-46F402AA55A6/d:Data/f:commonDataSet.Designer.cs" caret="317" fromTop="6" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/d:Main Forms/f:Main.Designer.cs" caret="623" fromTop="8" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/d:Design/f:ShMaXAssemblyDependencies.dgml" caret="1829" fromTop="11" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/d:Data/f:dbscript.sql" caret="21974" fromTop="470" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/d:Data/f:masterscript.sql" caret="1897" fromTop="4" />
+      <File id="018A1BD2-22E4-4190-A82A-A7A734C8431A/f:Database.cs" caret="382" fromTop="17" />
+      <File id="967279F6-8127-4916-A6B8-E9B18762760F/d:Reports/f:وارد الثلاجة.rdlc" caret="0" fromTop="0" />
+      <File id="967279F6-8127-4916-A6B8-E9B18762760F/f:ReportViewerControl.cs" caret="7283" fromTop="9" />
+      <File id="EA63C7AF-F6CE-421A-AB40-46F402AA55A6/d:Properties/f:Resources.Designer.cs" caret="4311" fromTop="3" />
+      <File id="EA63C7AF-F6CE-421A-AB40-46F402AA55A6/d:Properties/f:Resources.resx" caret="10944" fromTop="70" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/d:Main Forms/f:MainInstaller.cs" caret="1570" fromTop="22" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeStoragesControl.Designer.cs" caret="13206" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeOutsControl.designer.cs" caret="30754" fromTop="16" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:ManufacturingsControl.designer.cs" caret="30387" fromTop="16" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/f:Program.cs" caret="1400" fromTop="16" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Data/f:ShopDataSet.Designer.cs" caret="470126" fromTop="13" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/d:Main Forms/f:OptionsForm.cs" caret="1016" fromTop="7" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/d:Main Forms/f:Main.cs" caret="7552" fromTop="13" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.Designer.cs" caret="45120" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:ExpensesControl.cs" caret="5018" fromTop="9" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeOutsControl.cs" caret="6792" fromTop="8" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:ManufacturingsControl.cs" caret="4898" fromTop="9" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Basic/f:ParentControl.cs" caret="29641" fromTop="10" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:SalesControl.cs" caret="7083" fromTop="6" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.cs" caret="10352" fromTop="5" />
+      <File id="EA63C7AF-F6CE-421A-AB40-46F402AA55A6/d:Data/f:commonDataSet.cs" caret="0" fromTop="0" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeStoragesControl.cs" caret="5602" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:ManufacturingsControl.designer.cs" caret="28060" fromTop="28" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeStoragesControl.Designer.cs" caret="12724" fromTop="7" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeStoragesControl.Designer.cs" caret="13206" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeOutsControl.designer.cs" caret="30754" fromTop="16" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:ManufacturingsControl.designer.cs" caret="30387" fromTop="16" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.cs" caret="6168" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Basic/f:ParentControl.cs" caret="29432" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Basic/f:ParentControl.cs" caret="29672" fromTop="28" />
+      <File id="A65E3CE9-7160-4A59-BB0B-BBAB2C3EAC6C/d:Main Forms/f:Main.cs" caret="7915" fromTop="21" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.cs" caret="12575" fromTop="11" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.cs" caret="12219" fromTop="9" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:SalesControl.cs" caret="6708" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:ExpensesControl.cs" caret="5109" fromTop="9" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:ExpensesControl.cs" caret="5018" fromTop="9" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeOutsControl.cs" caret="6923" fromTop="11" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeStoragesControl.cs" caret="11422" fromTop="10" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:ManufacturingsControl.cs" caret="4898" fromTop="9" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:SalesControl.cs" caret="6708" fromTop="13" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:SalesControl.cs" caret="6708" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:SalesControl.cs" caret="6708" fromTop="9" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:SalesControl.cs" caret="6708" fromTop="16" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:SalesControl.cs" caret="539" fromTop="16" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:SalesControl.cs" caret="6461" fromTop="10" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeStoragesControl.cs" caret="10572" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeStoragesControl.cs" caret="10572" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.cs" caret="10698" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.cs" caret="11295" fromTop="14" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.cs" caret="9713" fromTop="15" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:PurchasesControl.cs" caret="9451" fromTop="0" />
+      <File id="0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E/d:Regular/f:FridgeStoragesControl.cs" caret="5713" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="server" priority="3" />
+      <Item value="db" priority="1" />
+      <Item value="re" priority="1" />
+      <Item value="if" priority="82" />
+      <Item value="switch" priority="8" />
+      <Item value="loadTypeComboBox" priority="2" />
+      <Item value="case" priority="7" />
+      <Item value="break" priority="8" />
+      <Item value="atLastPanel" priority="1" />
+      <Item value="true" priority="70" />
+      <Item value="fromToPanel" priority="3" />
+      <Item value="false" priority="60" />
+      <Item value="var" priority="50" />
+      <Item value="new" priority="48" />
+      <Item value="List" priority="0" />
+      <Item value="string" priority="30" />
+      <Item value="mainFilteringContextMenu" priority="1" />
+      <Item value="hideColumnToolStripMenuItem" priority="0" />
+      <Item value="DataGridViewHeaderCell" priority="0" />
+      <Item value="DataGridViewCheckBoxColumn" priority="0" />
+      <Item value="return" priority="45" />
+      <Item value="CurrentColumn" priority="5" />
+      <Item value="showAllColumnsToolStripMenuItem" priority="0" />
+      <Item value="foreach" priority="8" />
+      <Item value="FilteredDataGridView" priority="1" />
+      <Item value="DataGridViewColumn" priority="3" />
+      <Item value="column" priority="6" />
+      <Item value="freezeColumnToolStripMenuItem" priority="0" />
+      <Item value="Void" priority="0" />
+      <Item value="delegate" priority="7" />
+      <Item value="void" priority="12" />
+      <Item value="dataGridViewColumn" priority="0" />
+      <Item value="actOnDgv" priority="1" />
+      <Item value="unFreezeAllColumnToolStripMenuItem" priority="0" />
+      <Item value="ProcessFilteredDataGridView" priority="1" />
+      <Item value="is" priority="4" />
+      <Item value="ToolStripMenuItem" priority="1" />
+      <Item value="parentDataGridView" priority="7" />
+      <Item value="Browsable" priority="2" />
+      <Item value="Category" priority="0" />
+      <Item value="bool" priority="22" />
+      <Item value="enum" priority="3" />
+      <Item value="LoadMode" priority="3" />
+      <Item value="default" priority="1" />
+      <Item value="_loadMode" priority="1" />
+      <Item value="null" priority="60" />
+      <Item value="sortAscToolStripMenuItem" priority="0" />
+      <Item value="DataGridViewColumnSortMode" priority="0" />
+      <Item value="ListSortDirection" priority="0" />
+      <Item value="sortDesToolStripMenuItem" priority="0" />
+      <Item value="DateTime" priority="4" />
+      <Item value="DateTimeLabel" priority="0" />
+      <Item value="System" priority="5" />
+      <Item value="Globalization" priority="0" />
+      <Item value="Calendar" priority="0" />
+      <Item value="DateTimeFormatInfo" priority="0" />
+      <Item value="labelRelaseDate" priority="0" />
+      <Item value="Reflection" priority="0" />
+      <Item value="Assembly" priority="0" />
+      <Item value="FileLoadException" priority="0" />
+      <Item value="Enum" priority="0" />
+      <Item value="ExecuteMode" priority="2" />
+      <Item value="executeMode" priority="0" />
+      <Item value="static" priority="16" />
+      <Item value="sqlConnection" priority="1" />
+      <Item value="decimal" priority="13" />
+      <Item value="_masterConnection" priority="0" />
+      <Item value="Dir" priority="3" />
+      <Item value="SqlConnection" priority="0" />
+      <Item value="Environment" priority="8" />
+      <Item value="Application" priority="7" />
+      <Item value="Directory" priority="1" />
+      <Item value="public" priority="18" />
+      <Item value="MainInstaller" priority="17" />
+      <Item value="finally" priority="2" />
+      <Item value="toolStripStatusLabel1" priority="0" />
+      <Item value="try" priority="8" />
+      <Item value="exception" priority="4" />
+      <Item value="mbox" priority="0" />
+      <Item value="FileStyleUriParser" priority="2" />
+      <Item value="e" priority="42" />
+      <Item value="else" priority="22" />
+      <Item value="Exception" priority="4" />
+      <Item value="QueriesTableAdapter" priority="0" />
+      <Item value="ShopManager" priority="14" />
+      <Item value="global" priority="0" />
+      <Item value="Data" priority="9" />
+      <Item value="Properties" priority="7" />
+      <Item value="Settings" priority="7" />
+      <Item value="المشترياتTableAdapter" priority="2" />
+      <Item value="ShopDataSet" priority="6" />
+      <Item value="Resources" priority="8" />
+      <Item value="ReportViewerControl" priority="0" />
+      <Item value="Controls" priority="7" />
+      <Item value="MainDataSet" priority="23" />
+      <Item value="ShopDataSetTableAdapters" priority="4" />
+      <Item value="ProjectResources" priority="3" />
+      <Item value="object" priority="3" />
+      <Item value="Reports.ShopDataSetTableAdapters" priority="0" />
+      <Item value="ReportDataSetTableAdapters" priority="2" />
+      <Item value="this" priority="11" />
+      <Item value="sendErrorReportEmailToolStripButton" priority="1" />
+      <Item value="statusToolStripStatusLabel" priority="2" />
+      <Item value="DataGridViewComboBoxColumn" priority="0" />
+      <Item value="x" priority="2" />
+      <Item value="BindingSource" priority="2" />
+      <Item value="i" priority="2" />
+      <Item value="DataRowView" priority="2" />
+      <Item value="Dictionary" priority="0" />
+      <Item value="Dictionary&lt;string,string&gt;" priority="0" />
+      <Item value="display" priority="0" />
+      <Item value="Value" priority="2" />
+      <Item value="value" priority="8" />
+      <Item value="key" priority="5" />
+      <Item value="clmbsrc" priority="1" />
+      <Item value="cboxcol" priority="0" />
+      <Item value="filteringContextMenu" priority="1" />
+      <Item value="salesItemsDataGridView" priority="23" />
+      <Item value="viewReportButton" priority="1" />
+      <Item value="clientSupplierNameComboBox" priority="0" />
+      <Item value="as" priority="7" />
+      <Item value="debt" priority="1" />
+      <Item value="out" priority="1" />
+      <Item value="NoNullAllowedException" priority="0" />
+      <Item value="Validate" priority="0" />
+      <Item value="base" priority="1" />
+      <Item value="ValidationPassed" priority="1" />
+      <Item value="sender" priority="12" />
+      <Item value="protected" priority="3" />
+      <Item value="ValidationOk" priority="1" />
+      <Item value="FilterCollapsed" priority="0" />
+      <Item value="أنواعالبيعbindingSource" priority="0" />
+      <Item value="النوعالفرعيDataGridViewTextBoxColumn" priority="2" />
+      <Item value="الأنواع_الفرعية_للبيعTableAdapter" priority="0" />
+      <Item value="النوعDataGridViewTextBoxColumn" priority="0" />
+      <Item value="short" priority="2" />
+      <Item value="data" priority="2" />
+      <Item value="ArgumentException" priority="0" />
+      <Item value="dateTypeComboBox" priority="0" />
+      <Item value="prop" priority="11" />
+      <Item value="Boolean" priority="0" />
+      <Item value="loadnumbers" priority="1" />
+      <Item value="CalculateValue" priority="1" />
+      <Item value="aftersalesLabel" priority="1" />
+      <Item value="comboControl" priority="4" />
+      <Item value="ComboBox" priority="0" />
+      <Item value="selecedobj" priority="0" />
+      <Item value="cbox" priority="6" />
+      <Item value="selecedid" priority="1" />
+      <Item value="الأنواعالفرعيةللبيعbindingSource" priority="1" />
+      <Item value="override" priority="12" />
+      <Item value="treasuryTa" priority="1" />
+      <Item value="ReportDataSet" priority="0" />
+      <Item value="row" priority="15" />
+      <Item value="initialbalance" priority="1" />
+      <Item value="الأنواعالخامBindingSource" priority="0" />
+      <Item value="rawKindComboBox" priority="1" />
+      <Item value="الأنواع_الخامTableAdapter" priority="0" />
+      <Item value="RawKindRow" priority="2" />
+      <Item value="SupplierRow" priority="0" />
+      <Item value="raw" priority="3" />
+      <Item value="Sup" priority="0" />
+      <Item value="billNONumericUpDown" priority="2" />
+      <Item value="CurrentDataRow" priority="6" />
+      <Item value="datarow" priority="28" />
+      <Item value="sup" priority="0" />
+      <Item value="long" priority="11" />
+      <Item value="clientComboBox" priority="3" />
+      <Item value="BeginningBalanceNumericUpDown" priority="5" />
+      <Item value="expensesTableAdapter" priority="3" />
+      <Item value="int" priority="2" />
+      <Item value="ClientRow" priority="1" />
+      <Item value="clrow" priority="1" />
+      <Item value="salesvaluelabel" priority="1" />
+      <Item value="FirstTime" priority="1" />
+      <Item value="ParentBindingSourceSortString" priority="0" />
+      <Item value="AutoCompleteSource" priority="0" />
+      <Item value="AllowToggleInsertEdit" priority="0" />
+      <Item value="Main" priority="2" />
+      <Item value="main" priority="4" />
+      <Item value="_main" priority="7" />
+      <Item value="SQLtextBox" priority="0" />
+      <Item value="Keys" priority="3" />
+      <Item value="CboxEntered" priority="1" />
+      <Item value="using" priority="1" />
+      <Item value="Management" priority="0" />
+      <Item value="property" priority="2" />
+      <Item value="byte" priority="0" />
+      <Item value="numericUpDown1" priority="0" />
+      <Item value="sendInfoBackgroundWorker" priority="0" />
+      <Item value="sendInfoIDButton" priority="0" />
+      <Item value="serialTextBox" priority="1" />
+      <Item value="GetPassword" priority="1" />
+      <Item value="passwordTextBox" priority="1" />
+      <Item value="confirmPasswordTextBox" priority="0" />
+      <Item value="AppDomain" priority="0" />
+      <Item value="ShopNameTextBox" priority="1" />
+      <Item value="TreasuryBalanceNumericUpDown" priority="1" />
+      <Item value="CloseReason" priority="0" />
+      <Item value="Loading" priority="0" />
+      <Item value="Hide" priority="2" />
+      <Item value="OptionsForm" priority="0" />
+      <Item value="Close" priority="2" />
+      <Item value="startUpWizard" priority="2" />
+      <Item value="_startUpWizard" priority="1" />
+      <Item value="StartPosition" priority="0" />
+      <Item value="FormStartPosition" priority="0" />
+      <Item value="label1" priority="1" />
+      <Item value="AboutBox" priority="0" />
+      <Item value="DirectoryInfo" priority="0" />
+      <Item value="createDatabaseBackgroundWorker" priority="0" />
+      <Item value="startButton" priority="1" />
+      <Item value="Restore" priority="0" />
+      <Item value="createDatabaseBackgroundWorker_RunWorkerCompleted" priority="0" />
+      <Item value="أنواع_الصرفTableAdapter" priority="0" />
+      <Item value="scSqlServer" priority="1" />
+      <Item value="Clear" priority="0" />
+      <Item value="num" priority="1" />
+      <Item value="CurrentMode" priority="2" />
+      <Item value="SubmitMode" priority="1" />
+      <Item value="parentBindingSource" priority="2" />
+      <Item value="continue" priority="4" />
+      <Item value="aftersalesCredit" priority="0" />
+      <Item value="command" priority="1" />
+      <Item value="Connection" priority="0" />
+      <Item value="sql" priority="1" />
+      <Item value="TransactionScope" priority="0" />
+      <Item value="TransactionScopeOption" priority="0" />
+      <Item value="ts" priority="1" />
+      <Item value="Submitting" priority="1" />
+      <Item value="RemoveErroredItem" priority="1" />
+      <Item value="dr" priority="0" />
+      <Item value="DataRow" priority="4" />
+      <Item value="DatasetDatarow" priority="2" />
+      <Item value="serial" priority="1" />
+      <Item value="InsertKeyMode" priority="0" />
+      <Item value="InsertedRow" priority="4" />
+      <Item value="IFileReaderService" priority="0" />
+      <Item value="const" priority="0" />
+      <Item value="readonly" priority="0" />
+      <Item value="Hidden" priority="1" />
+      <Item value="Basic" priority="0" />
+      <Item value="FilteringContextMenu" priority="0" />
+      <Item value="String" priority="0" />
+      <Item value="StringBuilder" priority="0" />
+      <Item value="dd" priority="0" />
+      <Item value="regex" priority="2" />
+      <Item value="Regex" priority="0" />
+      <Item value="_reportfilename" priority="0" />
+      <Item value="ParentControl" priority="7" />
+      <Item value="DialogResult" priority="5" />
+      <Item value="result" priority="0" />
+      <Item value="MessageBox" priority="1" />
+      <Item value="MessageBoxButtons" priority="1" />
+      <Item value="MessageBoxIcon" priority="1" />
+      <Item value="MessageBoxDefaultButton" priority="1" />
+      <Item value="MessageBoxOptions" priority="3" />
+      <Item value="ex" priority="6" />
+      <Item value="Debugger" priority="0" />
+      <Item value="SaveFileDialog" priority="1" />
+      <Item value="saveFileDialog" priority="5" />
+      <Item value="Reportfilename" priority="0" />
+      <Item value="event" priority="3" />
+      <Item value="EventHandler" priority="3" />
+      <Item value="ErrorOccured" priority="1" />
+      <Item value="OnErrorOccured" priority="0" />
+      <Item value="output" priority="1" />
+      <Item value="errorNumberToolStripStatusLabel" priority="1" />
+      <Item value="activiated" priority="0" />
+      <Item value="activiationPanel" priority="1" />
+      <Item value="File" priority="3" />
+      <Item value="deleteDBresult" priority="0" />
+      <Item value="Process" priority="0" />
+      <Item value="throw" priority="5" />
+      <Item value="catch" priority="1" />
+      <Item value="DatabaseFile" priority="1" />
+      <Item value="df" priority="0" />
+      <Item value="Database" priority="1" />
+      <Item value="dgv" priority="1" />
+      <Item value="kindrow" priority="0" />
+      <Item value="index" priority="2" />
+      <Item value="subKindRow" priority="2" />
+      <Item value="item" priority="1" />
+      <Item value="SelectFirstBoxInPanel" priority="0" />
+      <Item value="EventsAdded" priority="1" />
+      <Item value="Mode" priority="4" />
+      <Item value="_mode" priority="1" />
+      <Item value="panel1" priority="0" />
+      <Item value="InitializeNormal" priority="0" />
+      <Item value="loading" priority="0" />
+      <Item value="subKindRows" priority="0" />
+      <Item value="Length" priority="2" />
+      <Item value="bindingSource" priority="1" />
+      <Item value="filter" priority="0" />
+      <Item value="results" priority="3" />
+      <Item value="FindRow" priority="2" />
+      <Item value="AddItem" priority="0" />
+      <Item value="addItem" priority="1" />
+      <Item value="TableLayoutPanel" priority="0" />
+      <Item value="balanceAfterPurchasenumericUpDown" priority="1" />
+      <Item value="beginningBalanceNumericUpDown" priority="1" />
+      <Item value="quantityInKilosNumericUpDown" priority="6" />
+      <Item value="paidNumericUpDown" priority="1" />
+      <Item value="ShowKeyBoardHelp" priority="0" />
+      <Item value="mainTreeView" priority="8" />
+      <Item value="_parentControl" priority="5" />
+      <Item value="MouseUp" priority="1" />
+      <Item value="node" priority="1" />
+      <Item value="TreeNode" priority="1" />
+      <Item value="LoggedIn" priority="0" />
+      <Item value="TreeViewCancelEventArgs" priority="0" />
+      <Item value="TreeViewAction" priority="0" />
+      <Item value="mainTreeView_BeforeSelect" priority="0" />
+      <Item value="logoutToolStripButton_Click" priority="0" />
+      <Item value="logoutToolStripButton" priority="0" />
+      <Item value="loginPanel" priority="1" />
+      <Item value="mainTreeView_AfterSelect" priority="0" />
+      <Item value="TreeViewEventArgs" priority="0" />
+      <Item value="ColorDepth" priority="0" />
+      <Item value="cell" priority="1" />
+      <Item value="DataGridViewCell" priority="1" />
+      <Item value="Color" priority="3" />
+      <Item value="Message" priority="0" />
+      <Item value="supplierComboBox" priority="5" />
+      <Item value="control" priority="3" />
+      <Item value="c" priority="0" />
+      <Item value="DataGridViewEditMode" priority="0" />
+      <Item value="DoNotAllowExit" priority="0" />
+      <Item value="مسلسل_مفرداتDataGridViewTextBoxColumn" priority="0" />
+      <Item value="optionsToolStripButton" priority="0" />
+      <Item value="other" priority="0" />
+      <Item value="ValidatedOk" priority="3" />
+      <Item value="DataGridViewTextBoxCell" priority="0" />
+      <Item value="rowNumberToolStripStatusLabel" priority="0" />
+      <Item value="OutputNumberOfrowsChanged" priority="0" />
+      <Item value="المبيعاتTableAdapter" priority="2" />
+      <Item value="expensesTypeDescComboBox" priority="0" />
+      <Item value="startAgain" priority="0" />
+      <Item value="exthrown" priority="0" />
+      <Item value="NumericUpDownValueChanged" priority="1" />
+      <Item value="gainedNumericUpDown" priority="0" />
+      <Item value="SalesItemsDataGridViewRowLeave" priority="0" />
+      <Item value="errorControl" priority="0" />
+      <Item value="WriteToLog" priority="0" />
+      <Item value="DatabaseExists" priority="0" />
+      <Item value="del" priority="0" />
+      <Item value="invoke" priority="0" />
+      <Item value="Invoking" priority="1" />
+      <Item value="DisplayInfoDelegate" priority="1" />
+      <Item value="_del" priority="0" />
+      <Item value="BuComplete" priority="0" />
+      <Item value="Srp" priority="0" />
+      <Item value="OperationType" priority="0" />
+      <Item value="RefreshData" priority="0" />
+      <Item value="Invoke" priority="2" />
+      <Item value="workingLabel" priority="1" />
+      <Item value="Delegate" priority="0" />
+      <Item value="SaveRestoreProcess" priority="0" />
+      <Item value="errorMessageLabel" priority="1" />
+      <Item value="BindingContext" priority="0" />
+      <Item value="Complete" priority="1" />
+      <Item value="errorLabel" priority="0" />
+      <Item value="errorMessageTextBox" priority="0" />
+      <Item value="صافي_حساب_العملاءTableAdapter" priority="3" />
+      <Item value="صافي_حساب_الموردينTableAdapter" priority="0" />
+      <Item value="ShowSuppliersCreditReport" priority="0" />
+      <Item value="StartDate" priority="0" />
+      <Item value="EndDate" priority="0" />
+      <Item value="Attribute`0" priority="0" />
+      <Item value="method" priority="0" />
+      <Item value="الثلاجةTableAdapter`0" priority="0" />
+      <Item value="الثلاجةTableAdapter" priority="0" />
+      <Item value="fridgesComboBox" priority="4" />
+      <Item value="FridgesRow" priority="0" />
+      <Item value="تخزين_الثلاجةTableAdapter" priority="0" />
+      <Item value="fri" priority="4" />
+      <Item value="الموردينTableAdapter`0" priority="0" />
+      <Item value="المشترياتTableAdapter`0" priority="0" />
+      <Item value="الثلاجاتTableAdapter" priority="0" />
+      <Item value="اسمالثلاجةDataGridViewTextBoxColumn" priority="1" />
+      <Item value="quantityNumericUpDown" priority="3" />
+      <Item value="rawkindsComboBox" priority="5" />
+      <Item value="اسم_الخامBindingSource" priority="1" />
+      <Item value="sugarQuantityNumericUpDown" priority="2" />
+      <Item value="String`0" priority="0" />
+      <Item value="frid" priority="0" />
+      <Item value="friname" priority="0" />
+      <Item value="ShowManuDeliveryReport`0" priority="0" />
+      <Item value="Enum`0" priority="0" />
+      <Item value="Action`0" priority="3" />
+      <Item value="action" priority="2" />
+      <Item value="Click" priority="1" />
+      <Item value="ComboBox`0" priority="0" />
+      <Item value="Choose" priority="0" />
+      <Item value="صرف_و_تصنيعTableAdapter`0" priority="0" />
+      <Item value="tableadapter" priority="0" />
+      <Item value="FridgeID" priority="0" />
+      <Item value="Databse`0" priority="0" />
+      <Item value="openDBFileDialog" priority="1" />
+      <Item value="dialogResult" priority="0" />
+      <Item value="DialogResult`0" priority="2" />
+      <Item value="Database`0" priority="0" />
+      <Item value="OpenFileDialog" priority="0" />
+      <Item value="Application`0" priority="1" />
+      <Item value="mainReportViewer" priority="0" />
+      <Item value="Directory`0" priority="1" />
+      <Item value="Exception`0" priority="0" />
+      <Item value="Environment`0" priority="0" />
+      <Item value="OK" priority="0" />
+      <Item value="Error" priority="0" />
+      <Item value="Button1" priority="0" />
+      <Item value="RtlReading" priority="0" />
+      <Item value="MessageBoxOptions`0" priority="0" />
+      <Item value="Color`0" priority="4" />
+      <Item value="outputDetailsDataGridView" priority="0" />
+      <Item value="Update" priority="0" />
+      <Item value="_rcontrol" priority="0" />
+      <Item value="selectReportComboBox" priority="0" />
+      <Item value="MainInstaller`0" priority="5" />
+      <Item value="sqlOpenFileDialog" priority="1" />
+      <Item value="File`0" priority="0" />
+      <Item value="allsecondcheckBox" priority="0" />
+      <Item value="منصرف_ثلاجةTableAdapter`0" priority="0" />
+      <Item value="_mainDataSet" priority="2" />
+      <Item value="DataMember" priority="0" />
+      <Item value="DataSource" priority="0" />
+      <Item value="ProgressBar`0" priority="0" />
+      <Item value="mainPictureBox" priority="3" />
+      <Item value="BackColor" priority="1" />
+      <Item value="TransparencyKey" priority="0" />
+      <Item value="PictureBoxSizeMode`0" priority="0" />
+      <Item value="DockStyle`0" priority="0" />
+      <Item value="PictureBox" priority="0" />
+      <Item value="Shown" priority="0" />
+      <Item value="timer1" priority="1" />
+      <Item value="BringToFront`0" priority="0" />
+      <Item value="TopMost" priority="0" />
+      <Item value="deleteAllToolStripButton" priority="0" />
+      <Item value="صرف_و_تصنيعTableAdapter" priority="0" />
+      <Item value="EventHandler`0" priority="1" />
+      <Item value="DeleteAll" priority="1" />
+      <Item value="DeleteAll`0" priority="1" />
+      <Item value="DeleteDataAll" priority="4" />
+      <Item value="RefreshData`0" priority="1" />
+      <Item value="BackgroundImage" priority="0" />
+      <Item value="CrossAppDomainDelegate`0" priority="0" />
+      <Item value="ServiceControllerStatus`0" priority="0" />
+      <Item value="BackgroundImageLayout" priority="0" />
+      <Item value="Stretch" priority="0" />
+      <Item value="Threading" priority="1" />
+      <Item value="Thread`0" priority="13" />
+      <Item value="ThreadStart" priority="2" />
+      <Item value="StartUpWizard`0" priority="0" />
+      <Item value="private" priority="1" />
+      <Item value="CreateMain`0" priority="0" />
+      <Item value="_maincreated" priority="0" />
+      <Item value="_mainThread" priority="3" />
+      <Item value="Stopped" priority="0" />
+      <Item value="ShowMain`0" priority="0" />
+      <Item value="while" priority="1" />
+      <Item value="ThreadState`0" priority="1" />
+      <Item value="Load" priority="0" />
+      <Item value="_scSqlServer" priority="2" />
+      <Item value="Running" priority="1" />
+      <Item value="dateTimeTimer" priority="4" />
+      <Item value="Timer`0" priority="0" />
+      <Item value="timer" priority="4" />
+      <Item value="Timer" priority="0" />
+      <Item value="Timers" priority="0" />
+      <Item value="mainBackgroundWorker" priority="5" />
+      <Item value="Hide`0" priority="2" />
+      <Item value="_صرف_الثلاجاتTableAdapter`0" priority="0" />
+      <Item value="fridge" priority="1" />
+      <Item value="صرف_الثلاجاتRow" priority="0" />
+      <Item value="DataRowBuilder" priority="0" />
+      <Item value="صرف_الثلاجاتTableAdapter`0" priority="0" />
+      <Item value="العملاءTableAdapter" priority="0" />
+      <Item value="client" priority="1" />
+      <Item value="اسمالخامDataGridViewTextBoxColumn" priority="1" />
+      <Item value="kiloPriceNumericUpDown" priority="1" />
+      <Item value="jerkinPriceNumericUpDown" priority="0" />
+      <Item value="MarqueeAnimationSpeed" priority="0" />
+      <Item value="MessageBox`0" priority="0" />
+      <Item value="d" priority="2" />
+      <Item value="CheckForIllegalCrossThreadCalls" priority="1" />
+      <Item value="AutoSavingLabel" priority="5" />
+      <Item value="autoSaveBackgroundWorker" priority="3" />
+      <Item value="BackgroundWorker" priority="0" />
+      <Item value="thread" priority="3" />
+      <Item value="loadingPanel" priority="1" />
+      <Item value="noticeLabel" priority="0" />
+      <Item value="loadingBackgroundWorker" priority="1" />
+      <Item value="DoneBefore" priority="0" />
+      <Item value="startProgressBar" priority="5" />
+      <Item value="الأنواع_الفرعية_للبيعTableAdapter`0" priority="0" />
+      <Item value="قيمةالسكرDataGridViewTextBoxColumn" priority="0" />
+      <Item value="قيمةالجراكنDataGridViewTextBoxColumn" priority="0" />
+      <Item value="سعرالكيلوDataGridViewTextBoxColumn" priority="0" />
+      <Item value="totalPriceNumericUpDown" priority="0" />
+      <Item value="dbBackgroundWorker" priority="4" />
+      <Item value="upgradeDbBackgroundWorker" priority="1" />
+      <Item value="Delegate`0" priority="0" />
+      <Item value="_mainthread" priority="1" />
+      <Item value="mainformBackgroundWorker" priority="2" />
+      <Item value="insertEditPanel" priority="1" />
+      <Item value="depositeDateDateTimePicker" priority="0" />
+      <Item value="sellDateDateTimePicker" priority="0" />
+      <Item value="label2" priority="0" />
+      <Item value="_currentSupplierName" priority="1" />
+      <Item value="_currentClientName" priority="0" />
+      <Item value="ProgressBarStyle`0" priority="0" />
+      <Item value="commonDataSetTableAdapters" priority="0" />
+      <Item value="QueriesTableAdapter`0" priority="0" />
+      <Item value="Decimal`0" priority="0" />
+      <Item value="AssemblyTrademarkAttribute`0" priority="0" />
+      <Item value="tradeMarkLabel" priority="0" />
+      <Item value="AssemblyTradeMark" priority="0" />
+      <Item value="cageProiceNumericUpDown" priority="3" />
+      <Item value="valueNumericUpDown" priority="2" />
+      <Item value="مسلسلDataGridViewTextBoxColumn3" priority="0" />
+      <Item value="الرصيدالحاليDataGridViewTextBoxColumn" priority="0" />
+      <Item value="currentvalue" priority="0" />
+      <Item value="quantityInLitersNumericUpDown" priority="2" />
+      <Item value="salesKindNameComboBox" priority="4" />
+      <Item value="propg" priority="0" />
+      <Item value="SaleKindRow" priority="0" />
+      <Item value="sales" priority="1" />
+      <Item value="NumericUpDown`0" priority="0" />
+      <Item value="MakeNumercUpDownReadOnly`0" priority="1" />
+      <Item value="MakeNumercUpDownWritable`0" priority="1" />
+      <Item value="MakeNumericUpDownWritable`0" priority="1" />
+      <Item value="ctrl" priority="0" />
+      <Item value="MakeNumericUpDownReadOnly`0" priority="1" />
+      <Item value="رقمإذنالصرفDataGridViewTextBoxColumn1" priority="0" />
+      <Item value="اسمالموردDataGridViewTextBoxColumn" priority="1" />
+      <Item value="رقمالايصالDataGridViewTextBoxColumn" priority="0" />
+      <Item value="رقمالفاتورةDataGridViewTextBoxColumn" priority="0" />
+      <Item value="numericUpDown" priority="0" />
+      <Item value="البيعهDataGridViewTextBoxColumn" priority="0" />
+      <Item value="insertUpdateLabel" priority="0" />
+      <Item value="DateTime`0" priority="1" />
+      <Item value="Reports" priority="0" />
+      <Item value="ReportDataSet`0" priority="0" />
+      <Item value="ShopDataSet`0" priority="2" />
+      <Item value="N_CagesNumericUpDown" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.SqlServer.Management.Smo.Server">
+      <Item value="ConnectionContext" priority="1" />
+      <Item value="Configuration" priority="0" />
+      <Item value="Databases" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.SqlServer.Management.Smo.Database">
+      <Item value="SetOnline" priority="0" />
+      <Item value="DatabaseOptions" priority="0" />
+      <Item value="Urn" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.SqlServer.Management.Common.ServerConnection">
+      <Item value="DatabaseName" priority="0" />
+      <Item value="Connect" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="Text" priority="11" />
+      <Item value="SelectedIndex" priority="1" />
+      <Item value="Items" priority="2" />
+      <Item value="SelectedItem" priority="1" />
+      <Item value="Enter" priority="0" />
+      <Item value="AutoCompleteSource" priority="0" />
+      <Item value="TextChanged" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="BackColor" priority="0" />
+      <Item value="Validated" priority="5" />
+      <Item value="SelectedValue" priority="1" />
+      <Item value="Focus`0" priority="0" />
+      <Item value="Select`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Panel">
+      <Item value="Visible" priority="8" />
+      <Item value="Parent" priority="0" />
+      <Item value="SelectNextControl`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WindowsFormsApplication1.FilteringContextMenu">
+      <Item value="ClearAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripMenuItem">
+      <Item value="Click" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewColumn">
+      <Item value="Visible" priority="1" />
+      <Item value="Frozen" priority="1" />
+      <Item value="Tag" priority="3" />
+      <Item value="SortMode" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="ValueType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridView">
+      <Item value="Columns" priority="1" />
+      <Item value="Sort" priority="0" />
+      <Item value="RowEnter" priority="0" />
+      <Item value="CurrentCell" priority="13" />
+      <Item value="CurrentRow" priority="2" />
+      <Item value="Rows" priority="10" />
+      <Item value="Paint" priority="0" />
+      <Item value="EditingControl" priority="2" />
+      <Item value="EndEdit" priority="2" />
+      <Item value="RowsRemoved" priority="0" />
+      <Item value="CurrentCellAddress" priority="0" />
+      <Item value="Refresh" priority="0" />
+      <Item value="Select" priority="0" />
+      <Item value="KeyUp" priority="0" />
+      <Item value="KeyDown" priority="1" />
+      <Item value="CancelEdit" priority="0" />
+      <Item value="EditMode" priority="0" />
+      <Item value="ResetBindings" priority="0" />
+      <Item value="CellValidating" priority="0" />
+      <Item value="Focus" priority="0" />
+      <Item value="AllowUserToAddRows" priority="0" />
+      <Item value="RowLeave" priority="0" />
+      <Item value="SelectedRows" priority="0" />
+      <Item value="FirstDisplayedScrollingRowIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Basic.FilteringContextMenu">
+      <Item value="FilteredDataGridView" priority="1" />
+      <Item value="ClearAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Controls.Basic.ParentControl+LoadMode">
+      <Item value="period" priority="1" />
+      <Item value="fromTo" priority="1" />
+      <Item value="All" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.BindingSource">
+      <Item value="RemoveFilter" priority="0" />
+      <Item value="Find" priority="2" />
+      <Item value="Current" priority="0" />
+      <Item value="Filter" priority="2" />
+      <Item value="EndEdit" priority="0" />
+      <Item value="DataMember" priority="0" />
+      <Item value="ListChanged" priority="0" />
+      <Item value="Sort" priority="1" />
+      <Item value="EndEdit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellStyle">
+      <Item value="Font" priority="0" />
+      <Item value="BackColor" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.ComponentModel.ListSortDirection">
+      <Item value="Ascending" priority="0" />
+      <Item value="Descending" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format" priority="10" />
+      <Item value="IsNullOrEmpty" priority="2" />
+      <Item value="IsNullOrEmpty`0" priority="2" />
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="2" />
+      <Item value="Today" priority="0" />
+      <Item value="Parse" priority="0" />
+      <Item value="MinValue" priority="0" />
+      <Item value="MaxValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortTimeString" priority="0" />
+      <Item value="DayOfWeek" priority="0" />
+      <Item value="ToShortDateString" priority="1" />
+      <Item value="GetDateTimeFormats" priority="0" />
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DayOfWeek">
+      <Item value="ToString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="9" />
+      <Item value="Visible" priority="2" />
+      <Item value="ForeColor" priority="0" />
+      <Item value="Select`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Globalization.DateTimeFormatInfo">
+      <Item value="CurrentInfo" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Globalization.DateTimeFormatInfo">
+      <Item value="GetDayName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="GetCallingAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.Assembly">
+      <Item value="Location" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.FileInfo">
+      <Item value="LastWriteTime" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.MainInstaller+ExecuteMode">
+      <Item value="ExecuteBatch" priority="3" />
+      <Item value="SingleWithReturnValue" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Decimal">
+      <Item value="Parse" priority="0" />
+      <Item value="TryParse" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="NewLine" priority="7" />
+      <Item value="SpecialFolder" priority="0" />
+      <Item value="GetFolderPath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxIcon">
+      <Item value="Warning" priority="0" />
+      <Item value="Error" priority="0" />
+      <Item value="Question" priority="1" />
+      <Item value="Information" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DialogResult">
+      <Item value="Yes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.MainInstaller">
+      <Item value="CreateBlankDataBase" priority="0" />
+      <Item value="DeleteDataBase" priority="0" />
+      <Item value="ExecuteSql" priority="0" />
+      <Item value="ExecuteMode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="ExecutablePath" priority="2" />
+      <Item value="StartupPath" priority="1" />
+      <Item value="Exit" priority="0" />
+      <Item value="Restart" priority="0" />
+      <Item value="Exit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetDirectoryName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripStatusLabel">
+      <Item value="Text" priority="6" />
+      <Item value="Visible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="6" />
+      <Item value="Source" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.File">
+      <Item value="Delete" priority="1" />
+      <Item value="ReadAllText" priority="0" />
+      <Item value="Copy" priority="0" />
+      <Item value="Exists" priority="3" />
+      <Item value="ReadAllText`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ComponentModel.DoWorkEventArgs">
+      <Item value="Result" priority="2" />
+      <Item value="Argument" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ComponentModel.RunWorkerCompletedEventArgs">
+      <Item value="Result" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ComponentModel.BackgroundWorker">
+      <Item value="RunWorkerAsync" priority="2" />
+      <Item value="RunWorkerAsync`0" priority="4" />
+      <Item value="ReportProgress`0" priority="6" />
+      <Item value="RunWorkerCompleted" priority="2" />
+      <Item value="ProgressChanged" priority="1" />
+      <Item value="WorkerReportsProgress" priority="0" />
+      <Item value="DoWork" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Data.Properties.Settings">
+      <Item value="Default" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Resources.Properties.Resources">
+      <Item value="building" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet">
+      <Item value="العملاء" priority="2" />
+      <Item value="الأنواع_الفرعية_للبيع" priority="6" />
+      <Item value="AcceptChanges" priority="1" />
+      <Item value="الأنواع_الخام" priority="2" />
+      <Item value="المشتريات" priority="2" />
+      <Item value="المصاريف" priority="0" />
+      <Item value="المبيعات" priority="7" />
+      <Item value="أنواع_الصرف" priority="1" />
+      <Item value="أنواع_البيع" priority="1" />
+      <Item value="Tables" priority="0" />
+      <Item value="الثلاجة" priority="0" />
+      <Item value="تخزين_الثلاجة" priority="2" />
+      <Item value="الثلاجات" priority="2" />
+      <Item value="صرف_و_تصنيع" priority="0" />
+      <Item value="الموردين" priority="0" />
+      <Item value="صرف_الثلاجات" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Regular.ExpensesControl">
+      <Item value="FilterCollapsed" priority="0" />
+      <Item value="ClearData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripButton">
+      <Item value="Enabled" priority="0" />
+      <Item value="ToolTipText" priority="0" />
+      <Item value="Visible" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Basic.FilteringContextMenu+ItemData">
+      <Item value="Display" priority="0" />
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="Key" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewComboBoxColumn">
+      <Item value="DataSource" priority="0" />
+      <Item value="ValueMember" priority="1" />
+      <Item value="DisplayMember" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="Index" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRowView">
+      <Item value="Indexer" priority="0" />
+      <Item value="Row" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString" priority="14" />
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Regular.SalesControl">
+      <Item value="FilterCollapsed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Enabled" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox+ObjectCollection">
+      <Item value="Count" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewDataErrorEventArgs">
+      <Item value="Exception" priority="1" />
+      <Item value="Cancel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewEditingControlShowingEventArgs">
+      <Item value="CellStyle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCell">
+      <Item value="OwningRow" priority="0" />
+      <Item value="Value" priority="3" />
+      <Item value="RowIndex" priority="0" />
+      <Item value="Selected" priority="0" />
+      <Item value="Style" priority="3" />
+      <Item value="DataGridView" priority="0" />
+      <Item value="IsInEditMode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.الأنواع_الفرعية_للبيعTableAdapter">
+      <Item value="FillBySalesKindID" priority="0" />
+      <Item value="Fill" priority="0" />
+      <Item value="ClearBeforeFill" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRow">
+      <Item value="Cells" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+مفردات_البيعDataTable">
+      <Item value="AcceptChanges" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRowCollection">
+      <Item value="Count" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellEventArgs">
+      <Item value="RowIndex" priority="2" />
+      <Item value="ColumnIndex" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.NumericUpDown">
+      <Item value="Value" priority="33" />
+      <Item value="Enabled" priority="2" />
+      <Item value="ReadOnly" priority="2" />
+      <Item value="Validated" priority="2" />
+      <Item value="ValueChanged" priority="3" />
+      <Item value="BackColor" priority="0" />
+      <Item value="Increment" priority="1" />
+      <Item value="TabStop" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewComboBoxEditingControl">
+      <Item value="Click" priority="0" />
+      <Item value="DropDown" priority="0" />
+      <Item value="DropDownClosed" priority="0" />
+      <Item value="SelectedValueChanged" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Controls.Data.ShopDataSet">
+      <Item value="الأنواع_الفرعية_للبيعRow" priority="1" />
+      <Item value="الأنواع_الخامRow" priority="0" />
+      <Item value="الموردينRow" priority="0" />
+      <Item value="العملاءRow" priority="0" />
+      <Item value="أنواع_البيعRow" priority="0" />
+      <Item value="المشترياتRow" priority="0" />
+      <Item value="الثلاجاتRow`0" priority="0" />
+      <Item value="تخزين_الثلاجةDataTable`0" priority="0" />
+      <Item value="تخزين_الثلاجةRow`0" priority="0" />
+      <Item value="صرف_و_تصنيعRow`0" priority="0" />
+      <Item value="أنواع_البيعRow`0" priority="0" />
+      <Item value="المشترياتRow`0" priority="0" />
+      <Item value="المبيعاتRow`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+الأنواع_الفرعية_للبيعRow">
+      <Item value="معرف" priority="0" />
+      <Item value="معرف_نوع_البيع" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportDataSetTableAdapters.الخزينةTableAdapter">
+      <Item value="GetInitialBalance" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportDataSet">
+      <Item value="الخزينة" priority="0" />
+      <Item value="صافي_حساب_الموردين" priority="2" />
+      <Item value="صرف_و_تصنيع" priority="0" />
+      <Item value="منصرف_ثلاجة" priority="0" />
+      <Item value="منصرف_الثلاجة" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportDataSet+الخزينةDataTable">
+      <Item value="Rows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Reports.ReportDataSet">
+      <Item value="الخزينةRow" priority="0" />
+      <Item value="صافي_حساب_الموردينRow`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportDataSet+الخزينةRow">
+      <Item value="الرصيد" priority="0" />
+      <Item value="التغيير" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="Value" priority="1" />
+      <Item value="HasValue" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+الأنواع_الخامDataTable">
+      <Item value="Addالأنواع_الخامRow" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.المصاريفTableAdapter">
+      <Item value="Insert1" priority="0" />
+      <Item value="Update1" priority="0" />
+      <Item value="ScalarQuery" priority="0" />
+      <Item value="GetLastID" priority="0" />
+      <Item value="CheckIfOrderNoExits" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.المشترياتTableAdapter">
+      <Item value="Insert1" priority="0" />
+      <Item value="Update1" priority="0" />
+      <Item value="CheckIfBillNoExists" priority="0" />
+      <Item value="sp_GetSupplierCredit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+الأنواع_الخامRow">
+      <Item value="معرف" priority="3" />
+      <Item value="الاسم" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+الموردينRow">
+      <Item value="معرف" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Decimal">
+      <Item value="ToString" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+المشترياتDataTable">
+      <Item value="AddالمشترياتRow" priority="0" />
+      <Item value="Rows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+المشترياتRow">
+      <Item value="مسلسل" priority="2" />
+      <Item value="رقم_الفاتورة" priority="0" />
+      <Item value="اسم_الخام" priority="0" />
+      <Item value="اسم_المورد" priority="3" />
+      <Item value="رصيد_أول_المدة" priority="0" />
+      <Item value="القيمة" priority="1" />
+      <Item value="المدفوع" priority="0" />
+      <Item value="RowState" priority="0" />
+      <Item value="الرصيد_الحالي" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.المبيعاتTableAdapter">
+      <Item value="Insert1" priority="0" />
+      <Item value="GetLastID" priority="0" />
+      <Item value="CheckIfBillNoExists" priority="0" />
+      <Item value="Fill" priority="0" />
+      <Item value="DeleteAll`0" priority="0" />
+      <Item value="sp_GetClientDebtSt`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+العملاءRow">
+      <Item value="معرف" priority="2" />
+      <Item value="رصيد_أول_المدة" priority="0" />
+      <Item value="الاسم" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+المبيعاتDataTable">
+      <Item value="AddالمبيعاتRow" priority="0" />
+      <Item value="Select" priority="0" />
+      <Item value="Rows" priority="0" />
+      <Item value="AcceptChanges`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+المبيعاتRow">
+      <Item value="مسلسل" priority="6" />
+      <Item value="AcceptChanges" priority="0" />
+      <Item value="المدفوع" priority="0" />
+      <Item value="القيمة" priority="0" />
+      <Item value="رصيد_أول_المدة" priority="1" />
+      <Item value="رقم_الفاتورة" priority="0" />
+      <Item value="اسم_العميل" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+المصاريفRow">
+      <Item value="مسلسل" priority="1" />
+      <Item value="اذن_الصرف" priority="0" />
+      <Item value="AcceptChanges" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.AutoCompleteSource">
+      <Item value="None" priority="0" />
+      <Item value="ListItems" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="7" />
+      <Item value="Select" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.ProjectResources.Properties.Settings">
+      <Item value="Default" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Keys">
+      <Item value="Escape" priority="1" />
+      <Item value="D1" priority="1" />
+      <Item value="L" priority="0" />
+      <Item value="I" priority="0" />
+      <Item value="Alt" priority="0" />
+      <Item value="F9" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.ProjectResources.Properties.Settings">
+      <Item value="ShopName" priority="3" />
+      <Item value="Save" priority="1" />
+      <Item value="Reset" priority="0" />
+      <Item value="Reload" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mail.MailMessage">
+      <Item value="Body" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.AppDomain">
+      <Item value="CurrentDomain" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.AppDomain">
+      <Item value="BaseDirectory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Main_Forms.MainInstaller">
+      <Item value="CreateBlankDataBase" priority="0" />
+      <Item value="Dir" priority="2" />
+      <Item value="GrantAccessToUsers" priority="0" />
+      <Item value="DatabaseExists" priority="4" />
+      <Item value="DeleteDataBase" priority="1" />
+      <Item value="ExecuteSqlAsyncNonQuery" priority="0" />
+      <Item value="CompletedSuccessfully" priority="1" />
+      <Item value="ExecuteSql" priority="0" />
+      <Item value="ExecuteMode" priority="2" />
+      <Item value="Del" priority="0" />
+      <Item value="IsExecuting" priority="0" />
+      <Item value="UpgradeIfNeeded`0" priority="0" />
+      <Item value="UpgradeIsNeeded" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.FormClosingEventArgs">
+      <Item value="CloseReason" priority="0" />
+      <Item value="Cancel" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.CloseReason">
+      <Item value="UserClosing" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Loading">
+      <Item value="Show" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Win32.RegistryKey">
+      <Item value="GetValue" priority="1" />
+      <Item value="DeleteSubKey" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Main_Forms.StartUpWizard">
+      <Item value="Text" priority="0" />
+      <Item value="Hide" priority="0" />
+      <Item value="Hide`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control">
+      <Item value="Hide" priority="0" />
+      <Item value="Controls" priority="0" />
+      <Item value="BackColor" priority="1" />
+      <Item value="Select" priority="1" />
+      <Item value="Focus" priority="0" />
+      <Item value="Capture" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Main">
+      <Item value="Visible" priority="0" />
+      <Item value="Show" priority="0" />
+      <Item value="ShopDataSet" priority="2" />
+      <Item value="KeyUp" priority="0" />
+      <Item value="KeyDown" priority="0" />
+      <Item value="KeyPress" priority="0" />
+      <Item value="statusToolStripStatusLabel" priority="0" />
+      <Item value="Parent" priority="0" />
+      <Item value="Show`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.FormStartPosition">
+      <Item value="WindowsDefaultLocation" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Replace" priority="1" />
+      <Item value="Trim" priority="2" />
+      <Item value="ToLower" priority="1" />
+      <Item value="TrimEnd`0" priority="0" />
+      <Item value="Trim`0" priority="0" />
+      <Item value="Contains`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.AboutBox">
+      <Item value="AssemblyProduct" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Directory">
+      <Item value="CreateDirectory" priority="0" />
+      <Item value="Delete" priority="0" />
+      <Item value="Exists`0" priority="0" />
+      <Item value="CreateDirectory`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.أنواع_الصرفTableAdapter">
+      <Item value="Fill" priority="0" />
+      <Item value="ClearBeforeFill" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.ServiceProcess.ServiceControllerStatus">
+      <Item value="Stopped" priority="0" />
+      <Item value="Running" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ServiceProcess.ServiceController">
+      <Item value="Stop" priority="0" />
+      <Item value="WaitForStatus`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int64">
+      <Item value="Parse" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Controls.Basic.SubmitMode">
+      <Item value="Insert" priority="0" />
+      <Item value="Update" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.SqlClient.SqlCommand">
+      <Item value="Connection" priority="0" />
+      <Item value="BeginExecuteNonQuery" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Transactions.TransactionScope">
+      <Item value="Complete" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRow">
+      <Item value="Delete" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewTextBoxColumn">
+      <Item value="Tag" priority="0" />
+      <Item value="Index" priority="0" />
+      <Item value="Visible" priority="1" />
+      <Item value="DefaultCellStyle" priority="3" />
+      <Item value="Frozen" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Controls.Basic.FilteringContextMenu">
+      <Item value="Hidden" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.RegularExpressions.Regex">
+      <Item value="Match" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.RegularExpressions.MatchCollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Controls.Basic.ParentControl">
+      <Item value="SendErrorReportEmail" priority="1" />
+      <Item value="Reportfilename" priority="1" />
+      <Item value="CopyErrorReportTo" priority="1" />
+      <Item value="NumberOfExceptions" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show" priority="0" />
+      <Item value="Show`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxButtons">
+      <Item value="YesNoCancel" priority="0" />
+      <Item value="YesNo" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxDefaultButton">
+      <Item value="Button1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxOptions">
+      <Item value="RtlReading" priority="1" />
+      <Item value="RightAlign" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Debugger">
+      <Item value="IsAttached" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.DialogResult">
+      <Item value="Yes" priority="3" />
+      <Item value="No" priority="0" />
+      <Item value="OK" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SaveFileDialog">
+      <Item value="FileName" priority="1" />
+      <Item value="DefaultExt" priority="0" />
+      <Item value="Filter" priority="0" />
+      <Item value="ShowDialog" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Basic.ParentControl">
+      <Item value="ErrorOccured" priority="0" />
+      <Item value="ValidateChildren" priority="0" />
+      <Item value="ValidatedOk" priority="0" />
+      <Item value="DoNotAllowExit" priority="0" />
+      <Item value="NumberOfRows" priority="0" />
+      <Item value="NumberOfrowsChanged" priority="0" />
+      <Item value="DeleteAllData`0" priority="0" />
+      <Item value="RefreshData`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int64">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Diagnostics.Process">
+      <Item value="Start" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment+SpecialFolder">
+      <Item value="LocalApplicationData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Environment+SpecialFolder">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+أنواع_البيعDataTable">
+      <Item value="Rows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.KeyEventArgs">
+      <Item value="Shift" priority="2" />
+      <Item value="Control" priority="3" />
+      <Item value="KeyValue" priority="1" />
+      <Item value="Alt" priority="0" />
+      <Item value="SuppressKeyPress" priority="0" />
+      <Item value="Handled" priority="1" />
+      <Item value="Modifiers" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Orange" priority="0" />
+      <Item value="White" priority="4" />
+      <Item value="Red" priority="0" />
+      <Item value="Lavender" priority="0" />
+      <Item value="OrangeRed" priority="3" />
+      <Item value="Green" priority="0" />
+      <Item value="Transparent" priority="1" />
+      <Item value="LightGreen" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+أنواع_البيعRow">
+      <Item value="معرف" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Main_Forms.StartUpWizard+Mode">
+      <Item value="Wizard" priority="0" />
+      <Item value="Normal" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+الأنواع_الفرعية_للبيعDataTable">
+      <Item value="Select" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataTable">
+      <Item value="Select" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeView">
+      <Item value="SelectedNode" priority="6" />
+      <Item value="Nodes" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeNode">
+      <Item value="Nodes" priority="0" />
+      <Item value="Level" priority="0" />
+      <Item value="Parent" priority="1" />
+      <Item value="Collapse" priority="0" />
+      <Item value="ExpandAll" priority="0" />
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeNodeCollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ComponentModel.CancelEventArgs">
+      <Item value="Cancel" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
+      <Item value="Remove" priority="1" />
+      <Item value="IndexOf" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.TreeViewAction">
+      <Item value="Expand" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Regular.PurchasesControl">
+      <Item value="ValidatedOk" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellCancelEventArgs">
+      <Item value="Cancel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellValidatingEventArgs">
+      <Item value="Cancel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ArrayList">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.KeyPressEventArgs">
+      <Item value="Handled" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Main_Forms.MainInstaller+ExecuteMode">
+      <Item value="SingleWithReturnValue" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.SaveRestoreProcess">
+      <Item value="Type" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.OperationType">
+      <Item value="Restore" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.SaveRestoreProcess">
+      <Item value="KillProcessesHoldingDb" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.BindingContext">
+      <Item value="UpdateBinding" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="Attributes" priority="0" />
+      <Item value="GetProperty" priority="0" />
+      <Item value="GetField" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.PropertyInfo">
+      <Item value="GetValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Properties.Resources">
+      <Item value="Main_Ready" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+الثلاجاتDataTable">
+      <Item value="AddالثلاجاتRow`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+الثلاجاتRow">
+      <Item value="معرف" priority="5" />
+      <Item value="الاسم" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+تخزين_الثلاجةDataTable">
+      <Item value="Addتخزين_الثلاجةRow`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.تخزين_الثلاجةTableAdapter">
+      <Item value="CheckIfRecieptNoExists`0" priority="0" />
+      <Item value="sp_FridgeStorage_Delete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+تخزين_الثلاجةRow">
+      <Item value="رقم_الايصال" priority="0" />
+      <Item value="اسم_المورد" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+صرف_و_تصنيعDataTable">
+      <Item value="Addصرف_و_تصنيعRow`0" priority="0" />
+      <Item value="AcceptChanges`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+صرف_و_تصنيعRow">
+      <Item value="رقم_الايصال" priority="0" />
+      <Item value="الوزن_بالكيلو" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+مفردات_الخرجRow">
+      <Item value="معرف_التوصيل" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.صرف_و_تصنيعTableAdapter">
+      <Item value="sp_ManuDelivery_Delete`0" priority="0" />
+      <Item value="GetQuantityInKilosBalance`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportDataSetTableAdapters.صرف_و_تصنيعTableAdapter">
+      <Item value="FillByRawID`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.Reports.ReportViewerControl+Action">
+      <Item value="Click" priority="0" />
+      <Item value="Choose" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.ReportViewer.Databse">
+      <Item value="DatabaseExists" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
+      <Item value="ShowDialog`0" priority="1" />
+      <Item value="FileName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.ReportViewer.Database">
+      <Item value="RestoreFrom`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.AnchorStyles">
+      <Item value="Left" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportViewerControl">
+      <Item value="ParentForm" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Form">
+      <Item value="AcceptButton" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
+      <Item value="Visible" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportDataSetTableAdapters.منصرف_ثلاجةTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ShopManager.ProjectResources.Properties.Resources">
+      <Item value="Copy_of_Keynote_Grass" priority="0" />
+      <Item value="loadingscreen" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
+      <Item value="Image" priority="0" />
+      <Item value="SizeMode" priority="0" />
+      <Item value="Dock" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.PictureBoxSizeMode">
+      <Item value="StretchImage" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.DockStyle">
+      <Item value="Fill" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Start`0" priority="1" />
+      <Item value="Enabled" priority="1" />
+      <Item value="Tick" priority="1" />
+      <Item value="Interval" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="7" />
+      <Item value="ThreadState" priority="2" />
+      <Item value="ExecutionContext" priority="0" />
+      <Item value="Join`0" priority="1" />
+      <Item value="SetApartmentState`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.ThreadState">
+      <Item value="Stopped" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Timers.Timer">
+      <Item value="Elapsed" priority="0" />
+      <Item value="Enabled" priority="0" />
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+صرف_الثلاجاتRow">
+      <Item value="رقم_إذن_الصرف" priority="0" />
+      <Item value="جهة_الصرف" priority="0" />
+      <Item value="الكمية_بالأقفاص" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.العملاءTableAdapter">
+      <Item value="Fill`0" priority="1" />
+      <Item value="DeleteAll`0" priority="0" />
+      <Item value="ClearBeforeFill" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.صرف_الثلاجاتTableAdapter">
+      <Item value="sp_FridgeOut_Delete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="SpinWait`0" priority="1" />
+      <Item value="Sleep`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ComponentModel.ProgressChangedEventArgs">
+      <Item value="ProgressPercentage" priority="4" />
+      <Item value="UserState" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ProgressBar">
+      <Item value="Style" priority="1" />
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.ProgressBarStyle">
+      <Item value="Continuous" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DateTimePicker">
+      <Item value="Select`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.DataRowState">
+      <Item value="Modified" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.ProjectResources.Data.commonDataSetTableAdapters.CommonQueriesTableAdapter">
+      <Item value="GetRawQuantityInKilosBalance`0" priority="1" />
+      <Item value="GetRawN_Cages`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.AssemblyTrademarkAttribute">
+      <Item value="Trademark" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportDataSet+صافي_حساب_الموردينDataTable">
+      <Item value="Rows" priority="0" />
+      <Item value="AcceptChanges`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Reports.ReportDataSet+صافي_حساب_الموردينRow">
+      <Item value="رصيد_أول_المدة" priority="0" />
+      <Item value="اسم_المورد" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSet+صرف_الثلاجاتDataTable">
+      <Item value="RejectChanges`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.الموردينTableAdapter">
+      <Item value="ClearBeforeFill" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.الأنواع_الخامTableAdapter">
+      <Item value="ClearBeforeFill" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.أنواع_البيعTableAdapter">
+      <Item value="ClearBeforeFill" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.مفردات_البيعTableAdapter">
+      <Item value="ClearBeforeFill" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ShopManager.Controls.Data.ShopDataSetTableAdapters.الثلاجاتTableAdapter">
+      <Item value="ClearBeforeFill" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

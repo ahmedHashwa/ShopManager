@@ -1,0 +1,9 @@
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\bin\x86\Debug\ShopManager.ProjectResources.dll.config
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\bin\x86\Debug\ShopManager.ProjectResources.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\bin\x86\Debug\ShopManager.ProjectResources.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\obj\x86\Debug\ShopManager.ProjectResources.Properties.Resources.resources
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\obj\x86\Debug\ResGen.read.1.tlog
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\obj\x86\Debug\ResGen.write.1.tlog
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\obj\x86\Debug\ShopManager.ProjectResources.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager.ProjectResources\obj\x86\Debug\ShopManager.ProjectResources.pdb

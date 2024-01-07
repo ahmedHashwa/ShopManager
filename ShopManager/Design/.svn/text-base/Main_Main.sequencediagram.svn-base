@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="3d912882-8383-4e19-9fe6-dc416e670fe0" name="Main_Main" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="18228078-d9c7-4623-9f54-fc3df6a615f1" name="Main_Main" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="501a39bc-c91a-4625-9eec-67799259f8b9" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="c56f6843-7c61-4c6e-a337-1667753fae86" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="4429e3b9-83c8-409b-8cb9-57e880b8a23d" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="60eb108f-03a1-4ac1-b666-7e9a24f5a8de" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="054e42e4-18a3-4875-a4a3-07101aef5565" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="d9f18bdb-f928-4fc2-9384-8d82eb404865" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="f88ce7f0-51ff-4fb5-9efc-97fb0ee7ace3" LastKnownName="ExecutionOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="9302524c-cb56-402c-8888-f5cc56a6a356" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="e1c1484a-5936-44cf-b64d-09d9c0a4c6d0" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="21c76ffa-f5a8-43c9-a357-7910eb0e6c70" LastKnownName="ExecutionOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="4429e3b9-83c8-409b-8cb9-57e880b8a23d" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="63618177-1a05-4149-8144-f9c3868a6d50" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="60eb108f-03a1-4ac1-b666-7e9a24f5a8de" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="24a7bd84-9d6a-421c-badd-fdb04787d0ad" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="054e42e4-18a3-4875-a4a3-07101aef5565" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="f352485d-8721-4694-9d7b-5c2676878876" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="f88ce7f0-51ff-4fb5-9efc-97fb0ee7ace3" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="d9f18bdb-f928-4fc2-9384-8d82eb404865" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="7754b1c7-2f96-4b3c-8248-7c21dd859c39" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="e6a40671-a9ac-4262-8c98-ad13cc565c32" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="484bbc8f-0255-4b3c-8297-e4b1fda9d1c3" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="d9f18bdb-f928-4fc2-9384-8d82eb404865" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="89310b13-8ade-4a20-96b5-d3199af7deab" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="7754b1c7-2f96-4b3c-8248-7c21dd859c39" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="45d64bf8-2933-455b-834b-65e1273dda99" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="f76faaea-b4e3-4f8b-8040-f750c2600fa3" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="ed3ddac6-2fbf-4f13-953f-f5022cbb1b70" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="6752010b-a44c-46c0-b2cb-9c71f0546a61" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="69d2d2ab-f114-4380-8835-3dde56653dc5" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="1ecb6b2a-59b5-4756-b72f-1bf29197c01d" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="114d0880-bd3f-4c5e-8185-181635ed1932" LastKnownName="ExecutionOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="f54a55b0-a886-4164-89ba-8ef892b4d418" LastKnownName="MessageOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="bd1f9940-9845-4a32-a1da-df1c210e4e89" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="baab5480-4d8f-49f2-be6a-eaeaecfbdac9" LastKnownName="ExecutionOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="ce3f7b36-f99e-44a7-80e3-f10d7632d3ba" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="ed3ddac6-2fbf-4f13-953f-f5022cbb1b70" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="3f6ccd89-6f8e-4114-9db7-d2d65e4512c7" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="6752010b-a44c-46c0-b2cb-9c71f0546a61" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e6a40671-a9ac-4262-8c98-ad13cc565c32" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="69d2d2ab-f114-4380-8835-3dde56653dc5" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="2851168d-da3f-4f5c-a357-32ec3f16c237" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="114d0880-bd3f-4c5e-8185-181635ed1932" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="1ecb6b2a-59b5-4756-b72f-1bf29197c01d" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="7e3125fc-dbe8-4ba1-9abc-95efe5f96402" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="0d6481b4-70e4-4d5f-a5a7-279068e26367" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="dcf563e8-986a-40fd-8f4a-f7f792584e62" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="e070b4d9-e938-4c5c-9b54-8ef64d01a626" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="39e17653-fcbd-48ad-8c19-1dd2018a5038" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="310b87c8-55dd-4f5f-8f6b-4b1acf5e46ce" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="ef46270f-8462-4f2a-ac83-dbd121eee129" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="067b4c24-f8b4-4a3a-97b9-ec90d5ca1093" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="b733831b-bb0d-4d61-891a-665414e8ed7c" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="ffc7142e-d1a9-42a5-a570-8e432e049805" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="aa54d5de-f95e-4031-a3a3-c66f4d4d1de4" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="1ecb6b2a-59b5-4756-b72f-1bf29197c01d" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="53c17fe3-d14f-477c-9201-2b63780610d1" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="7e3125fc-dbe8-4ba1-9abc-95efe5f96402" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="0d6481b4-70e4-4d5f-a5a7-279068e26367" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="9ded3178-6d9f-4261-b08f-640808e582ee" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="dcf563e8-986a-40fd-8f4a-f7f792584e62" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="8d0aa69d-4f1a-4788-8b1c-27ed6088517b" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="e070b4d9-e938-4c5c-9b54-8ef64d01a626" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="621f5b73-0cf7-476b-8e5c-e9f67358395c" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="39e17653-fcbd-48ad-8c19-1dd2018a5038" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="2e8b8bff-1ed3-4b40-91a5-df67a44c48bf" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="310b87c8-55dd-4f5f-8f6b-4b1acf5e46ce" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="193cc642-e36b-44bc-a8dd-c83e0e3e570b" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="ef46270f-8462-4f2a-ac83-dbd121eee129" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="aa9ce438-79c6-4eeb-a443-6c6f1634ab95" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="067b4c24-f8b4-4a3a-97b9-ec90d5ca1093" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="4b6c4d81-8110-4c8e-962b-809cf3bfeff8" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="b733831b-bb0d-4d61-891a-665414e8ed7c" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="ec5da4c7-5bfb-4e19-963c-76af4d25e4e9" name="LostFoundTarget" />
+          <lostFoundTarget Id="59949ab1-11a7-4ad6-893b-2b584d19872f" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="ffc7142e-d1a9-42a5-a570-8e432e049805" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="aa54d5de-f95e-4031-a3a3-c66f4d4d1de4" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="ea0c14c1-8eb3-4f74-8e0b-aeedfbe1657c" name="LostFoundTarget" />
+          <executionOccurrenceSpecification Id="114d0880-bd3f-4c5e-8185-181635ed1932" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="beaa49a0-782f-422e-abff-5c914ee382f8" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f54a55b0-a886-4164-89ba-8ef892b4d418" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="dbe08e17-bbeb-4015-8337-10d7dbe4261f" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="baab5480-4d8f-49f2-be6a-eaeaecfbdac9" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="bd1f9940-9845-4a32-a1da-df1c210e4e89" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="3a86c8d9-ec21-42a3-b561-c73518a8f6ad" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="bd1f9940-9845-4a32-a1da-df1c210e4e89" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="b373053d-3e57-4522-9616-5f4a952ae582" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="3a86c8d9-ec21-42a3-b561-c73518a8f6ad" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="baab5480-4d8f-49f2-be6a-eaeaecfbdac9" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="77a7960f-b47d-4a59-ba3e-40e358ea7697" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="484bbc8f-0255-4b3c-8297-e4b1fda9d1c3" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ce3f7b36-f99e-44a7-80e3-f10d7632d3ba" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="f76faaea-b4e3-4f8b-8040-f750c2600fa3" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="2ddb73e3-fb6f-400c-874c-a839e6f1afc7" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="48c2220f-f638-4c6c-b0eb-b658536286be" LastKnownName="this.ShopDataSet : ShopDataSet" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="f88ce7f0-51ff-4fb5-9efc-97fb0ee7ace3" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="34f5d08a-bfe8-4508-8c34-d135ce8887e4" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="9302524c-cb56-402c-8888-f5cc56a6a356" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="2152aba1-afc0-4d9c-9642-074c8f6fd2f5" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="21c76ffa-f5a8-43c9-a357-7910eb0e6c70" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="e1c1484a-5936-44cf-b64d-09d9c0a4c6d0" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="4faa3072-165d-45b0-b4e3-5af9a8237abb" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="e1c1484a-5936-44cf-b64d-09d9c0a4c6d0" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="147ae154-cb20-4cbe-9378-e8dff053d737" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4faa3072-165d-45b0-b4e3-5af9a8237abb" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="21c76ffa-f5a8-43c9-a357-7910eb0e6c70" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="1c51c19d-55d7-40f2-aac6-0ad849a2c941" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="c56f6843-7c61-4c6e-a337-1667753fae86" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="f1d2ac8c-0ba9-4494-8888-189047fe93c6" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="8a14ed40-0856-4ed4-904b-39f9bace9445" LastKnownName="this : Main" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="8a14ed40-0856-4ed4-904b-39f9bace9445" name="this : Main" isActor="false" lifelineDisplayName="this : Main" referencedInstance="(Assembly=&quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&quot; Namespace=ShopManager Type=Main ObjectInstance=&quot;Object instance 1&quot;)" referencedType="ShopManager.Main">
+            <referencesInternal>
+              <reference Id="14ffcea9-8880-436a-ac89-3df6879ac9bb" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&amp;quot; Namespace=ShopManager Type=Main)&quot;)" tag="DGQL" />
+              <reference Id="9ef5c4ac-d281-45c9-b2ac-cc3936868444" handle="(Assembly=&quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&quot; Namespace=ShopManager Type=Main)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="4429e3b9-83c8-409b-8cb9-57e880b8a23d" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="c56f6843-7c61-4c6e-a337-1667753fae86" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="48c2220f-f638-4c6c-b0eb-b658536286be" name="this.ShopDataSet : ShopDataSet" isActor="false" lifelineDisplayName="this.ShopDataSet : ShopDataSet" referencedInstance="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet ObjectInstance=&quot;Object instance 132&quot;)" referencedType="ShopManager.Controls.Data.ShopDataSet">
+            <referencesInternal>
+              <reference Id="272a6b5f-b5d9-436d-b19d-befbd2c2b59a" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)" tag="DGQL" />
+              <reference Id="ac9f36cd-b346-4d70-920b-a733693b0fb3" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="ed3ddac6-2fbf-4f13-953f-f5022cbb1b70" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="f76faaea-b4e3-4f8b-8040-f750c2600fa3" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="f1ad6e07-c022-470c-ae00-11bf261a061f" name="Create Main" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="00296842-0ceb-42ba-b961-7179dd1d0d5b" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&amp;quot; Namespace=ShopManager Type=Main)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&amp;quot; Namespace=ShopManager Type=Main Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="f1cee8d8-e4e8-4764-b3af-3cf62891eda3" handle="(Assembly=&quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&quot; Namespace=ShopManager Type=Main Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="24a7bd84-9d6a-421c-badd-fdb04787d0ad" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="60eb108f-03a1-4ac1-b666-7e9a24f5a8de" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="729bf08e-e197-4236-a423-a7b13b28415b" name="InitializeComponent" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="InitializeComponent()">
+            <referencesInternal>
+              <reference Id="22d85b3f-86ab-43f3-b00b-1ed15dcacd1e" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&amp;quot; Namespace=ShopManager Type=Main)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&amp;quot; Namespace=ShopManager Type=Main Member=InitializeComponent)&quot;)" tag="DGQL" />
+              <reference Id="d26b8177-7a3e-4114-8a02-3eacf2d0b36a" handle="(Assembly=&quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&quot; Namespace=ShopManager Type=Main Member=InitializeComponent)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="054e42e4-18a3-4875-a4a3-07101aef5565" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="7754b1c7-2f96-4b3c-8248-7c21dd859c39" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="e810f05d-731e-4e1b-af97-4709eab85142" name="Create ShopDataSet" messageKind="Complete" messageSort="CreateMessage" createSelfMessage="false" signatureText="new ShopManager.Controls.Data.ShopDataSet()">
+            <referencesInternal>
+              <reference Id="11d44db3-0a10-4d81-b95a-b40ef791f653" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="31000889-ce55-4e81-8811-fd5492fe861a" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="e6a40671-a9ac-4262-8c98-ad13cc565c32" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="6752010b-a44c-46c0-b2cb-9c71f0546a61" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="b426f98d-ee4a-4349-ad9e-1e5360454dec" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="ce3f7b36-f99e-44a7-80e3-f10d7632d3ba" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="484bbc8f-0255-4b3c-8297-e4b1fda9d1c3" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="e3332e6f-4988-4268-a651-c47e636bf5d2" name="InitClass" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="this.InitClass()">
+            <referencesInternal>
+              <reference Id="b4a8cfcf-5544-4586-8809-5e9a1f89d0bf" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet Member=InitClass)&quot;)" tag="DGQL" />
+              <reference Id="78ec37a9-6984-418a-bcb3-4d4605c6d338" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet Member=InitClass)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="69d2d2ab-f114-4380-8835-3dde56653dc5" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="7e3125fc-dbe8-4ba1-9abc-95efe5f96402" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="e91bb0ac-007d-435e-9696-b56bc9897863" name="Create ShopDataSet.العملاءDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="81f9a58b-f2bc-44d1-b78a-55178b190799" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=العملاءDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=العملاءDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="36ad09ee-0f19-48c5-a976-fc75bc3ba769" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=العملاءDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1Pv71nv56D3+9U/r341/vd/31TOs39P8J0xKUywieUMLBMBiYNzC/7a9xh/77yOvrBbWZ0c8fzeD/V2fwhL/NCb+KYFzbmQSemNnXNJ45Uzr7NX5/+rSkn5hhwHjOOOT0Gd6I9ze+EX9AOiOIx4Q/aHNNfVVE3YahPvs1oEMabgftcUYtGoawZEr/SHv8f5f3fqQ9/r8+g//v0B5f0u9m5rv6wWC0+2vs/xp7ijvwWTHGGWMdYvKGPlsrZOilb9PvGbX3ewnbQS8Zb6aht+7yJ3d7uMinXf9HPr2t//T/BAAA//9wQTLIagkAAA==
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=العملاءDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 142")
+this.ShopDataSet.tableالعملاء : ShopDataSet.العملاءDataTable
+new العملاءDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="0d6481b4-70e4-4d5f-a5a7-279068e26367" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="9ded3178-6d9f-4261-b08f-640808e582ee" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="c7172bb3-e2d1-4490-8366-f9f7b0338c36" name="Create ShopDataSet.المصاريفDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="60e77cfc-a656-4ac5-8b7b-604e1f7c922d" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=المصاريفDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=المصاريفDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="00df1f2c-3607-4a7d-b91b-7f192d0cfe36" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=المصاريفDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1Pv71nv56p7/e/V/v419v99f7zq93/OuZ9m/o/xOmJmiXEUShhYNicDBvYIbbX+MO/feR19sLajOjnz+aw//vzuEJf5sThhXBuLZzCUwxt69pRHOmdfZr/P70aUk/MceA8ZxxyOkzvBHvb3yLEQDWGcE8phGAPtfUW0UUbhjus18DmqThdtAhZ9SiYQhLpvaPdMj/l/nvRzrk//tz+P8WHfIl/W5mv6slDE67v8b+r/GpYg+MVoxzxniHuLyhz9YKGdrp2/R7Ru39XsJ20E7Gs2norbv8yd0eLvJp1xeST2/rS/0/AQAA//+jOgg3dgkAAA==
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=المصاريفDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 146")
+this.ShopDataSet.tableالمصاريف : ShopDataSet.المصاريفDataTable
+new المصاريفDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="dcf563e8-986a-40fd-8f4a-f7f792584e62" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="8d0aa69d-4f1a-4788-8b1c-27ed6088517b" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="fd053768-0678-4659-956e-06918f9edb24" name="Create ShopDataSet.أنواع_الصرفDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="e8727158-024c-4423-8947-7701ae0c5c94" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=أنواع_الصرفDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=أنواع_الصرفDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="94253767-a312-4ff8-9a33-099789cde5ec" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=أنواع_الصرفDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1fvzXe/brffvX+/jXe/jr/f6/xse/3tNf7/6vt/vrHf965q039P8J0xQUzAiuUMTBMpiYNzDP7a9xh/77yOvzBbWZ0c8fzeT/12fyhL/NCc+KYFzbGQW+mOHXNK45Uzz7NX5/+rSkn5hpwHjOOOT0Gd6I9ze+9TgA8YwgH9M4QKtr6rMiajcM/dmvAd3ScDtolTNq0TCEJVP+R1rl//u8+COt8v+Xmfx/l1b5kn43nNDVGwaz3V9j/9d4qGMAXivGPGPsQ4ze0GdrhQx99W36PaP2fi9hO+gr4/009NZd/uRuDxf5tOsvyae39bf+nwAAAP//F08mvZoJAAA=
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=أنواع_الصرفDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 149")
+this.ShopDataSet.tableأنواع_الصرف : ShopDataSet.أنواع_الصرفDataTable
+new أنواع_الصرفDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="e070b4d9-e938-4c5c-9b54-8ef64d01a626" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="621f5b73-0cf7-476b-8e5c-e9f67358395c" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="9c48612b-e1d9-4632-b304-41535b1a0db0" name="Create ShopDataSet.المشترياتDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="8a34cced-f38e-4c9c-a29b-b50a6e14073d" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=المشترياتDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=المشترياتDataTable ParentType=ShopDataSet) Member=(Name=.ctor OverloadingParameters=[(Assembly=&amp;quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&amp;quot; Namespace=System Type=Boolean)]))&quot;)" tag="DGQL" />
+              <reference Id="e41a7c0c-e5cb-4647-81b3-aeec37c28925" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=المشترياتDataTable ParentType=ShopDataSet) Member=(Name=.ctor OverloadingParameters=[(Assembly=&quot;$(FxRootUri)/v2.0.50727/mscorlib.dll&quot; Namespace=System Type=Boolean)]))" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1Pv71nv56p7/e/q/3rV9v99f7zq/3Mf00b7yh/0+YnqBeRjCFGg6OwcK8gTluf4079N9HXn8vqM2Mfv5oFv+/PIsn/G1OOFYE49rOJnDF7L6mMc2Z2tmv8fvTpyX9xCwDxnPGIafP8Ea8v/GtxgBoZwT1mMYAGl1TfxVRuWHIz34N6JOG20GTnFGLhiEsmeI/0iT/3+bBH2mS/z/M4v97NMmX9LvhgK6uMFjt/hr3f417ij9wWjHWGWMeYvOGPlsrZOiob9PvGbX3ewnbQUcZL6eht+7yJ3d7uMinXb/Ifzu1v/1e1P6a+/mRdPx/QzpARZkjYBX2N2b6g+PArZfcoqS/Mxo7KHehfUn7lr+HLfxedPa7M37Cv32XIc0I6hXPyRf095Rp0tD/z1miXvwapzSSu56nfsVYvaXPLn+NPWqxQ/+/T/8+oL8e0KcLenvKbeDvT+xsDc3QNXM8sPVp/4S5Gjhj5u78Gt9nevXHfMaaA/QueJRCSYyroM9Of413BA8zAooUPOuNaqUf2ZIfScuPpOW20vI+ntj/9+n39b2W1ywna+bHvt+ymdLGfzj+NX4U4/y/QaPFNVFXD2EeMKfOX02ZC4RrDG2ga3Z/jRH9f4/+3ePf8P/v/0i+fqjydVvPf09x3Oz5+zL5s+P7+z7/XebA2+RS/58AAAD//5HKdYF2FQAA
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=المشترياتDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 153")
+this.ShopDataSet.tableالمشتريات : ShopDataSet.المشترياتDataTable
+new المشترياتDataTable(false)</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="39e17653-fcbd-48ad-8c19-1dd2018a5038" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="2e8b8bff-1ed3-4b40-91a5-df67a44c48bf" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="683528e4-8dab-423d-b775-677e9059862c" name="Create ShopDataSet.الأنواع_الخامDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="fbc82997-7afc-4c8a-8fa3-ecc6bde206df" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=الأنواع_الخامDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=الأنواع_الخامDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="abce1815-fe35-4222-b76c-9e9af596eb9e" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=الأنواع_الخامDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1Pv71nv56P/7rPfv1vv3rffzrPfz1fn/+e0y/n/565s039P8J0xVUzAi2UMXBM9iYNzDX7a9xh/77yOv3BbWZ0c8fzeb/H2bzhL/NCdeKYFzbWQXOmOXXNLY5Uz37NX5/+rSkn5htwHjOOOT0Gd6I9zd+r7EA6hlBP6axgGbX1G9FVG+4h2e/BvRMw+2gYc6oRcMQljwDP9Iw///gyR9pmP8/zeb/+zTMl/S74YiuDjHY7f4a93+NT3UcwG3F2Gc8ghCrN/TZWiFDd32bfs+ovd9L2A66y3hFDb11lz+528NFPu36UfLpbf2w/ycAAP//DGz+R7IJAAA=
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=الأنواع_الخامDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 156")
+this.ShopDataSet.tableالأنواع_الخام : ShopDataSet.الأنواع_الخامDataTable
+new الأنواع_الخامDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="310b87c8-55dd-4f5f-8f6b-4b1acf5e46ce" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="193cc642-e36b-44bc-a8dd-c83e0e3e570b" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="54dfd13b-72fc-4b5e-950c-5d22be8188fb" name="Create ShopDataSet.المبيعاتDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="459510de-29ae-415b-8686-8735f8451241" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=المبيعاتDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=المبيعاتDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="7d299ac6-f53a-4357-aafe-7d2119b9ecc9" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=المبيعاتDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1Pv71nv56p7/e1q/3nV/v4a/38a/3rV/PtH9D/58wNUG7jCAKLRwUg4N5AzPc/hp36L+PvN5eUJsZ/fzRHP5/dw5P+NucMKwIxrWdS2CKuX1NI5ozrbNf4/enT0v6iTkGjOeMQ06f4Y14f+NbjACwzgjmMY0A9Lmm3iqicMNwn/0a0CQNt4MOOaMWDUNYMrV/pEP+v8x/P9Ih/9+fw/+36JAv6Xcz+10tYXDa/TXu/xoPFXtgtGKcM8Y7xOUNfbZWyNBO36bfM2rv9xK2g3Yynk1Db93lT+72cJFPu76QfHpbX+r/CQAA//8bSB+kdgkAAA==
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=المبيعاتDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 159")
+this.ShopDataSet.tableالمبيعات : ShopDataSet.المبيعاتDataTable
+new المبيعاتDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="ef46270f-8462-4f2a-ac83-dbd121eee129" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="aa9ce438-79c6-4eeb-a443-6c6f1634ab95" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="e48b841c-aa33-4df2-88f7-6064e8e3a6fe" name="Create ShopDataSet.مفردات_البيعDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="8c268143-d207-4b45-b731-fe42f1196441" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=مفردات_البيعDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=مفردات_البيعDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="3a89961f-10ee-4924-8a9e-a23372448941" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=مفردات_البيعDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1Tn+9419v99e7++t9/Ot969f7/X+Nj3+9p7/e1q/3nV/v4a9n3ntD/58wVUHDjCALTRw0g4t5AzPd/hp36L+PvF5fUJsZ/fzRXP5/fy5P+NucMK0IxrWdU2CMOX5NI5szzbNf4/enT0v6ibkGjOeMQ06f4Y14f+P3GAlgnhHsYxoJ6HVNvVZE8YbhP/s1oGEabgfdckYtGoawZOr/SLf8/4Eff6Rb/v8zl/9v0y1f0u+GG7raw+C2+2t8+mvs6SiA2Ypxzxj/EKc39NlaIUNrfZt+z6i930vYDlrLeEINvXWXP7nbw0U+7fpO8ultfa//JwAA//8K13vipgkAAA==
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=مفردات_البيعDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 162")
+this.ShopDataSet.tableمفردات_البيع : ShopDataSet.مفردات_البيعDataTable
+new مفردات_البيعDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="067b4c24-f8b4-4a3a-97b9-ec90d5ca1093" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="4b6c4d81-8110-4c8e-962b-809cf3bfeff8" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="f32c23d4-4267-4987-9c4b-dd6723469aa5" name="Create ShopDataSet.أنواع_البيعDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="45b29f89-dbf4-432f-9b73-3756ae4f2054" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=أنواع_البيعDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=أنواع_البيعDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="ffd8d290-fc5d-42c5-b2b8-5a4f99c4d7f3" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=أنواع_البيعDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1fvzXe/brffvX+/jXe/jr/f6/xse/3tNfb+vX+w79bt56Q/+fME1BwYzgCkUcLIOJeQPz3P4ad+i/j7w+X1CbGf380Uz+f30mT/jbnPCsCMa1nVHgixl+TeOaM8WzX+P3p09L+omZBoznjENOn+GNeH/jW48DEM8I8jGNA7S6pj4ronbD0J/9GtAtDbeDVjmjFg1DWDLlf6RV/r/Piz/SKv9/mcn/d2mVL+l3wwldvWEw2/01Pv017usYgNeKMc8Y+xCjN/TZWiFDX32bfs+ovd9L2A76yng/Db11lz+528NFPu36S/Lpbf2t/ycAAP//PEnH/poJAAA=
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=أنواع_البيعDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 165")
+this.ShopDataSet.tableأنواع_البيع : ShopDataSet.أنواع_البيعDataTable
+new أنواع_البيعDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="b733831b-bb0d-4d61-891a-665414e8ed7c" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="ec5da4c7-5bfb-4e19-963c-76af4d25e4e9" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="19d511bb-3225-41a1-82e0-6a2914b25ac6" name="Create ShopDataSet.الأنواع_الفرعية_للبيعDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="d6b6499d-a403-4af6-b579-8d0b817a5987" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=الأنواع_الفرعية_للبيعDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=الأنواع_الفرعية_للبيعDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="db93f2e4-45f4-4d7d-ba2a-74dee4b918ef" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=الأنواع_الفرعية_للبيعDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1Pv71nv56P/7rPfv1vv3rffzrPfz1fn/++/jX26Xfv/Pr3aG/n9LfW/T7w1/PQHpD/58wnUHVjPoSKjn4BjvzBua+/TXu0H8feXi8oDYz+vmj2f3/4+ye8Lc54V4RjGs7yxgDZv01jXXOs5D9Gr8/fVrST8w+YDxnHHL6DG/E+xt/0NjQyxn1dkxjA02vCY+KZqXhHp/9GtBLDbeDRjqjFg1DWPIM/Ugj/f+TZ3+kkf7/PLv/79dIX9LvhmO6Osdgu/trfPprHOi4gOuKR5PxiEIs39Bna4UMXfdt+j2j9n4vYTvoOuN1NfTWXf7kbg8X+bTrp8mnt/Xz/p8AAAD///bNTWASCgAA
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=الأنواع_الفرعية_للبيعDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 168")
+this.ShopDataSet.tableالأنواع_الفرعية_للبيع : ShopDataSet.الأنواع_الفرعية_للبيعDataTable
+new الأنواع_الفرعية_للبيعDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="ffc7142e-d1a9-42a5-a570-8e432e049805" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="59949ab1-11a7-4ad6-893b-2b584d19872f" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="43186547-086e-4d54-857b-93a7ae1ea667" name="Create ShopDataSet.الموردينDataTable" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="6fc5ea77-3ac4-4ab1-9707-6e4af56ada0d" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=الموردينDataTable ParentType=ShopDataSet))&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=(Name=الموردينDataTable ParentType=ShopDataSet) Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="2f26657d-0b06-4820-bcac-612ed8964c6f" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=(Name=الموردينDataTable ParentType=ShopDataSet) Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <generationState>H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gq9/jfzXqH+N4tfIfo2S/v0B/TX7NU74r/LXeEbfZL/Ggj47+jUe/xpvfo05tWh+jVe/RkX/tb9G+mucUdvPfo2Pfo2tX+OYPm+o3eLXmNB71/TpL/w1ftGvseZ2h7/GOb1X0rePfo27/N9T/u0Lapf+Gi+pj+rX+Gn6dkptG/r8NfXzBfX7e+vv1a+xonb4ZEn/v+Becvq99b73v61/jTGNoOIWgF0y1AnhsOS+c/p9TS1v//aYxgl6+GNKf40XSpuGIGSEfU6jvj3Ep/RtS/9Pia7X9Abe3rIwP/s1Pv71nv56p7/et3+93V/v7q/3nV/v2a9n2r+h/0+YmqBdRhCFFg6KwcG8gRluf4079N9HXm8vqM2Mfv5oDv+/O4cn/G1OGFYE49rOJTDF3L6mEc2Z1tmv8fvTpyX9xBwDxnPGIafP8Ea8v/EtRgBYZwTzmEYA+lxTbxVRuGG4z34NaJKG20GHnFGLhiEsmdo/0iH/X+a/H+mQ/+/P4f9bdMiX9LuZ/a6WMDjt/hoP6P+CPTBaMc4Z4x3i8oY+WytkaKdv0+8Ztfd7CdtBOxnPpqG37vInd3u4yKddX0g+va0v9f8EAAD//zhVvJB2CQAA
+(Assembly="$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)" Namespace=ShopManager.Controls.Data Type=(Name=الموردينDataTable ParentType=ShopDataSet) ObjectInstance="Object instance 171")
+this.ShopDataSet.tableالموردين : ShopDataSet.الموردينDataTable
+new الموردينDataTable()</generationState>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="aa54d5de-f95e-4031-a3a3-c66f4d4d1de4" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="ea0c14c1-8eb3-4f74-8e0b-aeedfbe1657c" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="609af6f9-3e03-4e6e-b81a-0f44b88cc728" name="InitExpressions" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="this.InitExpressions()">
+            <referencesInternal>
+              <reference Id="0aab7a48-df63-4a4e-ac0c-c06a93d7a9dd" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager.Controls.Data)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&amp;quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet Member=InitExpressions)&quot;)" tag="DGQL" />
+              <reference Id="dacd6e8d-cf21-4c05-b484-23fe5927fed4" handle="(Assembly=&quot;$(0298c37a-57ad-4ab4-b23c-5eeb3cd8e79e.OutputPathUri)&quot; Namespace=ShopManager.Controls.Data Type=ShopDataSet Member=InitExpressions)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="f54a55b0-a886-4164-89ba-8ef892b4d418" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="3a86c8d9-ec21-42a3-b561-c73518a8f6ad" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="915d701e-4240-4d7d-8835-8421beb88ef2" name="OutputErrorOccured" messageKind="Complete" messageSort="SynchCall" createSelfMessage="true" signatureText="OutputErrorOccured()">
+            <referencesInternal>
+              <reference Id="d142cae2-6f3a-40f8-9fba-28c0a3cfe656" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=ShopManager)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&amp;quot; Namespace=ShopManager Type=Main)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&amp;quot; Namespace=ShopManager Type=Main Member=OutputErrorOccured)&quot;)" tag="DGQL" />
+              <reference Id="10d627c4-17dd-4888-9122-972d17cd9d43" handle="(Assembly=&quot;$(a65e3ce9-7160-4a59-bb0b-bbab2c3eac6c.OutputPathUri)&quot; Namespace=ShopManager Type=Main Member=OutputErrorOccured)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="9302524c-cb56-402c-8888-f5cc56a6a356" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="4faa3072-165d-45b0-b4e3-5af9a8237abb" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="63618177-1a05-4149-8144-f9c3868a6d50" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="f1d2ac8c-0ba9-4494-8888-189047fe93c6" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="89310b13-8ade-4a20-96b5-d3199af7deab" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="34f5d08a-bfe8-4508-8c34-d135ce8887e4" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="3f6ccd89-6f8e-4114-9db7-d2d65e4512c7" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="2ddb73e3-fb6f-400c-874c-a839e6f1afc7" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="53c17fe3-d14f-477c-9201-2b63780610d1" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="beaa49a0-782f-422e-abff-5c914ee382f8" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="b373053d-3e57-4522-9616-5f4a952ae582" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="77a7960f-b47d-4a59-ba3e-40e358ea7697" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="147ae154-cb20-4cbe-9378-e8dff053d737" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="1c51c19d-55d7-40f2-aac6-0ad849a2c941" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>

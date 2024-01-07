@@ -1,0 +1,12 @@
+﻿1. replace kind inventory and inventory  reports.
+2. add any valid item function.
+3. change monthly work view.
+4. change exe files.
+
+
+
+
+
+
+
+1. change the expennses update SP

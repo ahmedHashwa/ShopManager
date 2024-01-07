@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0298C37A-57AD-4AB4-B23C-5EEB3CD8E79E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShopManager.Controls</RootNamespace>
+    <AssemblyName>ShopManager.Controls</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ShopManager.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ShopManager.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Logger, Version=1.0.1199.25392, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ShopManager\Main Forms\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic\CustomPropertyDescriptor.cs" />
+    <Compile Include="Basic\FilteringContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Basic\FilteringContextMenu.designer.cs">
+      <DependentUpon>FilteringContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\GmailMessage.cs" />
+    <Compile Include="Basic\MyCollectionEditor.cs" />
+    <Compile Include="Basic\ParentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Basic\ParentControl.Designer.cs">
+      <DependentUpon>ParentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\PrintDGV.cs" />
+    <Compile Include="Basic\PrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\PrintOptions.designer.cs">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ShopDataSet.cs">
+      <DependentUpon>ShopDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Management\ClientsMgmtControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\ClientsMgmtControl.Designer.cs">
+      <DependentUpon>ClientsMgmtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\FridgesMgmtControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\FridgesMgmtControl.Designer.cs">
+      <DependentUpon>FridgesMgmtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ExpensesMgmtControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\ExpensesMgmtControl.Designer.cs">
+      <DependentUpon>ExpensesMgmtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\RawKindsMgmtControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\RawKindsMgmtControl.Designer.cs">
+      <DependentUpon>RawKindsMgmtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\SalesKindsMgmtControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\SalesKindsMgmtControl.Designer.cs">
+      <DependentUpon>SalesKindsMgmtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\SalesSubKindsMgmtControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\SalesSubKindsMgmtControl.Designer.cs">
+      <DependentUpon>SalesSubKindsMgmtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\SuppliersMgmtControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\SuppliersMgmtControl.Designer.cs">
+      <DependentUpon>SuppliersMgmtControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regular\ManufacturingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Regular\ManufacturingsControl.designer.cs">
+      <DependentUpon>ManufacturingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regular\FridgeOutsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Regular\FridgeOutsControl.designer.cs">
+      <DependentUpon>FridgeOutsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regular\FridgeStoragesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Regular\FridgeStoragesControl.Designer.cs">
+      <DependentUpon>FridgeStoragesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regular\ExpensesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Regular\ExpensesControl.designer.cs">
+      <DependentUpon>ExpensesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regular\PurchasesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Regular\PurchasesControl.Designer.cs">
+      <DependentUpon>PurchasesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regular\SalesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Regular\SalesControl.designer.cs">
+      <DependentUpon>SalesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Data\ShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\ShopDataSet.xsc">
+      <DependentUpon>ShopDataSet.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\ShopDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShopDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\ShopDataSet.xss">
+      <DependentUpon>ShopDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Basic\FilteringContextMenu.resx">
+      <DependentUpon>FilteringContextMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\ParentControl.resx">
+      <DependentUpon>ParentControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\PrintOptions.resx">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\ClientsMgmtControl.resx">
+      <DependentUpon>ClientsMgmtControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\FridgesMgmtControl.resx">
+      <DependentUpon>FridgesMgmtControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\ExpensesMgmtControl.resx">
+      <DependentUpon>ExpensesMgmtControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\RawKindsMgmtControl.resx">
+      <DependentUpon>RawKindsMgmtControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\SalesKindsMgmtControl.resx">
+      <DependentUpon>SalesKindsMgmtControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\SalesSubKindsMgmtControl.resx">
+      <DependentUpon>SalesSubKindsMgmtControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\SuppliersMgmtControl.resx">
+      <DependentUpon>SuppliersMgmtControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regular\ManufacturingsControl.resx">
+      <DependentUpon>ManufacturingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regular\FridgeOutsControl.resx">
+      <DependentUpon>FridgeOutsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regular\FridgeStoragesControl.resx">
+      <DependentUpon>FridgeStoragesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regular\ExpensesControl.resx">
+      <DependentUpon>ExpensesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regular\PurchasesControl.resx">
+      <DependentUpon>PurchasesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regular\SalesControl.resx">
+      <DependentUpon>SalesControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopManager.ProjectResources\ShopManager.ProjectResources.csproj">
+      <Project>{EA63C7AF-F6CE-421A-AB40-46F402AA55A6}</Project>
+      <Name>ShopManager.ProjectResources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

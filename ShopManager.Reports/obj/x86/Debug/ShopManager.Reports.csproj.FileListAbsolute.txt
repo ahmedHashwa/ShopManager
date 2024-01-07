@@ -1,0 +1,13 @@
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\bin\x86\Debug\ShopManager.Reports.dll.config
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\bin\x86\Debug\ShopManager.Reports.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\bin\x86\Debug\ShopManager.Reports.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\bin\x86\Debug\ShopManager.ProjectResources.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\bin\x86\Debug\ShopManager.ProjectResources.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\obj\x86\Debug\ShopManager.Reports.ReportViewerControl.resources
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\obj\x86\Debug\ResGen.read.1.tlog
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\obj\x86\Debug\ResGen.write.1.tlog
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\obj\x86\Debug\RdlCompile.cache
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\obj\x86\Debug\RdlCompile.compiled
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\obj\x86\Debug\ShopManager.Reports.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager.Reports\obj\x86\Debug\ShopManager.Reports.pdb

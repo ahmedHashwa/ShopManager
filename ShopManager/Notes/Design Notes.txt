@@ -1,0 +1,34 @@
+﻿------------------------------------------------------------
+Design search
+string of size x operators contains
+int16 , decimal operators < > = >= <= <>
+
+
+
+we need to refresh mgmt panel if 
+new items has been inserted
+and it's not refreshed
+we need to set newiteminserted to false when all related controls are refreshed with new data
+
+
+
+Debt = دائن
+credit = مدين
+
+
+
+remove the TreasuryBeginningBalance',
+PurchasesBeginningBalance'
+SalesBeginningBalance'," +
+
+before scripting
+
+
+
+
+
+
+
+
+
+مطلوب اسم العميل و العصير  أو كل العصير

@@ -1,0 +1,6 @@
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Data\bin\Debug\ShopManager.Data.dll.config
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Data\bin\Debug\ShopManager.Data.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Data\bin\Debug\ShopManager.Data.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Data\obj\Debug\ResolveAssemblyReference.cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Data\obj\Debug\ShopManager.Data.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager.Data\obj\Debug\ShopManager.Data.pdb

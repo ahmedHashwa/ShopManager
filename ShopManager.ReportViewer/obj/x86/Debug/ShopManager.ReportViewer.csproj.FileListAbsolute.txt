@@ -1,0 +1,13 @@
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\bin\Debug\ShopManager.ReportViewer.exe
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\bin\Debug\ShopManager.ReportViewer.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\bin\Debug\ShopManager.ProjectResources.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\bin\Debug\ShopManager.Reports.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\bin\Debug\ShopManager.Reports.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\bin\Debug\ShopManager.ProjectResources.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\obj\x86\Debug\ShopManager.ReportViewer.mainReportViewerForm.resources
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\obj\x86\Debug\ShopManager.ReportViewer.Properties.Resources.resources
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\obj\x86\Debug\ResGen.read.1.tlog
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\obj\x86\Debug\ResGen.write.1.tlog
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\obj\x86\Debug\ShopManager.ReportViewer.exe
+D:\My Projects\ShMaX\Shop Management\ShopManager.ReportViewer\obj\x86\Debug\ShopManager.ReportViewer.pdb

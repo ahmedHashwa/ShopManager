@@ -1,0 +1,8 @@
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\bin\Release\SerialNumberGenerator.exe
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\bin\Release\SerialNumberGenerator.pdb
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Release\ResolveAssemblyReference.cache
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Release\WindowsFormsApplication1.SerialNumberGenerator.resources
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Release\WindowsFormsApplication1.Properties.Resources.resources
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Release\SerialNumberGenerator.csproj.GenerateResource.Cache
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Release\SerialNumberGenerator.exe
+D:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\SerialNumberGenerator\obj\Release\SerialNumberGenerator.pdb

@@ -1,0 +1,33 @@
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.exe.config
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.exe
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\Logger.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.Controls.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.ProjectResources.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.Reports.dll
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.ProjectResources.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.Reports.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\bin\x86\Debug\ShopManager.Controls.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ShopManager.AboutBox.resources
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ShopManager.OptionsForm.resources
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ShopManager.Main.resources
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ShopManager.Properties.Resources.resources
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ShopManager.csproj.GenerateResource.Cache
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ShopManager.exe
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ShopManager.pdb
+E:\My Projects\Shop Management Solution\Shop Management V3\Shop Management\ShopManager\obj\x86\Debug\ShopManager.Main_Forms.StartUpWizard.resources
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.exe.config
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.exe
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\Logger.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.Controls.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.ProjectResources.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.Reports.dll
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.Controls.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.Reports.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\x86\Debug\ShopManager.ProjectResources.pdb
+D:\My Projects\ShMaX\Shop Management\ShopManager\bin\Debug\ShopManager.exe.config
+D:\My Projects\ShMaX\Shop Management\ShopManager\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\My Projects\ShMaX\Shop Management\ShopManager\obj\x86\Debug\ResGen.read.1.tlog
+D:\My Projects\ShMaX\Shop Management\ShopManager\obj\x86\Debug\ResGen.write.1.tlog

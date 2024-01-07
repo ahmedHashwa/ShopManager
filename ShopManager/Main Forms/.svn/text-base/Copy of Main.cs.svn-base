@@ -1,0 +1,853 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Main.cs" company="sOlOnXPL Software">
+//   This file is protected by copyright Laws in Egypt
+// </copyright>
+// <summary>
+//   Defines the Main type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+#region using directives
+using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Media;
+using System.Reflection;
+using System.Windows.Forms;
+using Microsoft.Win32;
+using ShopManager.Controls.Basic;
+using ShopManager.ProjectResources.Properties;
+using ShopManager.Reports;
+using Resources = ShopManager.Properties.Resources;
+#endregion
+namespace ShopManager
+{
+#pragma warning disable 618,612
+    /// <summary>
+    ///   Defines the main Form containing the controls to run the application
+    /// </summary>
+    public partial class Main : Form
+    {
+        /// <summary>
+        ///   Initializes a new instance of the <see cref = "Main" /> class.
+        /// </summary>
+        public Main()
+        {
+            InitializeComponent();
+            mainTreeView.SelectedNode = mainTreeView.Nodes[0];
+            passwordTextBox.Select();
+            CheckForIllegalCrossThreadCalls = false;
+            var timer = new System.Timers.Timer(1000);
+            timer.Elapsed += delegate
+                                 {
+                                     try
+                                     {
+                                         DateTimeLabel.Text = string.Format(
+                                             "{0}:{1}" + Environment.NewLine + "{2}:{3}" + Environment.NewLine + "{4}:{5}",
+                                             "الساعة الآن",
+                                             DateTime.Now.GetDateTimeFormats()[34], "اليوم",
+                                             DateTimeFormatInfo.CurrentInfo.GetDayName(DateTime.Now.DayOfWeek), "التاريخ",
+                                             DateTime.Now.ToShortDateString());
+                                     }
+                                     // ReSharper disable EmptyGeneralCatchClause
+                                     catch
+                                     // ReSharper restore EmptyGeneralCatchClause
+                                     {
+                                     }
+                                 };
+            timer.Start();
+            OutputErrorOccured();
+            //  CheckForIllegalCrossThreadCalls = true;
+        }
+        #region Methods
+        /// <summary>
+        ///   Extracts the Control needed at the current Treenode
+        /// </summary>
+        /// <param name = "node">
+        ///   The node. the tree node containing the control
+        /// </param>
+        /// <returns>
+        ///   the control to be displayed
+        /// </returns>
+        private ParentControl GetControl(TreeNode node)
+        {
+            if (node.Tag != null)
+                return (ParentControl)node.Tag;
+            var output =
+                (ParentControl)
+                Assembly.Load("ShopManager.Controls").CreateInstance(
+                    "ShopManager.Controls." + node.Name, true,
+                    BindingFlags.CreateInstance, null, new object[] { ShopDataSet }, null, null);
+            node.Tag = output;
+            output.AfterClearData += ParentControlClearData;
+            output.RowEnter += ParentControlRowEnter;
+            output.Dock = DockStyle.Fill;
+            output.ItemSubmissionError += ParentControlItemSubmissionError;
+            output.ItemSuccessfullySubmitted += ParentControlItemSuccessfullySubmitted;
+            output.ValidationPassed += ParentControlValidationPassed;
+            output.TimeRangeChanged += OutputTimeRangeChanged;
+            output.NumberOfrowsChanged += OutputNumberOfrowsChanged;
+            output.BringToFront();
+            return output;
+        }
+        /// <summary>
+        ///  TODO: write
+        /// </summary>
+        /// <param name = "visible">
+        ///   The visible.
+        /// </param>
+        /// <param name = "tagname">
+        ///   The <paramref name="tagname"/>.
+        /// </param>
+        private void ToggleToolButtonsVisibility(bool visible, string tagname)
+        {
+            foreach (ToolStripItem item in manageToolsToolStrip.Items)
+            {
+                if (item.Tag != null && (item.Tag.ToString() == tagname))
+                {
+                    item.Visible = visible;
+                }
+            }
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        private void UpdateToolButtonsVisibility()
+        {
+            if (mgmtPanel.Contains(_parentControl))
+            {
+                toggleViewToolStripButton.Visible = _parentControl.AllowToggleInsertEdit;
+                helpToolStripButton.Visible = executetoolStripButton.Visible = _parentControl.SupportsAddingAndUpdating;
+                deleteAllToolStripButton.Visible = deleteToolStripButton.Visible = _parentControl.SupportsDeletingData;
+                clearToolStripButton.Visible = _parentControl.SupportsClearingData;
+                refreshDBToolStripButton.Visible = _parentControl.SupportsRefreshingData;
+                toggleInsertEditToolStripMenuItem.Visible =
+                    toggleShowDataToolStripMenuItem.Visible = _parentControl.AllowToggleInsertEdit;
+                printToolStripButton.Visible = true;
+            }
+            else
+            {
+                ToggleToolButtonsVisibility(false, "editTools");
+                toggleInsertEditToolStripMenuItem.Visible = toggleShowDataToolStripMenuItem.Visible = false;
+            }
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        private static void ShowKeyBoardHelp()
+        {
+            MessageBox.Show(
+                Resources.Main_ShowKeyBoardHelp_HowToSelectASection
+                + Environment.NewLine + "لاختيار صفحة : اضغط Alt+ ترتيب الصفحه"
+                + Environment.NewLine + "للخروج : اضغط Ctrl+L"
+                + Environment.NewLine + "لفتح الخيارات : اضغط F8"
+                + Environment.NewLine + "لاختيار صندوق إدخال كلمة السر: اضغط Ctrl+I"
+                + Environment.NewLine + "للإدخال أو التعديل : اضغط Ctrl+Enter"
+                + Environment.NewLine + "للمسح من أجل إدخال جديد : اضغط Shift+ Esc"
+                + Environment.NewLine + "لاختيار أول حقل: اضغط F6"
+                + Environment.NewLine + "لتحديث البيانات: اضغط F5"
+                + Environment.NewLine + "للتنقل بين الحقول : اضغط Tab"
+                + Environment.NewLine + "للطباعة : اضغط F7"
+                + Environment.NewLine + "لإرسال بريد إلكتروني بالأخطاء : اضغط F11"
+                + Environment.NewLine + "للإظهار منطقة التصفية : اضغط F10"
+                + Environment.NewLine + "للإظهار إخفاء منطقة الإبحار : اضغط F12",
+                "اختصارات لوحة المفاتيح",
+                MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading);
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "treeNodeCollection">
+        ///   The tree node collection.
+        /// </param>
+        internal static void RefreshDataInControls(TreeNodeCollection treeNodeCollection)
+        {
+            foreach (TreeNode node in treeNodeCollection)
+            {
+                if (node.Tag == null) continue;
+                var parentcontrol = (ParentControl)node.Tag;
+                parentcontrol.RefreshData(true);
+            }
+        }
+        #endregion
+        #region Properties
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        private ParentControl _parentControl;
+        #region Controls
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        private ReportViewerControl _rcontrol;
+        /// <summary>
+        ///   Gets Rcontrol.
+        /// </summary>
+        private ReportViewerControl Rcontrol
+        {
+            get { return _rcontrol ?? (_rcontrol = new ReportViewerControl { Dock = DockStyle.Fill }); }
+        }
+        #endregion
+        #region Others
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        private bool _loggedIn;
+        /// <summary>
+        ///   Gets or sets a value indicating whether LoggedIn.
+        /// </summary>
+        private bool LoggedIn
+        {
+            get { return _loggedIn; }
+            set
+            {
+                if (value)
+                {
+                    loginPanel.SendToBack();
+                }
+                ToggleToolButtonsVisibility(value, "mgmtTools");
+                _loggedIn = value;
+            }
+        }
+        #endregion
+        #endregion
+        #region Event Handlers
+        #region Main
+        #region TreeView
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender. //TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e. //TODO: write  
+        /// </param>
+        private void MainTreeViewAfterSelect(object sender, TreeViewEventArgs e)
+        {
+            mgmtPanel.Controls.Remove(_parentControl);
+            rowNumberToolStripStatusLabel.Visible = false;
+            if (e.Node.Name != "mgmtNode" && e.Node.Name != "main")
+            {
+                if (e.Node.Name == "ReportViewerControl")
+                {
+                    if (!mgmtPanel.Controls.Contains(_rcontrol))
+                        mgmtPanel.Controls.Add(Rcontrol);
+                    Rcontrol.BringToFront();
+                    toggleShowReportSelectorToolStripMenuItem.Visible = true;
+                    toggleShowFilterToolStripMenuItem.Visible = false;
+                }
+                else
+                {
+                    toggleShowFilterToolStripMenuItem.Visible = true;
+                    toggleShowReportSelectorToolStripMenuItem.Visible = false;
+                    _parentControl = GetControl(mainTreeView.SelectedNode);
+                    rowNumberToolStripStatusLabel.Visible = true;
+                    OutputNumberOfrowsChanged(null, null);
+                    if (_rcontrol != null)
+                        mgmtPanel.Controls.Remove(_rcontrol);
+                    mgmtPanel.Controls.Add(_parentControl);
+                    if (_parentControl.IsDirty)
+                        _parentControl.Clear();
+                }
+                noticeLabel.SendToBack();
+                UpdateToolButtonsVisibility();
+            }
+            else
+            {
+                if (mgmtPanel.Controls.Contains(_rcontrol)) mgmtPanel.Controls.Remove(_rcontrol);
+                else if (mgmtPanel.Controls.Contains(_parentControl)) mgmtPanel.Controls.Remove(_parentControl);
+            }
+            OutputTimeRangeChanged(null, null);
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void MainTreeViewBeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            if (e.Node.Name == "main" || e.Node.Name == "mgmtNode")
+            {
+                ToggleToolButtonsVisibility(false, "editTools");
+                toggleViewToolStripButton.Visible = false;
+                if (!LoggedIn)
+                {
+                    loginPanel.BringToFront();
+                }
+            }
+            else
+            {
+                loginPanel.SendToBack();
+                toggleViewToolStripButton.Visible = true;
+            }
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender. //TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void MainTreeViewBeforeExpand(object sender, TreeViewCancelEventArgs e)
+        {
+            if ((e.Node.Name == "mgmtNode" || e.Node.Name == "main") && e.Action == TreeViewAction.Expand && !LoggedIn)
+            {
+                e.Cancel = true;
+            }
+        }
+        #endregion
+        #region Toolbar
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ToggleShowNavToolStripButtonCheckedChanged(object sender, EventArgs e)
+        {
+            mainSplitContainer.Panel1Collapsed = !toggleShowNavToolStripButton.Checked;
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void OptionsToolStripButtonClick(object sender, EventArgs e)
+        {
+            new OptionsForm(this).ShowDialog();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ExecutetoolStripButtonClick(object sender, EventArgs e)
+        {
+            _parentControl.SubmitItem();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ClearToolStripButtonClick(object sender, EventArgs e)
+        {
+            _parentControl.Clear();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void RefreshDbToolStripButtonClick(object sender, EventArgs e)
+        {
+            _parentControl.RefreshData(true);
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void DeleteToolStripButtonClick(object sender, EventArgs e)
+        {
+            _parentControl.FocusOnDataGridView();
+            SendKeys.Send("{DEL}");
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void HelpToolStripButtonClick(object sender, EventArgs e)
+        {
+            ShowKeyBoardHelp();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ToggleShowFilterToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            _parentControl.ToggleFilter();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ToggleInsertEditToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            _parentControl.ToggleInsertEdit();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ToggleShowDataToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            _parentControl.ToggleDataGrid();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ToggleShowReportSelectorToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            Rcontrol.ToggleReportSelector();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void LogoutToolStripButtonClick(object sender, EventArgs e)
+        {
+            foreach (TreeNode node in mainTreeView.Nodes)
+                node.Collapse(false);
+            LoggedIn = false;
+            mainTreeView.SelectedNode = mainTreeView.Nodes["main"];
+            MainTreeViewBeforeSelect(null,
+                                     new TreeViewCancelEventArgs(mainTreeView.SelectedNode, false, TreeViewAction.Expand));
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void AboutProgrammeToolStripButtonClick(object sender, EventArgs e)
+        {
+            SystemSounds.Asterisk.Play();
+            new AboutBox().ShowDialog();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void PrintToolStripButtonClick(object sender, EventArgs e)
+        {
+            PrintDGV.Print_DataGridView(
+                _parentControl.ParentDataGridView,
+                mainTreeView.SelectedNode.Text.Substring(3),
+                (string.IsNullOrEmpty(_parentControl.ControlTitle) ? string.Empty : _parentControl.ControlTitle));
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void SendErrorReportEmailToolStripButtonClick(object sender, EventArgs e)
+        {
+            if (File.Exists(ParentControl.Reportfilename))
+            {
+                sendReportBackgroundWorker.RunWorkerAsync();
+                sendErrorReportEmailToolStripButton.Enabled = false;
+                statusToolStripStatusLabel.Text = sendErrorReportEmailToolStripButton.ToolTipText = ProjectResources.Properties.Resources.Main_sendErrorReportEmailToolStripButton_Click____جاري_الإرسال;
+            }
+            else
+                MessageBox.Show(Resources.Main_sendErrorReportEmailToolStripButton_Click_لا_يوجد_تقرير);
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void SendReportBackgroundWorkerDoWork(object sender, DoWorkEventArgs e)
+        {
+            ParentControl.SendErrorReportEmail();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void SendReportBackgroundWorkerRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            sendErrorReportEmailToolStripButton.Enabled = true;
+            sendErrorReportEmailToolStripButton.ToolTipText = ProjectResources.Properties.Resources.Main_SendReportBackgroundWorkerRunWorkerCompleted_ارسل_تقرير_الأخطاء;
+            statusToolStripStatusLabel.Text = Resources.Main_Ready;
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ToggleViewToolStripButtonButtonClick(object sender, EventArgs e)
+        {
+            if (mgmtPanel.Contains(_parentControl))
+            {
+                _parentControl.ToggleFilter();
+            }
+            else
+            {
+                Rcontrol.ToggleReportSelector();
+            }
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void حفظملفالأخطاءإلىToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ParentControl.CopyErrorReportTo();
+        }
+        #endregion
+        #region Other
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void LoginButtonClick(object sender, EventArgs e)
+        {
+            // ReSharper disable PossibleNullReferenceException
+            string currentpassword =
+                Registry.LocalMachine.OpenSubKey("software").OpenSubKey("SM").GetValue("key", "SecurityCorrupted").
+                    ToString();
+            // ReSharper restore PossibleNullReferenceException
+            if (OptionsForm.Hash(passwordTextBox.Text) != currentpassword)
+            {
+                passErrorLabel.Visible = true;
+                SystemSounds.Beep.Play();
+            }
+            else
+            {
+                LoggedIn = true;
+                passwordTextBox.Clear();
+                passErrorLabel.Visible = false;
+                foreach (TreeNode node in mainTreeView.Nodes)
+                    node.ExpandAll();
+                mainTreeView.SelectedNode = mainTreeView.Nodes["main"];
+                MainTreeViewAfterSelect(null, new TreeViewEventArgs(mainTreeView.SelectedNode));
+            }
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void LoginPanelEnter(object sender, EventArgs e)
+        {
+            AcceptButton = loginButton;
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if ((e.Cancel && _parentControl.DoNotAllowExit) || e.CloseReason == CloseReason.ApplicationExitCall) return;
+            Settings.Default.Save();
+            Application.Exit();
+            e.Cancel = false;
+        }
+        /// <summary>
+        ///   Processes a dialog box key. specially to remover error sounds for the shortcut keys of Alt+ Enter and Alt + keys
+        /// </summary>
+        /// <returns>
+        ///   <see langword="true"/> if the keystroke was processed and consumed by the control; otherwise, <see langword="false"/> to allow further processing.
+        /// </returns>
+        /// <param name = "keyData">One of the <see cref = "T:System.Windows.Forms.Keys" /> values that represents the key to process. 
+        /// </param>
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if ((keyData >= (Keys.Alt | Keys.D1) && keyData <= (Keys.Alt | Keys.D9)) ||
+                keyData == (Keys.Control | Keys.Enter))
+                return true;
+            return base.ProcessDialogKey(keyData);
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void Main_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+            if (e.KeyValue == (int)Keys.F1 && e.Shift)
+                ShowKeyBoardHelp();
+            else if (e.KeyValue == (int)Keys.F1)
+                new AboutBox().ShowDialog();
+            else if (e.KeyValue == (int)Keys.F7 && printToolStripButton.Visible)
+                PrintToolStripButtonClick(null, null);
+            else if (e.KeyValue == (int)Keys.F11)
+                SendErrorReportEmailToolStripButtonClick(null, null);
+            else if (e.KeyValue == (int)Keys.F10 && toggleViewToolStripButton.Visible)
+                ToggleViewToolStripButtonButtonClick(null, null);
+            else if (e.KeyValue == (int)Keys.F12)
+                toggleShowNavToolStripButton.Checked = !toggleShowNavToolStripButton.Checked;
+            else if (e.KeyValue == (int)Keys.F8 && optionsToolStripButton.Visible)
+                new OptionsForm(this).ShowDialog();
+            else if (e.KeyValue == (int)Keys.L && e.Control && logoutToolStripButton.Visible)
+                LogoutToolStripButtonClick(null, null);
+            else if (e.KeyValue == (int)Keys.I && e.Control && loginPanel.Parent.Controls.IndexOf(loginPanel) == 0)
+                passwordTextBox.Select();
+            else if (e.KeyValue == (int)Keys.Enter && e.Control && executetoolStripButton.Visible)
+                _parentControl.SubmitItem();
+            else if (e.KeyValue == (int)Keys.Escape && e.Shift && clearToolStripButton.Visible)
+                _parentControl.Clear();
+            else if (e.KeyValue == (int)Keys.F6 && executetoolStripButton.Visible)
+                _parentControl.SelectFirstBoxInPanel();
+            else if (e.KeyValue == (int)Keys.F6 && mainTreeView.SelectedNode.Name == "ReportViewerControl")
+                Rcontrol.SelectFirstBoxInPanel();
+            else if (e.KeyValue == (int)Keys.F5 && refreshDBToolStripButton.Visible)
+                _parentControl.RefreshData(true);
+            else if (e.KeyValue > (int)Keys.D0 && e.KeyValue <= (int)Keys.D9)
+                if (e.Control && mainTreeView.Nodes.Count > e.KeyValue - (int)Keys.D1)
+                {
+                    if (_parentControl != null)
+                        _parentControl.Validate();
+                    mainTreeView.SelectedNode = mainTreeView.Nodes[e.KeyValue - (int)Keys.D1];
+                }
+                else if (LoggedIn && e.Alt &&
+                         (mainTreeView.SelectedNode.Level == 0
+                              ? mainTreeView.SelectedNode.Nodes.Count
+                              : mainTreeView.SelectedNode.Parent.Nodes.Count) > e.KeyValue - (int)Keys.D1)
+                {
+                    if (_parentControl != null && !_parentControl.Validate()) return;
+                    mainTreeView.SelectedNode = mainTreeView.SelectedNode.Level == 0
+                                                    ? mainTreeView.SelectedNode.Nodes[e.KeyValue - (int)Keys.D1]
+                                                    : mainTreeView.SelectedNode.Parent.Nodes[e.KeyValue - (int)Keys.D1];
+                }
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void عرضالملفToolStripLabel_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(ParentControl.Reportfilename))
+                Process.Start(ParentControl.Reportfilename);
+        }
+        #endregion
+        #endregion
+        #region ParentControl
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        private void OutputErrorOccured()
+        {
+            sendErrorReportEmailToolStripButton.Text = ParentControl.NumberOfExceptions.ToString();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void OutputNumberOfrowsChanged(object sender, EventArgs e)
+        {
+            rowNumberToolStripStatusLabel.Text = Resources.Main_OutputNumberOfrowsChanged_ShowingNow +
+                                                 _parentControl.NumberOfRows +
+                                                 Resources.Main_OutputNumberOfrowsChanged__Row;
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void OutputTimeRangeChanged(object sender, EventArgs e)
+        {
+            if (sender != null)
+                _parentControl.ControlTitle = sender.ToString();
+            Text = AboutBox.AssemblyProduct + Resources.Main_OutputTimeRangeChanged__Separator +
+                   Settings.Default.ShopName + Resources.Main_OutputTimeRangeChanged__Separator +
+                   mainTreeView.SelectedNode.Text.Substring(3)
+                   +
+                   ((_parentControl == null || string.IsNullOrEmpty(_parentControl.ControlTitle))
+                        ? string.Empty
+                        : Resources.Main_OutputTimeRangeChanged__Separator + _parentControl.ControlTitle);
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ParentControlValidationPassed(object sender, EventArgs e)
+        {
+            statusToolStripStatusLabel.Text = Resources.Main_Ready;
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ParentControlClearData(object sender, EventArgs e)
+        {
+            executetoolStripButton.Text = Resources.Main_ParentControlClearData_Insert;
+            executetoolStripButton.Image = ProjectResources.Properties.Resources.database_add;
+            statusToolStripStatusLabel.Text = Resources.Main_Ready;
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ParentControlRowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            executetoolStripButton.Text = Resources.Main_ParentControlRowEnter_Modify;
+            executetoolStripButton.Image = ProjectResources.Properties.Resources.database_import;
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ParentControlItemSubmissionError(object sender, EventArgs e)
+        {
+            statusToolStripStatusLabel.Text = sender is Exception ? ((Exception)sender).Message : sender.ToString();
+        }
+        /// <summary>
+        ///   //TODO: write
+        /// </summary>
+        /// <param name = "sender">
+        ///   The sender.//TODO: write 
+        /// </param>
+        /// <param name = "e">
+        ///   The e.//TODO: write 
+        /// </param>
+        private void ParentControlItemSuccessfullySubmitted(object sender, EventArgs e)
+        {
+            statusToolStripStatusLabel.Text = Resources.Main_ParentControlItemSuccessfullySubmitted_DoneSuccessfuly;
+        }
+        #endregion
+        private void DeleteAllToolStripButtonClick(object sender, EventArgs e)
+        {
+            _parentControl.DeleteAllData();
+        }
+        #endregion
+    }
+}

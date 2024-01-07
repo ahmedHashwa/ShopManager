@@ -1,0 +1,999 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportDataSet" targetNamespace="http://tempuri.org/ShopDataSet.xsd" xmlns:mstns="http://tempuri.org/ShopDataSet.xsd" xmlns="http://tempuri.org/ShopDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatabaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ShopManager.Reports.Properties.Settings.GlobalReference.Default.DatabaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="العملاءTableAdapter" GeneratorDataComponentClassName="العملاءTableAdapter" Name="العملاء" UserDataComponentName="العملاءTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.Clients" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT        ClientID, Name, BeginningBalance
+                      FROM            Clients
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ClientID" DataSetColumn="معرف" />
+              <Mapping SourceColumn="Name" DataSetColumn="الاسم" />
+              <Mapping SourceColumn="BeginningBalance" DataSetColumn="رصيد أول المدة" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="الخزينةTableAdapter" GeneratorDataComponentClassName="الخزينةTableAdapter" Name="الخزينة" UserDataComponentName="الخزينةTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.Additions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT 'إضافة' AS type, Inserted AS Change, Date FROM Additions UNION ALL SELECT 'مصاريف' AS Expr2, - Amount AS Expr3, Date AS Expr1 FROM Expenses UNION ALL SELECT 'شراء' AS Expr1, - Paid AS Expr2, Date FROM Purchases UNION ALL SELECT 'بيع' AS Expr1, Gained, Date FROM [Sales]
+                      order by date
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Change" DataSetColumn="التغيير" />
+              <Mapping SourceColumn="Date" DataSetColumn="التاريخ" />
+              <Mapping SourceColumn="type" DataSetColumn="النوع" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetBalance" Modifier="Public" Name="GetBalance" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="GetBalance">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        (SELECT        Value
+                           FROM            Flags
+                           WHERE        (Name = 'TreasuryBeginningBalance')) + ISNULL
+                             ((SELECT        SUM(Gained) AS Expr1
+                                 FROM            Sales), 0) + ISNULL
+                             ((SELECT        SUM(Inserted) AS Expr1
+                                 FROM            Additions), 0) - ISNULL
+                             ((SELECT        SUM(Amount) AS Expr1
+                                 FROM            Expenses), 0) - ISNULL
+                             ((SELECT        SUM(Paid) AS Expr1
+                                 FROM            Purchases), 0) AS Expr1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.Flags" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetInitialBalance" Modifier="Public" Name="GetInitialBalance" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetInitialBalance">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Value
+FROM            Flags
+WHERE        (Name = 'TreasuryBeginningBalance')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.Additions" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="InsertBalance" Modifier="Public" Name="InsertBalance" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertBalance">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      INSERT INTO Treasury
+                      (BeginningBalance, Change, Balance, TransactionID)
+                      VALUES        (@BeginningBalance,@Change,@Balance, 0);
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="BeginningBalance" ColumnName="BeginningBalance" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@BeginningBalance" Precision="0" ProviderType="Money" Scale="0" Size="8" SourceColumn="BeginningBalance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Change" ColumnName="Change" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@Change" Precision="0" ProviderType="Money" Scale="0" Size="8" SourceColumn="Change" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Balance" ColumnName="Balance" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@Balance" Precision="0" ProviderType="Money" Scale="0" Size="8" SourceColumn="Balance" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      INSERT INTO Additions
+                      (Inserted, Date)
+                      VALUES        (@Inserted,@Date);
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Inserted" ColumnName="Inserted" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@Inserted" Precision="0" ProviderType="Money" Scale="0" Size="8" SourceColumn="Inserted" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Date" ColumnName="Date" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="الأنواع الخامTableAdapter" GeneratorDataComponentClassName="الأنواع_الخامTableAdapter" Name="الأنواع الخام" UserDataComponentName="الأنواع الخامTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.RawKinds" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT        RawID, Name
+                      FROM            RawKinds
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RawID" DataSetColumn="معرف" />
+              <Mapping SourceColumn="Name" DataSetColumn="الاسم" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="أنواع البيعTableAdapter" GeneratorDataComponentClassName="أنواع_البيعTableAdapter" Name="أنواع البيع" UserDataComponentName="أنواع البيعTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.SalesKinds" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT        SalesKindID AS ID, Name
+                      FROM            SalesKinds
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="معرف" />
+              <Mapping SourceColumn="Name" DataSetColumn="الاسم" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="الموردينTableAdapter" GeneratorDataComponentClassName="الموردينTableAdapter" Name="الموردين" UserDataComponentName="الموردينTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.Suppliers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT        SupplierID, Name, BeginningBalance
+                      FROM            Suppliers
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SupplierID" DataSetColumn="معرف" />
+              <Mapping SourceColumn="Name" DataSetColumn="الاسم" />
+              <Mapping SourceColumn="BeginningBalance" DataSetColumn="رصيد أول المدة" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="مبيعات كمياتTableAdapter" GeneratorDataComponentClassName="مبيعات_كمياتTableAdapter" Name="مبيعات كميات" UserDataComponentName="مبيعات كمياتTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT        [Sales].Date AS التاريخ, SalesKinds.Name AS [نوع العصير], SalesSubKinds.Name AS [عدد اللترات], [Sales].Gained AS [وارد فلوس], SalesItems.Amount AS الكمية, 
+                      Clients.Name AS [اسم العميل], SalesItems.PiecePrice * SalesItems.Amount AS منصرف, [Sales].BillNO AS [رقم الفاتورة]
+                      FROM            SalesKinds INNER JOIN
+                      SalesItems ON SalesKinds.SalesKindID = SalesItems.SalesKindID INNER JOIN
+                      SalesSubKinds ON SalesItems.SalesSubKindID = SalesSubKinds.SalesSubKindID INNER JOIN
+                      [Sales] ON SalesItems.SaleID = [Sales].SaleID INNER JOIN
+                      Clients ON [Sales].ClientID = Clients.ClientID
+                      WHERE        (Clients.Name = @Clname)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Clname" ColumnName="Name" DataSourceName="" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Clname" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="اسم العميل" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="التاريخ" DataSetColumn="التاريخ" />
+              <Mapping SourceColumn="نوع العصير" DataSetColumn="نوع العصير" />
+              <Mapping SourceColumn="عدد اللترات" DataSetColumn="عدد اللترات" />
+              <Mapping SourceColumn="وارد فلوس" DataSetColumn="وارد فلوس" />
+              <Mapping SourceColumn="الكمية" DataSetColumn="الكمية" />
+              <Mapping SourceColumn="اسم العميل" DataSetColumn="اسم العميل" />
+              <Mapping SourceColumn="منصرف" DataSetColumn="منصرف" />
+              <Mapping SourceColumn="رقم الفاتورة" DataSetColumn="رقم الفاتورة" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        [Sales].Date AS التاريخ, SalesKinds.Name AS [نوع العصير], SalesSubKinds.Name AS [عدد اللترات], [Sales].Gained AS [وارد فلوس], SalesItems.Amount AS الكمية, 
+                      Clients.Name AS [اسم العميل], SalesItems.PiecePrice * SalesItems.Amount AS منصرف, [Sales].BillNO AS [رقم الفاتورة]
+                      FROM            SalesKinds INNER JOIN
+                      SalesItems ON SalesKinds.SalesKindID = SalesItems.SalesKindID INNER JOIN
+                      SalesSubKinds ON SalesItems.SalesSubKindID = SalesSubKinds.SalesSubKindID INNER JOIN
+                      [Sales] ON SalesItems.SaleID = [Sales].SaleID INNER JOIN
+                      Clients ON [Sales].ClientID = Clients.ClientID
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="مبيعات نقودTableAdapter" GeneratorDataComponentClassName="مبيعات_نقودTableAdapter" Name="مبيعات نقود" UserDataComponentName="مبيعات نقودTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Clients.Name AS الاسم, CASE WHEN SUM(SalesItems.Amount * SalesItems.PiecePrice) IS NULL THEN 0 ELSE SUM(SalesItems.Amount * SalesItems.PiecePrice) 
+                         END AS منصرف, derivedtbl_1.Gained AS وارد, derivedtbl_1.Date AS التاريخ, derivedtbl_1.BillNO AS رقم_الفاتورة
+FROM            SalesItems RIGHT OUTER JOIN
+                         Clients INNER JOIN
+                             (SELECT        SUM(Gained) AS Gained, ClientID, Date, BillNO
+                                FROM            Sales AS [Sales _1]
+                                GROUP BY ClientID, Date, BillNO) AS derivedtbl_1 INNER JOIN
+                         Sales ON derivedtbl_1.ClientID = Sales.ClientID AND derivedtbl_1.Date = Sales.Date ON Clients.ClientID = Sales.ClientID ON 
+                         SalesItems.SaleID = Sales.SaleID
+GROUP BY Clients.Name, derivedtbl_1.Gained, derivedtbl_1.ClientID, derivedtbl_1.Date, derivedtbl_1.BillNO
+HAVING        (Clients.Name = @ClientName)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ClientName" ColumnName="Name" DataSourceName="[ShopDatabase].dbo.Clients" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@ClientName" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="الاسم" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الاسم" DataSetColumn="الاسم" />
+              <Mapping SourceColumn="منصرف" DataSetColumn="منصرف" />
+              <Mapping SourceColumn="وارد" DataSetColumn="وارد" />
+              <Mapping SourceColumn="التاريخ" DataSetColumn="التاريخ" />
+              <Mapping SourceColumn="رقم_الفاتورة" DataSetColumn="رقم_الفاتورة" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="إجمالي مصروفاتTableAdapter" GeneratorDataComponentClassName="إجمالي_مصروفاتTableAdapter" Name="إجمالي مصروفات" UserDataComponentName="إجمالي مصروفاتTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.[Expenses Types]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT        [Expenses Types].Description AS [نوع المصروف], SUM(Table1.Amount) AS القيمة
+                      FROM            (SELECT        Amount, ExpenseTypeID
+                      FROM            Expenses
+                      WHERE        (Date BETWEEN @StartDate AND @EndDate)) AS Table1 INNER JOIN
+                      [Expenses Types] ON Table1.ExpenseTypeID = [Expenses Types].ExpenseTypeID
+                      GROUP BY [Expenses Types].Description
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StartDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="EndDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="نوع المصروف" DataSetColumn="نوع المصروف" />
+              <Mapping SourceColumn="القيمة" DataSetColumn="القيمة" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="إجمالي مبيعات كمية العصيرTableAdapter" GeneratorDataComponentClassName="إجمالي_مبيعات_كمية_العصيرTableAdapter" Name="إجمالي مبيعات كمية العصير" UserDataComponentName="إجمالي مبيعات كمية العصيرTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT        SalesKinds.Name AS [اسم العصير], SalesSubKinds.Name AS [نوع العصير], SUM(derivedtbl_1.Amount) AS الكمية, SUM(derivedtbl_1.Amount * derivedtbl_1.PiecePrice) 
+                      AS القيمة
+                      FROM            (SELECT        SalesItems.Amount, SalesItems.PiecePrice, SalesItems.SalesKindID, SalesItems.SalesSubKindID
+                      FROM            SalesItems INNER JOIN
+                      [Sales] ON SalesItems.SaleID = [Sales].SaleID
+                      WHERE        ([Sales].Date BETWEEN @StartDate AND @EndDate)) AS derivedtbl_1 INNER JOIN
+                      SalesSubKinds ON derivedtbl_1.SalesKindID = SalesSubKinds.SalesKindID AND derivedtbl_1.SalesSubKindID = SalesSubKinds.SalesSubKindID INNER JOIN
+                      SalesKinds ON SalesSubKinds.SalesKindID = SalesKinds.SalesKindID
+                      GROUP BY SalesKinds.Name, SalesSubKinds.Name
+                      ORDER BY [اسم العصير], [نوع العصير]
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StartDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="EndDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="اسم العصير" DataSetColumn="اسم العصير" />
+              <Mapping SourceColumn="نوع العصير" DataSetColumn="نوع العصير" />
+              <Mapping SourceColumn="الكمية" DataSetColumn="الكمية" />
+              <Mapping SourceColumn="القيمة" DataSetColumn="القيمة" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="صافي حساب العملاءTableAdapter" GeneratorDataComponentClassName="صافي_حساب_العملاءTableAdapter" Name="صافي حساب العملاء" UserDataComponentName="صافي حساب العملاءTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="SELECT Clients.Name, CASE WHEN SUM([Sales _1].Gained) IS NOT NULL THEN SUM(derivedtbl_1.summ) + Clients.BeginningBalance - SUM([Sales _1 ].Gained) ELSE Clients.BeginningBalance END AS BeginningBalance FROM [Sales] AS [Sales _1] INNER JOIN (SELECT SUM(Amount * PiecePrice) AS summ, SaleID FROM SalesItems GROUP BY SaleID) AS derivedtbl_1 ON [Sales _1].SaleID = derivedtbl_1.SaleID RIGHT OUTER JOIN Clients ON [Sales _1].ClientID = Clients.ClientID GROUP BY Clients.BeginningBalance, Clients.ClientID, Clients.Name" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT        Name AS [اسم العميل], BeginningBalance AS [رصيد أول المدة]
+                      FROM            (SELECT        Clients.Name, CASE WHEN SUM([Sales _1].Gained) IS NOT NULL THEN SUM(derivedtbl_1.summ) 
+                      + Clients.BeginningBalance - SUM([Sales _1 ].Gained) ELSE Clients.BeginningBalance END AS BeginningBalance
+                      FROM            [Sales] AS [Sales _1] INNER JOIN
+                      (SELECT        SUM(Amount * PiecePrice) AS summ, SaleID
+                      FROM            SalesItems
+                      GROUP BY SaleID) AS derivedtbl_1 ON [Sales _1].SaleID = derivedtbl_1.SaleID RIGHT OUTER JOIN
+                      Clients ON [Sales _1].ClientID = Clients.ClientID
+                      GROUP BY Clients.BeginningBalance, Clients.ClientID, Clients.Name) AS ClientCredits
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="اسم العميل" DataSetColumn="اسم العميل" />
+              <Mapping SourceColumn="رصيد أول المدة" DataSetColumn="رصيد أول المدة" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="صافي حساب الموردينTableAdapter" GeneratorDataComponentClassName="صافي_حساب_الموردينTableAdapter" Name="صافي حساب الموردين" UserDataComponentName="صافي حساب الموردينTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="ShopDatabase.dbo.Suppliers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Name AS [اسم المورد]
+FROM            Suppliers</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="اسم المورد" DataSetColumn="اسم المورد" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="المشترياتTableAdapter" GeneratorDataComponentClassName="المشترياتTableAdapter" Name="المشتريات" UserDataComponentName="المشترياتTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Purchases.PurchaseID AS مسلسل, Purchases.Date AS تاريخ_الشراء, Purchases.N_Cages AS الكمية_بالأقفاص, Purchases.N_Kilos AS الكمية_بالكيلو, 
+                         Purchases.Paid AS المدفوع, Purchases.BillNO AS رقم_الفاتورة, Suppliers.Name AS اسم_المورد, RawKinds.Name AS اسم_الخام,Purchases.N_Kilos * Purchases.KiloPrice + Purchases.CagePrice * Purchases.N_Cages AS قيمة_المشتريات, 
+                         Purchases.KiloPrice AS سعر_الكيلو
+FROM            Purchases INNER JOIN
+                         RawKinds ON Purchases.RawID = RawKinds.RawID INNER JOIN
+                         Suppliers ON Purchases.SupplierID = Suppliers.SupplierID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="اسم_المورد" DataSetColumn="اسم_المورد" />
+              <Mapping SourceColumn="اسم_الخام" DataSetColumn="اسم_الخام" />
+              <Mapping SourceColumn="مسلسل" DataSetColumn="مسلسل" />
+              <Mapping SourceColumn="تاريخ_الشراء" DataSetColumn="تاريخ_الشراء" />
+              <Mapping SourceColumn="الكمية_بالأقفاص" DataSetColumn="الكمية_بالأقفاص" />
+              <Mapping SourceColumn="الكمية_بالكيلو" DataSetColumn="الكمية_بالكيلو" />
+              <Mapping SourceColumn="المدفوع" DataSetColumn="المدفوع" />
+              <Mapping SourceColumn="رقم_الفاتورة" DataSetColumn="رقم_الفاتورة" />
+              <Mapping SourceColumn="سعر_الكيلو" DataSetColumn="سعر_الكيلو" />
+              <Mapping SourceColumn="قيمة_المشتريات" DataSetColumn="قيمة_المشتريات" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="حساب العملاءTableAdapter" GeneratorDataComponentClassName="حساب_العملاءTableAdapter" Name="حساب العملاء" UserDataComponentName="حساب العملاءTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.Clients" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Clients.Name, SUM(Sales_1.Gained) AS TotalGained, SUM(SalesPrice.TotalPrice) AS GrossPrice, SUM(Sales_1.Gained) - SUM(SalesPrice.TotalPrice) 
+                         AS Gross
+FROM            Clients INNER JOIN
+                             (SELECT        SaleID, ClientID, Gained
+                                FROM            Sales
+                                WHERE        (Date BETWEEN @StartDate AND @EndDate)) AS Sales_1 ON Clients.ClientID = Sales_1.ClientID LEFT OUTER JOIN
+                             (SELECT        SaleID, SUM(PiecePrice * Amount) AS TotalPrice
+                                FROM            SalesItems
+                                GROUP BY SaleID) AS SalesPrice ON SalesPrice.SaleID = Sales_1.SaleID
+GROUP BY Clients.Name</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StartDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="EndDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="اسم العميل" />
+              <Mapping SourceColumn="TotalGained" DataSetColumn="إجمالي المدفوع" />
+              <Mapping SourceColumn="GrossPrice" DataSetColumn="إجمالي الثمن" />
+              <Mapping SourceColumn="Gross" DataSetColumn="الصافي" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="حساب الموردينTableAdapter" GeneratorDataComponentClassName="حساب_الموردينTableAdapter" Name="حساب الموردين" UserDataComponentName="حساب الموردينTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.Suppliers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Suppliers.Name AS اسم_المورد, SUM(Purchases_1.Paid) AS إجمالي_المدفوع, 
+                         SUM(Purchases_1.N_Kilos * Purchases_1.KiloPrice + Purchases_1.CagePrice * Purchases_1.N_Cages) AS إجمالي_الثمن, SUM(Purchases_1.Paid) 
+                         - SUM(Purchases_1.N_Kilos * Purchases_1.KiloPrice + Purchases_1.CagePrice * Purchases_1.N_Cages) AS الصافي
+FROM            Suppliers INNER JOIN
+                             (SELECT        SupplierID, KiloPrice, N_Kilos, Paid, CagePrice, N_Cages
+                                FROM            Purchases
+                                WHERE        (Date BETWEEN @StartDate AND @EndDate)) AS Purchases_1 ON Suppliers.SupplierID = Purchases_1.SupplierID
+GROUP BY Suppliers.Name</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="StartDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="EndDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="اسم_المورد" DataSetColumn="اسم_المورد" />
+              <Mapping SourceColumn="إجمالي_المدفوع" DataSetColumn="إجمالي_المدفوع" />
+              <Mapping SourceColumn="إجمالي_الثمن" DataSetColumn="إجمالي_الثمن" />
+              <Mapping SourceColumn="الصافي" DataSetColumn="الصافي" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="وارد_الثلاجةTableAdapter" GeneratorDataComponentClassName="وارد_الثلاجةTableAdapter" Name="وارد_الثلاجة" UserDataComponentName="وارد_الثلاجةTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByFridgeID" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataByFridgeID" GeneratorSourceName="FillByFridgeID" GetMethodModifier="Public" GetMethodName="GetDataByFridgeID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFridgeID" UserSourceName="FillByFridgeID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+                      SELECT        RawKinds.Name AS اسم_الخام, FridgeStorages.Date AS تاريخ_النخزين, Suppliers.Name AS اسم_المورد, FridgeStorages.N_Cages AS عدد_الأقفاص, 
+                      FridgeStorages.N_Kilos AS الوزن_بالكيلو, FridgeStorages.RecieptNo AS رقم_الإيصال
+                      FROM            FridgeStorages INNER JOIN
+                      RawKinds ON FridgeStorages.RawID = RawKinds.RawID INNER JOIN
+                      Suppliers ON FridgeStorages.SupplierID = Suppliers.SupplierID
+                      WHERE        (FridgeStorages.FridgeID = @ID)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="FridgeID" DataSourceName="[ShopDatabase].dbo.FridgeStorages" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="FridgeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="اسم_الخام" DataSetColumn="اسم_الخام" />
+              <Mapping SourceColumn="تاريخ_النخزين" DataSetColumn="تاريخ_التخزين" />
+              <Mapping SourceColumn="اسم_المورد" DataSetColumn="اسم_المورد" />
+              <Mapping SourceColumn="عدد_الأقفاص" DataSetColumn="عدد_الأقفاص" />
+              <Mapping SourceColumn="الوزن_بالكيلو" DataSetColumn="الوزن_بالكيلو" />
+              <Mapping SourceColumn="رقم_الإيصال" DataSetColumn="رقم_الإيصال" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="التصنيعTableAdapter" GeneratorDataComponentClassName="التصنيعTableAdapter" Name="التصنيع" UserDataComponentName="التصنيعTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="Get" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="Get" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="Get" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Manufacturings.RawWeight AS الوزن_بالكيلو, Manufacturings.Date AS تاريخ_التصنيع, Manufacturings.SugarPrice AS سعر_السكر, RawKinds.Name AS اسم_الخام, 
+                         Manufacturings.RawPrice AS سعر_الكيلو, Manufacturings.JerkinPrice AS سعر_الجراكن, Manufacturings.ManufacutringID AS مسلسل, SalesKinds.Name AS اسم_العصير, 
+                         Manufacturings.QauntityInLiters AS عدد_اللترات
+FROM            Manufacturings INNER JOIN
+                         RawKinds ON Manufacturings.RawID = RawKinds.RawID INNER JOIN
+                         SalesKinds ON Manufacturings.SalesKindID = SalesKinds.SalesKindID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="الوزن_بالكيلو" DataSetColumn="الوزن_بالكيلو" />
+              <Mapping SourceColumn="تاريخ_التصنيع" DataSetColumn="تاريخ_التصنيع" />
+              <Mapping SourceColumn="اسم_الخام" DataSetColumn="اسم_الخام" />
+              <Mapping SourceColumn="سعر_السكر" DataSetColumn="سعر_السكر" />
+              <Mapping SourceColumn="سعر_الكيلو" DataSetColumn="سعر_الكيلو" />
+              <Mapping SourceColumn="سعر_الجراكن" DataSetColumn="سعر_الجراكن" />
+              <Mapping SourceColumn="مسلسل" DataSetColumn="مسلسل" />
+              <Mapping SourceColumn="اسم_العصير" DataSetColumn="اسم_العصير" />
+              <Mapping SourceColumn="عدد_اللترات" DataSetColumn="عدد_اللترات" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="الثلاجاتTableAdapter" GeneratorDataComponentClassName="الثلاجاتTableAdapter" Name="الثلاجات" UserDataComponentName="الثلاجاتTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="[ShopDatabase].dbo.Fridges" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      DELETE FROM [dbo].[Fridges] WHERE (([FridgeID] = @Original_FridgeID) AND ([Name] = @Original_Name))
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_FridgeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FridgeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      INSERT INTO [dbo].[Fridges] ([Name]) VALUES (@Name);
+                      SELECT FridgeID, Name FROM Fridges WHERE (FridgeID = SCOPE_IDENTITY())
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      SELECT FridgeID, Name FROM dbo.Fridges
+                    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>
+                      UPDATE [dbo].[Fridges] SET [Name] = @Name WHERE (([FridgeID] = @Original_FridgeID) AND ([Name] = @Original_Name));
+                      SELECT FridgeID, Name FROM Fridges WHERE (FridgeID = @FridgeID)
+                    </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_FridgeID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FridgeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FridgeID" ColumnName="FridgeID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@FridgeID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="FridgeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FridgeID" DataSetColumn="معرف" />
+              <Mapping SourceColumn="Name" DataSetColumn="الاسم" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="منصرف_الثلاجةTableAdapter" GeneratorDataComponentClassName="منصرف_الثلاجةTableAdapter" Name="منصرف_الثلاجة" UserDataComponentName="منصرف_الثلاجةTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        RawKinds.Name AS اسم_الخام, FridgeOuts.N_Kilos AS الوزن_بالكيلو, FridgeOuts.Date AS تاريخ_الصرف, FridgeOuts.DismissalNoticeNo AS رقم_إذن_الصرف, 
+                         Clients.Name AS جهة_الصرف, FridgeOuts.N_Cages AS الكمية_بالأقفاص
+FROM            FridgeOuts INNER JOIN
+                         RawKinds ON FridgeOuts.RawID = RawKinds.RawID INNER JOIN
+                         Clients ON FridgeOuts.ClientID = Clients.ClientID
+WHERE        (FridgeOuts.FridgeID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="FridgeID" DataSourceName="[ShopDatabase].dbo.FridgeOuts" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="FridgeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="اسم_الخام" DataSetColumn="اسم_الخام" />
+              <Mapping SourceColumn="الوزن_بالكيلو" DataSetColumn="الوزن_بالكيلو" />
+              <Mapping SourceColumn="تاريخ_الصرف" DataSetColumn="تاريخ_الصرف" />
+              <Mapping SourceColumn="رقم_إذن_الصرف" DataSetColumn="رقم_إذن_الصرف" />
+              <Mapping SourceColumn="جهة_الصرف" DataSetColumn="جهة_الصرف" />
+              <Mapping SourceColumn="الكمية_بالأقفاص" DataSetColumn="الكمية_بالأقفاص" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources>
+          <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="sp_GetClientDebtSt" MethodsParameterType="CLR" Modifier="Public" Name="sp_GetClientDebtSt" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="sp_GetClientDebtSt">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>
+                  SELECT        CASE WHEN SUM([Sales].Gained) IS NOT NULL THEN SUM(derivedtbl_1.summ) + Clients.BeginningBalance - SUM([Sales].Gained) 
+                  ELSE Clients.BeginningBalance END AS Expr1
+                  FROM            [Sales] INNER JOIN
+                  (SELECT        SUM(Amount * PiecePrice) AS summ, SaleID
+                  FROM            SalesItems
+                  GROUP BY SaleID) AS derivedtbl_1 ON [Sales].SaleID = derivedtbl_1.SaleID RIGHT OUTER JOIN
+                  Clients ON [Sales].ClientID = Clients.ClientID
+                  GROUP BY Clients.BeginningBalance, Clients.ClientID, Clients.Name
+                  having Clients.Name= @clientName
+                </CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="false" AutogeneratedName="clientName" ColumnName="Name" DataSourceName="[ShopDatabase].dbo.Clients" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@clientName" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetTotalGain" MethodsParameterType="CLR" Modifier="Public" Name="GetTotalGain" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetTotalGain">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT        SUM(Gained) AS Expr1
+FROM            (SELECT DISTINCT Sales.Gained
+                           FROM            SalesItems INNER JOIN
+                                                    Sales ON SalesItems.SaleID = Sales.SaleID INNER JOIN
+                                                    Clients ON Sales.ClientID = Clients.ClientID INNER JOIN
+                                                    SalesKinds ON SalesItems.SalesKindID = SalesKinds.SalesKindID
+                           WHERE        (Sales.Date BETWEEN @StartDate AND @EndDate) AND (Clients.Name = @ClientName) AND (SalesKinds.Name LIKE @SalesKindName)) AS AllGained</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="false" AutogeneratedName="StartDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="false" AutogeneratedName="EndDate" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="false" AutogeneratedName="ClientName" ColumnName="" DataSourceName="" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@ClientName" Precision="0" Scale="0" Size="50" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="false" AutogeneratedName="SalesKindName" ColumnName="" DataSourceName="" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SalesKindName" Precision="0" Scale="0" Size="50" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportDataSet" msprop:Generator_UserDSName="ReportDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="العملاء" msprop:Generator_UserTableName="العملاء" msprop:Generator_RowEvArgName="العملاءRowChangeEvent" msprop:Generator_TableVarName="tableالعملاء" msprop:Generator_TablePropName="العملاء" msprop:Generator_RowDeletingName="العملاءRowDeleting" msprop:Generator_RowChangingName="العملاءRowChanging" msprop:Generator_RowDeletedName="العملاءRowDeleted" msprop:Generator_TableClassName="العملاءDataTable" msprop:Generator_RowChangedName="العملاءRowChanged" msprop:Generator_RowEvHandlerName="العملاءRowChangeEventHandler" msprop:Generator_RowClassName="العملاءRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="معرف" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="ClientID" msprop:Generator_ColumnVarNameInTable="columnمعرف" msprop:Generator_ColumnPropNameInRow="معرف" msprop:Generator_ColumnPropNameInTable="معرفColumn" msprop:Generator_UserColumnName="معرف" type="xs:int" />
+              <xs:element name="الاسم" msdata:Caption="Name" msprop:Generator_ColumnVarNameInTable="columnالاسم" msprop:Generator_ColumnPropNameInRow="الاسم" msprop:Generator_ColumnPropNameInTable="الاسمColumn" msprop:Generator_UserColumnName="الاسم">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="رصيد_x0020_أول_x0020_المدة" msdata:Caption="BeginningBalance" msprop:Generator_ColumnVarNameInTable="columnرصيد_أول_المدة" msprop:Generator_ColumnPropNameInRow="رصيد_أول_المدة" msprop:Generator_ColumnPropNameInTable="رصيد_أول_المدةColumn" msprop:Generator_UserColumnName="رصيد أول المدة" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="الأنواع_x0020_الخام" msprop:Generator_UserTableName="الأنواع الخام" msprop:Generator_RowEvArgName="الأنواع_الخامRowChangeEvent" msprop:Generator_TableVarName="tableالأنواع_الخام" msprop:Generator_TablePropName="الأنواع_الخام" msprop:Generator_RowDeletingName="الأنواع_الخامRowDeleting" msprop:Generator_RowChangingName="الأنواع_الخامRowChanging" msprop:Generator_RowDeletedName="الأنواع_الخامRowDeleted" msprop:Generator_TableClassName="الأنواع_الخامDataTable" msprop:Generator_RowChangedName="الأنواع_الخامRowChanged" msprop:Generator_RowEvHandlerName="الأنواع_الخامRowChangeEventHandler" msprop:Generator_RowClassName="الأنواع_الخامRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="معرف" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="RawID" msprop:Generator_ColumnVarNameInTable="columnمعرف" msprop:Generator_ColumnPropNameInRow="معرف" msprop:Generator_ColumnPropNameInTable="معرفColumn" msprop:Generator_UserColumnName="معرف" type="xs:int" />
+              <xs:element name="الاسم" msdata:Caption="Name" msprop:Generator_ColumnVarNameInTable="columnالاسم" msprop:Generator_ColumnPropNameInRow="الاسم" msprop:Generator_ColumnPropNameInTable="الاسمColumn" msprop:Generator_UserColumnName="الاسم">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="أنواع_x0020_البيع" msprop:Generator_UserTableName="أنواع البيع" msprop:Generator_RowEvArgName="أنواع_البيعRowChangeEvent" msprop:Generator_TableVarName="tableأنواع_البيع" msprop:Generator_TablePropName="أنواع_البيع" msprop:Generator_RowDeletingName="أنواع_البيعRowDeleting" msprop:Generator_RowChangingName="أنواع_البيعRowChanging" msprop:Generator_RowDeletedName="أنواع_البيعRowDeleted" msprop:Generator_TableClassName="أنواع_البيعDataTable" msprop:Generator_RowChangedName="أنواع_البيعRowChanged" msprop:Generator_RowEvHandlerName="أنواع_البيعRowChangeEventHandler" msprop:Generator_RowClassName="أنواع_البيعRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="معرف" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="ID" msprop:Generator_ColumnVarNameInTable="columnمعرف" msprop:Generator_ColumnPropNameInRow="معرف" msprop:Generator_ColumnPropNameInTable="معرفColumn" msprop:Generator_UserColumnName="معرف" type="xs:short" />
+              <xs:element name="الاسم" msdata:Caption="Name" msprop:Generator_ColumnVarNameInTable="columnالاسم" msprop:Generator_ColumnPropNameInRow="الاسم" msprop:Generator_ColumnPropNameInTable="الاسمColumn" msprop:Generator_UserColumnName="الاسم">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="الموردين" msprop:Generator_UserTableName="الموردين" msprop:Generator_RowEvArgName="الموردينRowChangeEvent" msprop:Generator_TableVarName="tableالموردين" msprop:Generator_TablePropName="الموردين" msprop:Generator_RowDeletingName="الموردينRowDeleting" msprop:Generator_RowChangingName="الموردينRowChanging" msprop:Generator_RowDeletedName="الموردينRowDeleted" msprop:Generator_TableClassName="الموردينDataTable" msprop:Generator_RowChangedName="الموردينRowChanged" msprop:Generator_RowEvHandlerName="الموردينRowChangeEventHandler" msprop:Generator_RowClassName="الموردينRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="معرف" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="SupplierID" msprop:Generator_ColumnVarNameInTable="columnمعرف" msprop:Generator_ColumnPropNameInRow="معرف" msprop:Generator_ColumnPropNameInTable="معرفColumn" msprop:Generator_UserColumnName="معرف" type="xs:int" />
+              <xs:element name="الاسم" msdata:Caption="Name" msprop:Generator_ColumnVarNameInTable="columnالاسم" msprop:Generator_ColumnPropNameInRow="الاسم" msprop:Generator_ColumnPropNameInTable="الاسمColumn" msprop:Generator_UserColumnName="الاسم">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="رصيد_x0020_أول_x0020_المدة" msdata:Caption="BeginningBalance" msprop:Generator_ColumnVarNameInTable="columnرصيد_أول_المدة" msprop:Generator_ColumnPropNameInRow="رصيد_أول_المدة" msprop:Generator_ColumnPropNameInTable="رصيد_أول_المدةColumn" msprop:Generator_UserColumnName="رصيد أول المدة" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="مبيعات_x0020_كميات" msprop:Generator_UserTableName="مبيعات كميات" msprop:Generator_RowEvArgName="مبيعات_كمياتRowChangeEvent" msprop:Generator_TableVarName="tableمبيعات_كميات" msprop:Generator_TablePropName="مبيعات_كميات" msprop:Generator_RowDeletingName="مبيعات_كمياتRowDeleting" msprop:Generator_RowChangingName="مبيعات_كمياتRowChanging" msprop:Generator_RowDeletedName="مبيعات_كمياتRowDeleted" msprop:Generator_TableClassName="مبيعات_كمياتDataTable" msprop:Generator_RowChangedName="مبيعات_كمياتRowChanged" msprop:Generator_RowEvHandlerName="مبيعات_كمياتRowChangeEventHandler" msprop:Generator_RowClassName="مبيعات_كمياتRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="التاريخ" msprop:Generator_ColumnVarNameInTable="columnالتاريخ" msprop:Generator_ColumnPropNameInRow="التاريخ" msprop:Generator_ColumnPropNameInTable="التاريخColumn" msprop:Generator_UserColumnName="التاريخ" type="xs:dateTime" />
+              <xs:element name="نوع_x0020_العصير" msprop:Generator_ColumnVarNameInTable="columnنوع_العصير" msprop:Generator_ColumnPropNameInRow="نوع_العصير" msprop:Generator_ColumnPropNameInTable="نوع_العصيرColumn" msprop:Generator_UserColumnName="نوع العصير">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="عدد_x0020_اللترات" msprop:Generator_ColumnVarNameInTable="columnعدد_اللترات" msprop:Generator_ColumnPropNameInRow="عدد_اللترات" msprop:Generator_ColumnPropNameInTable="عدد_اللتراتColumn" msprop:Generator_UserColumnName="عدد اللترات">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="وارد_x0020_فلوس" msprop:Generator_ColumnVarNameInTable="columnوارد_فلوس" msprop:Generator_ColumnPropNameInRow="وارد_فلوس" msprop:Generator_ColumnPropNameInTable="وارد_فلوسColumn" msprop:Generator_UserColumnName="وارد فلوس" type="xs:decimal" />
+              <xs:element name="الكمية" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_UserColumnName="الكمية" type="xs:int" />
+              <xs:element name="اسم_x0020_العميل" msprop:Generator_ColumnVarNameInTable="columnاسم_العميل" msprop:Generator_ColumnPropNameInRow="اسم_العميل" msprop:Generator_ColumnPropNameInTable="اسم_العميلColumn" msprop:Generator_UserColumnName="اسم العميل">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="منصرف" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnمنصرف" msprop:Generator_ColumnPropNameInRow="منصرف" msprop:Generator_ColumnPropNameInTable="منصرفColumn" msprop:Generator_UserColumnName="منصرف" type="xs:decimal" minOccurs="0" />
+              <xs:element name="رقم_x0020_الفاتورة" msprop:Generator_ColumnVarNameInTable="columnرقم_الفاتورة" msprop:Generator_ColumnPropNameInRow="رقم_الفاتورة" msprop:Generator_ColumnPropNameInTable="رقم_الفاتورةColumn" msprop:Generator_UserColumnName="رقم الفاتورة" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="مبيعات_x0020_نقود" msprop:Generator_UserTableName="مبيعات نقود" msprop:Generator_RowEvArgName="مبيعات_نقودRowChangeEvent" msprop:Generator_TableVarName="tableمبيعات_نقود" msprop:Generator_TablePropName="مبيعات_نقود" msprop:Generator_RowDeletingName="مبيعات_نقودRowDeleting" msprop:Generator_RowChangingName="مبيعات_نقودRowChanging" msprop:Generator_RowDeletedName="مبيعات_نقودRowDeleted" msprop:Generator_TableClassName="مبيعات_نقودDataTable" msprop:Generator_RowChangedName="مبيعات_نقودRowChanged" msprop:Generator_RowEvHandlerName="مبيعات_نقودRowChangeEventHandler" msprop:Generator_RowClassName="مبيعات_نقودRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الاسم" msprop:Generator_ColumnVarNameInTable="columnالاسم" msprop:Generator_ColumnPropNameInRow="الاسم" msprop:Generator_ColumnPropNameInTable="الاسمColumn" msprop:Generator_UserColumnName="الاسم">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="منصرف" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnمنصرف" msprop:Generator_ColumnPropNameInRow="منصرف" msprop:Generator_ColumnPropNameInTable="منصرفColumn" msprop:Generator_UserColumnName="منصرف" type="xs:decimal" minOccurs="0" />
+              <xs:element name="وارد" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnوارد" msprop:Generator_ColumnPropNameInRow="وارد" msprop:Generator_ColumnPropNameInTable="واردColumn" msprop:Generator_UserColumnName="وارد" type="xs:decimal" minOccurs="0" />
+              <xs:element name="التاريخ" msprop:Generator_ColumnVarNameInTable="columnالتاريخ" msprop:Generator_ColumnPropNameInRow="التاريخ" msprop:Generator_ColumnPropNameInTable="التاريخColumn" msprop:Generator_UserColumnName="التاريخ" type="xs:dateTime" />
+              <xs:element name="رقم_الفاتورة" msprop:Generator_ColumnVarNameInTable="columnرقم_الفاتورة" msprop:Generator_ColumnPropNameInRow="رقم_الفاتورة" msprop:Generator_ColumnPropNameInTable="رقم_الفاتورةColumn" msprop:Generator_UserColumnName="رقم_الفاتورة" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="إجمالي_x0020_مصروفات" msprop:Generator_UserTableName="إجمالي مصروفات" msprop:Generator_RowEvArgName="إجمالي_مصروفاتRowChangeEvent" msprop:Generator_TableVarName="tableإجمالي_مصروفات" msprop:Generator_TablePropName="إجمالي_مصروفات" msprop:Generator_RowDeletingName="إجمالي_مصروفاتRowDeleting" msprop:Generator_RowChangingName="إجمالي_مصروفاتRowChanging" msprop:Generator_RowDeletedName="إجمالي_مصروفاتRowDeleted" msprop:Generator_TableClassName="إجمالي_مصروفاتDataTable" msprop:Generator_RowChangedName="إجمالي_مصروفاتRowChanged" msprop:Generator_RowEvHandlerName="إجمالي_مصروفاتRowChangeEventHandler" msprop:Generator_RowClassName="إجمالي_مصروفاتRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="نوع_x0020_المصروف" msprop:Generator_ColumnVarNameInTable="columnنوع_المصروف" msprop:Generator_ColumnPropNameInRow="نوع_المصروف" msprop:Generator_ColumnPropNameInTable="نوع_المصروفColumn" msprop:Generator_UserColumnName="نوع المصروف">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="القيمة" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnالقيمة" msprop:Generator_ColumnPropNameInRow="القيمة" msprop:Generator_ColumnPropNameInTable="القيمةColumn" msprop:Generator_UserColumnName="القيمة" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="إجمالي_x0020_مبيعات_x0020_كمية_x0020_العصير" msprop:Generator_UserTableName="إجمالي مبيعات كمية العصير" msprop:Generator_RowEvArgName="إجمالي_مبيعات_كمية_العصيرRowChangeEvent" msprop:Generator_TableVarName="tableإجمالي_مبيعات_كمية_العصير" msprop:Generator_TablePropName="إجمالي_مبيعات_كمية_العصير" msprop:Generator_RowDeletingName="إجمالي_مبيعات_كمية_العصيرRowDeleting" msprop:Generator_RowChangingName="إجمالي_مبيعات_كمية_العصيرRowChanging" msprop:Generator_RowDeletedName="إجمالي_مبيعات_كمية_العصيرRowDeleted" msprop:Generator_TableClassName="إجمالي_مبيعات_كمية_العصيرDataTable" msprop:Generator_RowChangedName="إجمالي_مبيعات_كمية_العصيرRowChanged" msprop:Generator_RowEvHandlerName="إجمالي_مبيعات_كمية_العصيرRowChangeEventHandler" msprop:Generator_RowClassName="إجمالي_مبيعات_كمية_العصيرRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="اسم_x0020_العصير" msprop:Generator_ColumnVarNameInTable="columnاسم_العصير" msprop:Generator_ColumnPropNameInRow="اسم_العصير" msprop:Generator_ColumnPropNameInTable="اسم_العصيرColumn" msprop:Generator_UserColumnName="اسم العصير">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="نوع_x0020_العصير" msprop:Generator_ColumnVarNameInTable="columnنوع_العصير" msprop:Generator_ColumnPropNameInRow="نوع_العصير" msprop:Generator_ColumnPropNameInTable="نوع_العصيرColumn" msprop:Generator_UserColumnName="نوع العصير">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الكمية" msprop:Generator_ColumnVarNameInTable="columnالكمية" msprop:Generator_ColumnPropNameInRow="الكمية" msprop:Generator_ColumnPropNameInTable="الكميةColumn" msprop:Generator_UserColumnName="الكمية" type="xs:int" minOccurs="0" />
+              <xs:element name="القيمة" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnالقيمة" msprop:Generator_ColumnPropNameInRow="القيمة" msprop:Generator_ColumnPropNameInTable="القيمةColumn" msprop:Generator_UserColumnName="القيمة" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="صافي_x0020_حساب_x0020_العملاء" msprop:Generator_UserTableName="صافي حساب العملاء" msprop:Generator_RowEvArgName="صافي_حساب_العملاءRowChangeEvent" msprop:Generator_TableVarName="tableصافي_حساب_العملاء" msprop:Generator_TablePropName="صافي_حساب_العملاء" msprop:Generator_RowDeletingName="صافي_حساب_العملاءRowDeleting" msprop:Generator_RowChangingName="صافي_حساب_العملاءRowChanging" msprop:Generator_RowDeletedName="صافي_حساب_العملاءRowDeleted" msprop:Generator_TableClassName="صافي_حساب_العملاءDataTable" msprop:Generator_RowChangedName="صافي_حساب_العملاءRowChanged" msprop:Generator_RowEvHandlerName="صافي_حساب_العملاءRowChangeEventHandler" msprop:Generator_RowClassName="صافي_حساب_العملاءRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="اسم_x0020_العميل" msprop:Generator_ColumnVarNameInTable="columnاسم_العميل" msprop:Generator_ColumnPropNameInRow="اسم_العميل" msprop:Generator_ColumnPropNameInTable="اسم_العميلColumn" msprop:Generator_UserColumnName="اسم العميل">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="رصيد_x0020_أول_x0020_المدة" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnرصيد_أول_المدة" msprop:Generator_ColumnPropNameInRow="رصيد_أول_المدة" msprop:Generator_ColumnPropNameInTable="رصيد_أول_المدةColumn" msprop:Generator_UserColumnName="رصيد أول المدة" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="صافي_x0020_حساب_x0020_الموردين" msprop:Generator_UserTableName="صافي حساب الموردين" msprop:Generator_RowEvArgName="صافي_حساب_الموردينRowChangeEvent" msprop:Generator_TableVarName="tableصافي_حساب_الموردين" msprop:Generator_TablePropName="صافي_حساب_الموردين" msprop:Generator_RowDeletingName="صافي_حساب_الموردينRowDeleting" msprop:Generator_RowChangingName="صافي_حساب_الموردينRowChanging" msprop:Generator_RowDeletedName="صافي_حساب_الموردينRowDeleted" msprop:Generator_TableClassName="صافي_حساب_الموردينDataTable" msprop:Generator_RowChangedName="صافي_حساب_الموردينRowChanged" msprop:Generator_RowEvHandlerName="صافي_حساب_الموردينRowChangeEventHandler" msprop:Generator_RowClassName="صافي_حساب_الموردينRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="اسم_x0020_المورد" msprop:Generator_ColumnVarNameInTable="columnاسم_المورد" msprop:Generator_ColumnPropNameInRow="اسم_المورد" msprop:Generator_ColumnPropNameInTable="اسم_الموردColumn" msprop:Generator_UserColumnName="اسم المورد">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="رصيد_x0020_أول_x0020_المدة" msprop:Generator_ColumnVarNameInTable="columnرصيد_أول_المدة" msprop:Generator_ColumnPropNameInRow="رصيد_أول_المدة" msprop:Generator_ColumnPropNameInTable="رصيد_أول_المدةColumn" msprop:Generator_UserColumnName="رصيد أول المدة" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="الخزينة" msprop:Generator_UserTableName="الخزينة" msprop:Generator_RowEvArgName="الخزينةRowChangeEvent" msprop:Generator_TableVarName="tableالخزينة" msprop:Generator_TablePropName="الخزينة" msprop:Generator_RowDeletingName="الخزينةRowDeleting" msprop:Generator_RowChangingName="الخزينةRowChanging" msprop:Generator_RowDeletedName="الخزينةRowDeleted" msprop:Generator_TableClassName="الخزينةDataTable" msprop:Generator_RowChangedName="الخزينةRowChanged" msprop:Generator_RowEvHandlerName="الخزينةRowChangeEventHandler" msprop:Generator_RowClassName="الخزينةRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="التغيير" msprop:Generator_ColumnVarNameInTable="columnالتغيير" msprop:Generator_ColumnPropNameInRow="التغيير" msprop:Generator_ColumnPropNameInTable="التغييرColumn" msprop:Generator_UserColumnName="التغيير" type="xs:decimal" minOccurs="0" />
+              <xs:element name="الرصيد" msprop:Generator_ColumnVarNameInTable="columnالرصيد" msprop:Generator_ColumnPropNameInRow="الرصيد" msprop:Generator_ColumnPropNameInTable="الرصيدColumn" msprop:Generator_UserColumnName="الرصيد" type="xs:decimal" minOccurs="0" />
+              <xs:element name="التاريخ" msdata:ReadOnly="true" msdata:Caption="Date" msprop:Generator_ColumnVarNameInTable="columnالتاريخ" msprop:Generator_ColumnPropNameInRow="التاريخ" msprop:Generator_ColumnPropNameInTable="التاريخColumn" msprop:Generator_UserColumnName="التاريخ" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="النوع" msdata:ReadOnly="true" msdata:Caption="type" msprop:Generator_ColumnVarNameInTable="columnالنوع" msprop:Generator_ColumnPropNameInRow="النوع" msprop:Generator_ColumnPropNameInTable="النوعColumn" msprop:Generator_UserColumnName="النوع" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="المشتريات" msprop:Generator_UserTableName="المشتريات" msprop:Generator_RowEvArgName="المشترياتRowChangeEvent" msprop:Generator_TableVarName="tableالمشتريات" msprop:Generator_TablePropName="المشتريات" msprop:Generator_RowDeletingName="المشترياتRowDeleting" msprop:Generator_RowChangingName="المشترياتRowChanging" msprop:Generator_RowDeletedName="المشترياتRowDeleted" msprop:Generator_TableClassName="المشترياتDataTable" msprop:Generator_RowChangedName="المشترياتRowChanged" msprop:Generator_RowEvHandlerName="المشترياتRowChangeEventHandler" msprop:Generator_RowClassName="المشترياتRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="اسم_المورد" msprop:Generator_ColumnVarNameInTable="columnاسم_المورد" msprop:Generator_ColumnPropNameInRow="اسم_المورد" msprop:Generator_ColumnPropNameInTable="اسم_الموردColumn" msprop:Generator_UserColumnName="اسم_المورد" type="xs:string" />
+              <xs:element name="اسم_الخام" msprop:Generator_ColumnVarNameInTable="columnاسم_الخام" msprop:Generator_ColumnPropNameInRow="اسم_الخام" msprop:Generator_ColumnPropNameInTable="اسم_الخامColumn" msprop:Generator_UserColumnName="اسم_الخام" type="xs:string" />
+              <xs:element name="مسلسل" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnمسلسل" msprop:Generator_ColumnPropNameInRow="مسلسل" msprop:Generator_ColumnPropNameInTable="مسلسلColumn" msprop:Generator_UserColumnName="مسلسل" type="xs:long" />
+              <xs:element name="تاريخ_الشراء" msprop:Generator_ColumnVarNameInTable="columnتاريخ_الشراء" msprop:Generator_ColumnPropNameInRow="تاريخ_الشراء" msprop:Generator_ColumnPropNameInTable="تاريخ_الشراءColumn" msprop:Generator_UserColumnName="تاريخ_الشراء" type="xs:dateTime" />
+              <xs:element name="الكمية_بالأقفاص" msprop:Generator_ColumnVarNameInTable="columnالكمية_بالأقفاص" msprop:Generator_ColumnPropNameInRow="الكمية_بالأقفاص" msprop:Generator_ColumnPropNameInTable="الكمية_بالأقفاصColumn" msprop:Generator_UserColumnName="الكمية_بالأقفاص" type="xs:int" minOccurs="0" />
+              <xs:element name="الكمية_بالكيلو" msprop:Generator_ColumnVarNameInTable="columnالكمية_بالكيلو" msprop:Generator_ColumnPropNameInRow="الكمية_بالكيلو" msprop:Generator_ColumnPropNameInTable="الكمية_بالكيلوColumn" msprop:Generator_UserColumnName="الكمية_بالكيلو" type="xs:int" />
+              <xs:element name="المدفوع" msprop:Generator_ColumnVarNameInTable="columnالمدفوع" msprop:Generator_ColumnPropNameInRow="المدفوع" msprop:Generator_ColumnPropNameInTable="المدفوعColumn" msprop:Generator_UserColumnName="المدفوع" type="xs:decimal" />
+              <xs:element name="رقم_الفاتورة" msprop:Generator_ColumnVarNameInTable="columnرقم_الفاتورة" msprop:Generator_ColumnPropNameInRow="رقم_الفاتورة" msprop:Generator_ColumnPropNameInTable="رقم_الفاتورةColumn" msprop:Generator_UserColumnName="رقم_الفاتورة" type="xs:long" minOccurs="0" />
+              <xs:element name="سعر_الكيلو" msprop:Generator_ColumnVarNameInTable="columnسعر_الكيلو" msprop:Generator_ColumnPropNameInRow="سعر_الكيلو" msprop:Generator_ColumnPropNameInTable="سعر_الكيلوColumn" msprop:Generator_UserColumnName="سعر_الكيلو" type="xs:decimal" />
+              <xs:element name="قيمة_المشتريات" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnقيمة_المشتريات" msprop:Generator_ColumnPropNameInRow="قيمة_المشتريات" msprop:Generator_ColumnPropNameInTable="قيمة_المشترياتColumn" msprop:Generator_UserColumnName="قيمة_المشتريات" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="حساب_x0020_العملاء" msprop:Generator_TableClassName="حساب_العملاءDataTable" msprop:Generator_RowEvArgName="حساب_العملاءRowChangeEvent" msprop:Generator_TableVarName="tableحساب_العملاء" msprop:Generator_TablePropName="حساب_العملاء" msprop:Generator_RowDeletingName="حساب_العملاءRowDeleting" msprop:Generator_UserTableName="حساب العملاء" msprop:Generator_RowChangingName="حساب_العملاءRowChanging" msprop:Generator_RowDeletedName="حساب_العملاءRowDeleted" msprop:Generator_RowChangedName="حساب_العملاءRowChanged" msprop:Generator_RowEvHandlerName="حساب_العملاءRowChangeEventHandler" msprop:Generator_RowClassName="حساب_العملاءRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="اسم_x0020_العميل" msdata:Caption="Name" msprop:Generator_ColumnVarNameInTable="columnاسم_العميل" msprop:Generator_ColumnPropNameInRow="اسم_العميل" msprop:Generator_ColumnPropNameInTable="اسم_العميلColumn" msprop:Generator_UserColumnName="اسم العميل">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="إجمالي_x0020_المدفوع" msdata:ReadOnly="true" msdata:Caption="TotalGained" msprop:Generator_ColumnVarNameInTable="columnإجمالي_المدفوع" msprop:Generator_ColumnPropNameInRow="إجمالي_المدفوع" msprop:Generator_ColumnPropNameInTable="إجمالي_المدفوعColumn" msprop:Generator_UserColumnName="إجمالي المدفوع" type="xs:decimal" minOccurs="0" />
+              <xs:element name="إجمالي_x0020_الثمن" msdata:ReadOnly="true" msdata:Caption="GrossPrice" msprop:Generator_ColumnVarNameInTable="columnإجمالي_الثمن" msprop:Generator_ColumnPropNameInRow="إجمالي_الثمن" msprop:Generator_ColumnPropNameInTable="إجمالي_الثمنColumn" msprop:Generator_UserColumnName="إجمالي الثمن" type="xs:decimal" minOccurs="0" />
+              <xs:element name="الصافي" msdata:ReadOnly="true" msdata:Caption="Gross" msprop:Generator_ColumnVarNameInTable="columnالصافي" msprop:Generator_ColumnPropNameInRow="الصافي" msprop:Generator_ColumnPropNameInTable="الصافيColumn" msprop:Generator_UserColumnName="الصافي" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="حساب_x0020_الموردين" msprop:Generator_TableClassName="حساب_الموردينDataTable" msprop:Generator_RowEvArgName="حساب_الموردينRowChangeEvent" msprop:Generator_TableVarName="tableحساب_الموردين" msprop:Generator_TablePropName="حساب_الموردين" msprop:Generator_RowDeletingName="حساب_الموردينRowDeleting" msprop:Generator_UserTableName="حساب الموردين" msprop:Generator_RowChangingName="حساب_الموردينRowChanging" msprop:Generator_RowDeletedName="حساب_الموردينRowDeleted" msprop:Generator_RowChangedName="حساب_الموردينRowChanged" msprop:Generator_RowEvHandlerName="حساب_الموردينRowChangeEventHandler" msprop:Generator_RowClassName="حساب_الموردينRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="اسم_المورد" msprop:Generator_ColumnVarNameInTable="columnاسم_المورد" msprop:Generator_ColumnPropNameInRow="اسم_المورد" msprop:Generator_ColumnPropNameInTable="اسم_الموردColumn" msprop:Generator_UserColumnName="اسم_المورد">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="إجمالي_المدفوع" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnإجمالي_المدفوع" msprop:Generator_ColumnPropNameInRow="إجمالي_المدفوع" msprop:Generator_ColumnPropNameInTable="إجمالي_المدفوعColumn" msprop:Generator_UserColumnName="إجمالي_المدفوع" type="xs:decimal" minOccurs="0" />
+              <xs:element name="إجمالي_الثمن" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnإجمالي_الثمن" msprop:Generator_ColumnPropNameInRow="إجمالي_الثمن" msprop:Generator_ColumnPropNameInTable="إجمالي_الثمنColumn" msprop:Generator_UserColumnName="إجمالي_الثمن" type="xs:decimal" minOccurs="0" />
+              <xs:element name="الصافي" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnالصافي" msprop:Generator_ColumnPropNameInRow="الصافي" msprop:Generator_ColumnPropNameInTable="الصافيColumn" msprop:Generator_UserColumnName="الصافي" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="وارد_الثلاجة" msprop:Generator_TableClassName="وارد_الثلاجةDataTable" msprop:Generator_TableVarName="tableوارد_الثلاجة" msprop:Generator_TablePropName="وارد_الثلاجة" msprop:Generator_RowDeletingName="وارد_الثلاجةRowDeleting" msprop:Generator_UserTableName="وارد_الثلاجة" msprop:Generator_RowChangingName="وارد_الثلاجةRowChanging" msprop:Generator_RowEvHandlerName="وارد_الثلاجةRowChangeEventHandler" msprop:Generator_RowDeletedName="وارد_الثلاجةRowDeleted" msprop:Generator_RowEvArgName="وارد_الثلاجةRowChangeEvent" msprop:Generator_RowChangedName="وارد_الثلاجةRowChanged" msprop:Generator_RowClassName="وارد_الثلاجةRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="اسم_الخام" msprop:Generator_ColumnVarNameInTable="columnاسم_الخام" msprop:Generator_ColumnPropNameInRow="اسم_الخام" msprop:Generator_ColumnPropNameInTable="اسم_الخامColumn" msprop:Generator_UserColumnName="اسم_الخام">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="تاريخ_التخزين" msprop:Generator_ColumnVarNameInTable="columnتاريخ_التخزين" msprop:Generator_ColumnPropNameInRow="تاريخ_التخزين" msprop:Generator_ColumnPropNameInTable="تاريخ_التخزينColumn" msprop:Generator_UserColumnName="تاريخ_التخزين" type="xs:dateTime" />
+              <xs:element name="اسم_المورد" msprop:Generator_ColumnVarNameInTable="columnاسم_المورد" msprop:Generator_ColumnPropNameInRow="اسم_المورد" msprop:Generator_ColumnPropNameInTable="اسم_الموردColumn" msprop:Generator_UserColumnName="اسم_المورد">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="عدد_الأقفاص" msprop:Generator_ColumnVarNameInTable="columnعدد_الأقفاص" msprop:Generator_ColumnPropNameInRow="عدد_الأقفاص" msprop:Generator_ColumnPropNameInTable="عدد_الأقفاصColumn" msprop:Generator_UserColumnName="عدد_الأقفاص" type="xs:int" />
+              <xs:element name="الوزن_بالكيلو" msprop:Generator_ColumnVarNameInTable="columnالوزن_بالكيلو" msprop:Generator_ColumnPropNameInRow="الوزن_بالكيلو" msprop:Generator_ColumnPropNameInTable="الوزن_بالكيلوColumn" msprop:Generator_UserColumnName="الوزن_بالكيلو" type="xs:int" />
+              <xs:element name="رقم_الإيصال" msprop:Generator_ColumnVarNameInTable="columnرقم_الإيصال" msprop:Generator_ColumnPropNameInRow="رقم_الإيصال" msprop:Generator_ColumnPropNameInTable="رقم_الإيصالColumn" msprop:Generator_UserColumnName="رقم_الإيصال" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="التصنيع" msprop:Generator_TableClassName="التصنيعDataTable" msprop:Generator_TableVarName="tableالتصنيع" msprop:Generator_TablePropName="التصنيع" msprop:Generator_RowDeletingName="التصنيعRowDeleting" msprop:Generator_UserTableName="التصنيع" msprop:Generator_RowChangingName="التصنيعRowChanging" msprop:Generator_RowEvHandlerName="التصنيعRowChangeEventHandler" msprop:Generator_RowDeletedName="التصنيعRowDeleted" msprop:Generator_RowEvArgName="التصنيعRowChangeEvent" msprop:Generator_RowChangedName="التصنيعRowChanged" msprop:Generator_RowClassName="التصنيعRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="الوزن_بالكيلو" msprop:Generator_ColumnVarNameInTable="columnالوزن_بالكيلو" msprop:Generator_ColumnPropNameInRow="الوزن_بالكيلو" msprop:Generator_ColumnPropNameInTable="الوزن_بالكيلوColumn" msprop:Generator_UserColumnName="الوزن_بالكيلو" type="xs:int" />
+              <xs:element name="تاريخ_التصنيع" msprop:Generator_ColumnVarNameInTable="columnتاريخ_التصنيع" msprop:Generator_ColumnPropNameInRow="تاريخ_التصنيع" msprop:Generator_ColumnPropNameInTable="تاريخ_التصنيعColumn" msprop:Generator_UserColumnName="تاريخ_التصنيع" type="xs:dateTime" />
+              <xs:element name="اسم_الخام" msprop:Generator_ColumnVarNameInTable="columnاسم_الخام" msprop:Generator_ColumnPropNameInRow="اسم_الخام" msprop:Generator_ColumnPropNameInTable="اسم_الخامColumn" msprop:Generator_UserColumnName="اسم_الخام">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="سعر_السكر" msprop:Generator_ColumnVarNameInTable="columnسعر_السكر" msprop:Generator_ColumnPropNameInRow="سعر_السكر" msprop:Generator_ColumnPropNameInTable="سعر_السكرColumn" msprop:Generator_UserColumnName="سعر_السكر" type="xs:decimal" />
+              <xs:element name="سعر_الكيلو" msprop:Generator_ColumnVarNameInTable="columnسعر_الكيلو" msprop:Generator_ColumnPropNameInRow="سعر_الكيلو" msprop:Generator_ColumnPropNameInTable="سعر_الكيلوColumn" msprop:Generator_UserColumnName="سعر_الكيلو" type="xs:decimal" />
+              <xs:element name="سعر_الجراكن" msprop:Generator_ColumnVarNameInTable="columnسعر_الجراكن" msprop:Generator_ColumnPropNameInRow="سعر_الجراكن" msprop:Generator_ColumnPropNameInTable="سعر_الجراكنColumn" msprop:Generator_UserColumnName="سعر_الجراكن" type="xs:decimal" />
+              <xs:element name="مسلسل" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnمسلسل" msprop:Generator_ColumnPropNameInRow="مسلسل" msprop:Generator_ColumnPropNameInTable="مسلسلColumn" msprop:Generator_UserColumnName="مسلسل" type="xs:long" />
+              <xs:element name="اسم_العصير" msprop:Generator_ColumnVarNameInTable="columnاسم_العصير" msprop:Generator_ColumnPropNameInRow="اسم_العصير" msprop:Generator_ColumnPropNameInTable="اسم_العصيرColumn" msprop:Generator_UserColumnName="اسم_العصير">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="عدد_اللترات" msprop:Generator_ColumnVarNameInTable="columnعدد_اللترات" msprop:Generator_ColumnPropNameInRow="عدد_اللترات" msprop:Generator_ColumnPropNameInTable="عدد_اللتراتColumn" msprop:Generator_UserColumnName="عدد_اللترات" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="الثلاجات" msprop:Generator_TableClassName="الثلاجاتDataTable" msprop:Generator_TableVarName="tableالثلاجات" msprop:Generator_TablePropName="الثلاجات" msprop:Generator_RowDeletingName="الثلاجاتRowDeleting" msprop:Generator_UserTableName="الثلاجات" msprop:Generator_RowChangingName="الثلاجاتRowChanging" msprop:Generator_RowEvHandlerName="الثلاجاتRowChangeEventHandler" msprop:Generator_RowDeletedName="الثلاجاتRowDeleted" msprop:Generator_RowEvArgName="الثلاجاتRowChangeEvent" msprop:Generator_RowChangedName="الثلاجاتRowChanged" msprop:Generator_RowClassName="الثلاجاتRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="معرف" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="FridgeID" msprop:Generator_ColumnVarNameInTable="columnمعرف" msprop:Generator_ColumnPropNameInRow="معرف" msprop:Generator_ColumnPropNameInTable="معرفColumn" msprop:Generator_UserColumnName="معرف" type="xs:int" />
+              <xs:element name="الاسم" msdata:Caption="Name" msprop:Generator_ColumnVarNameInTable="columnالاسم" msprop:Generator_ColumnPropNameInRow="الاسم" msprop:Generator_ColumnPropNameInTable="الاسمColumn" msprop:Generator_UserColumnName="الاسم">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="منصرف_الثلاجة" msprop:Generator_TableClassName="منصرف_الثلاجةDataTable" msprop:Generator_TableVarName="tableمنصرف_الثلاجة" msprop:Generator_TablePropName="منصرف_الثلاجة" msprop:Generator_RowDeletingName="منصرف_الثلاجةRowDeleting" msprop:Generator_UserTableName="منصرف_الثلاجة" msprop:Generator_RowChangingName="منصرف_الثلاجةRowChanging" msprop:Generator_RowEvHandlerName="منصرف_الثلاجةRowChangeEventHandler" msprop:Generator_RowDeletedName="منصرف_الثلاجةRowDeleted" msprop:Generator_RowEvArgName="منصرف_الثلاجةRowChangeEvent" msprop:Generator_RowChangedName="منصرف_الثلاجةRowChanged" msprop:Generator_RowClassName="منصرف_الثلاجةRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="اسم_الخام" msprop:Generator_ColumnVarNameInTable="columnاسم_الخام" msprop:Generator_ColumnPropNameInRow="اسم_الخام" msprop:Generator_ColumnPropNameInTable="اسم_الخامColumn" msprop:Generator_UserColumnName="اسم_الخام">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الوزن_بالكيلو" msprop:Generator_ColumnVarNameInTable="columnالوزن_بالكيلو" msprop:Generator_ColumnPropNameInRow="الوزن_بالكيلو" msprop:Generator_ColumnPropNameInTable="الوزن_بالكيلوColumn" msprop:Generator_UserColumnName="الوزن_بالكيلو" type="xs:int" />
+              <xs:element name="تاريخ_الصرف" msprop:Generator_ColumnVarNameInTable="columnتاريخ_الصرف" msprop:Generator_ColumnPropNameInRow="تاريخ_الصرف" msprop:Generator_ColumnPropNameInTable="تاريخ_الصرفColumn" msprop:Generator_UserColumnName="تاريخ_الصرف" type="xs:dateTime" />
+              <xs:element name="رقم_إذن_الصرف" msprop:Generator_ColumnVarNameInTable="columnرقم_إذن_الصرف" msprop:Generator_ColumnPropNameInRow="رقم_إذن_الصرف" msprop:Generator_ColumnPropNameInTable="رقم_إذن_الصرفColumn" msprop:Generator_UserColumnName="رقم_إذن_الصرف" type="xs:long" />
+              <xs:element name="جهة_الصرف" msprop:Generator_ColumnVarNameInTable="columnجهة_الصرف" msprop:Generator_ColumnPropNameInRow="جهة_الصرف" msprop:Generator_ColumnPropNameInTable="جهة_الصرفColumn" msprop:Generator_UserColumnName="جهة_الصرف">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="الكمية_بالأقفاص" msprop:Generator_ColumnVarNameInTable="columnالكمية_بالأقفاص" msprop:Generator_ColumnPropNameInRow="الكمية_بالأقفاص" msprop:Generator_ColumnPropNameInTable="الكمية_بالأقفاصColumn" msprop:Generator_UserColumnName="الكمية_بالأقفاص" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:العملاء" />
+      <xs:field xpath="mstns:معرف" />
+    </xs:unique>
+    <xs:unique name="الأنواع_x0020_الخام_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:الأنواع_x0020_الخام" />
+      <xs:field xpath="mstns:معرف" />
+    </xs:unique>
+    <xs:unique name="أنواع_x0020_البيع_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:أنواع_x0020_البيع" />
+      <xs:field xpath="mstns:معرف" />
+    </xs:unique>
+    <xs:unique name="الموردين_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:الموردين" />
+      <xs:field xpath="mstns:معرف" />
+    </xs:unique>
+    <xs:unique name="المشتريات_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:المشتريات" />
+      <xs:field xpath="mstns:مسلسل" />
+    </xs:unique>
+    <xs:unique name="التصنيع_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:التصنيع" />
+      <xs:field xpath="mstns:مسلسل" />
+    </xs:unique>
+    <xs:unique name="الثلاجات_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:الثلاجات" />
+      <xs:field xpath="mstns:معرف" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

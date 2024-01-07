@@ -1,0 +1,14 @@
+﻿GO
+SET IDENTITY_INSERT [dbo].[Expenses Types] ON
+INSERT [dbo].[Expenses Types] ([ID], [Description]) VALUES (1, N'إيجار')
+INSERT [dbo].[Expenses Types] ([ID], [Description]) VALUES (2, N'كهرباء')
+INSERT [dbo].[Expenses Types] ([ID], [Description]) VALUES (3, N'ضرائب و تأمينات')
+INSERT [dbo].[Expenses Types] ([ID], [Description]) VALUES (4, N'دش')
+INSERT [dbo].[Expenses Types] ([ID], [Description]) VALUES (5, N'شخصي')
+INSERT [dbo].[Expenses Types] ([ID], [Description]) VALUES (6, N'إصلاحات')
+INSERT [dbo].[Expenses Types] ([ID], [Description]) VALUES (7, N'مرتبات')
+INSERT [dbo].[Expenses Types] ([ID], [Description]) VALUES (8, N'مواصلات')
+SET IDENTITY_INSERT [dbo].[Expenses Types] OFF
+GO
+Insert into Flags([Name] ,[Value]) values ('UpdatingTreasury',0)
+GO
